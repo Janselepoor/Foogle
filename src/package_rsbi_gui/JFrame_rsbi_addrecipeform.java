@@ -68,6 +68,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("add recipe");
+        setResizable(false);
 
         jLabel_recipename_addrecipe.setText("recipe name:");
 
@@ -152,6 +153,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jButton3.setText("cancel");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("amount");
 
@@ -270,7 +276,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_category1_addrecipeActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new JFrame_rsbi_confirmrecipe().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
@@ -284,6 +291,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private void jTextField_amount_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_amount_addrecipeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_amount_addrecipeActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.setVisible(false);
+        new JFrame_rsbi_main().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -336,11 +348,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_preperation_addrecipe;
     private javax.swing.JLabel jLabel_preptime_addrecipe;
     private javax.swing.JLabel jLabel_recipename_addrecipe;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane_ingredients_addrecipe;
