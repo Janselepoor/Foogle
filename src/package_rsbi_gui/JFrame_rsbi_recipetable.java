@@ -33,8 +33,14 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
         jTable_table_recipetable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jButton_show_recipetable.setText("show");
+        jButton_show_recipetable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_show_recipetableActionPerformed(evt);
+            }
+        });
 
         jButton_cancel_recipetable.setText("cancel");
         jButton_cancel_recipetable.addActionListener(new java.awt.event.ActionListener() {
@@ -104,8 +110,14 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_recipetableActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new JFrame_rsbi_search().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_recipetableActionPerformed
+
+    private void jButton_show_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_show_recipetableActionPerformed
+        this.setVisible(false);
+        new JFrame_rsbi_showrecipe().setVisible(true);
+    }//GEN-LAST:event_jButton_show_recipetableActionPerformed
 
     /**
      * @param args the command line arguments
