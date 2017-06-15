@@ -33,13 +33,15 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
         buttonGroup4 = new javax.swing.ButtonGroup();
         JButton_clear_category = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox_add_category = new javax.swing.JComboBox<>();
+        jComboBox_select_category = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jButton_clear_ingredients = new javax.swing.JButton();
-        jComboBox_add_ingredients = new javax.swing.JComboBox<>();
+        jComboBox_select_ingredients = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jButton1_add_category = new javax.swing.JButton();
+        jButton_add_ingredient = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -52,10 +54,10 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
 
         jLabel1.setText("Categories:");
 
-        jComboBox_add_category.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox_add_category.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox_select_category.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_select_category.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_add_categoryActionPerformed(evt);
+                jComboBox_select_categoryActionPerformed(evt);
             }
         });
 
@@ -63,13 +65,17 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
 
         jButton_clear_ingredients.setText("clear");
 
-        jComboBox_add_ingredients.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_select_ingredients.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setText("jLabel3");
 
         jLabel4.setText("jLabel4");
 
         jLabel5.setText("jLabel5");
+
+        jButton1_add_category.setText("add");
+
+        jButton_add_ingredient.setText("add");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,9 +85,15 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox_add_category, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox_add_ingredients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox_select_category, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1_add_category, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox_select_ingredients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton_add_ingredient, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton_clear_ingredients)
@@ -116,14 +128,16 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox_add_category, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JButton_clear_category))
+                    .addComponent(jComboBox_select_category, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JButton_clear_category)
+                    .addComponent(jButton1_add_category))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_clear_ingredients)
-                    .addComponent(jComboBox_add_ingredients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox_select_ingredients, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_add_ingredient))
                 .addGap(18, 18, 18))
         );
 
@@ -134,9 +148,9 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JButton_clear_categoryActionPerformed
 
-    private void jComboBox_add_categoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_add_categoryActionPerformed
+    private void jComboBox_select_categoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_select_categoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox_add_categoryActionPerformed
+    }//GEN-LAST:event_jComboBox_select_categoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,9 +193,11 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.JButton jButton1_add_category;
+    private javax.swing.JButton jButton_add_ingredient;
     private javax.swing.JButton jButton_clear_ingredients;
-    private javax.swing.JComboBox<String> jComboBox_add_category;
-    private javax.swing.JComboBox<String> jComboBox_add_ingredients;
+    private javax.swing.JComboBox<String> jComboBox_select_category;
+    private javax.swing.JComboBox<String> jComboBox_select_ingredients;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

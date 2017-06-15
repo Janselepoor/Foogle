@@ -23,7 +23,7 @@ public class Verbindung {
             IllegalAccessException, SQLException
                 {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
-                                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rsbi_database" , "root" , "hOto-213");
+                                            Connection conn = DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11180394","sql11180394","xgJyrQK6SB");
         //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test?"+"user=root&password=xxx");
         return conn;        
     }
@@ -101,7 +101,7 @@ public class Verbindung {
             
             //if (password.equals(password_conf))
             //{
-                stmt.executeUpdate("Insert INTO user(mailaddr,username,password) VALUES (\""+email+"\",\""+username+"\",\""+password+"\")");
+                stmt.executeUpdate("Insert INTO user(email,username,password) VALUES (\""+email+"\",\""+username+"\",\""+password+"\")");
                 return true;
             //}
             /*else
