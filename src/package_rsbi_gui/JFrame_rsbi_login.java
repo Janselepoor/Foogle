@@ -70,6 +70,12 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
 
         jLabel1.setText("Username");
 
+        jTextField_password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_passwordActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("Password");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -173,6 +179,10 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         this.setVisible(false);
         new JFrame_rsbi_registration().setVisible(true);
     }//GEN-LAST:event_jButton_registrationActionPerformed
+
+    private void jTextField_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_passwordActionPerformed
 
     /**
      * @param args the command line arguments

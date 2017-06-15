@@ -23,7 +23,7 @@ public class Verbindung {
             IllegalAccessException, SQLException
                 {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
-                                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/foogle","root","hOto-213");
+                                            Connection conn = DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11180394","sql11180394","xgJyrQK6SB");
         //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test?"+"user=root&password=xxx");
         return conn;        
     }
@@ -41,7 +41,7 @@ public class Verbindung {
         Connection conn = this.starteVerbindung();
         Statement stmt = conn.createStatement();
         //System.out.println("Step1");
-        ResultSet rs = stmt.executeQuery("SELECT passw FROM user WHERE username = \""+username+"\";");
+        ResultSet rs = stmt.executeQuery("SELECT password FROM user WHERE username = \""+username+"\";");
         //System.out.println("Step2");
         while(rs.next()){
         pwfromdb = rs.getString(1);
@@ -101,7 +101,7 @@ public class Verbindung {
             
             //if (password.equals(password_conf))
             //{
-                stmt.executeUpdate("Insert INTO user(mailaddr,username,passw) VALUES (\""+email+"\",\""+username+"\",\""+password+"\")");
+                stmt.executeUpdate("Insert INTO user(email,username,password) VALUES (\""+email+"\",\""+username+"\",\""+password+"\")");
                 return true;
             //}
             /*else
