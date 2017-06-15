@@ -5,6 +5,11 @@
  */
 package package_rsbi_gui;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import methoden_rsbi.Verbindung;
+
 /**
  *
  * @author rebecca
@@ -14,8 +19,62 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     /**
      * Creates new form JFrame_rsbi_addrecipeform
      */
+    private Verbindung connect2db = new Verbindung();
+    
+    private void FuelleComboIngr(){
+        jComboBox_Ingredient_addrecipe.removeAllItems();
+        try
+        {
+        Connection conn = connect2db.starteVerbindung();
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT DISTINCT ingr_name FROM ingredient ORDER BY ingr_name ASC;");
+        String tmpString;
+        while (rs.next()) 
+            {                
+                tmpString = "";
+                tmpString = rs.getString(1);
+                jComboBox_Ingredient_addrecipe.addItem(tmpString);
+            }
+            conn.close();
+        
+        }
+        catch (Exception e)
+        {
+            System.out.println("Fehler beim Befüllen der ComboBox");
+            System.out.println(e.getMessage());
+        }
+    }
+        private void FuelleComboMeas(){
+            
+        jComboBox_measurement_addrecipe.removeAllItems();
+                
+        try
+        {
+        Connection conn = connect2db.starteVerbindung();
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT DISTINCT meas_name FROM measurement ORDER BY meas_name ASC;");
+        String tmpString;
+        while (rs.next()) 
+            {                
+                tmpString = "";
+                tmpString = rs.getString(1);
+                jComboBox_measurement_addrecipe.addItem(tmpString);
+            }
+            conn.close();
+        
+        }
+        catch (Exception e)
+        {
+            System.out.println("Fehler beim Befüllen der ComboBox");
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    // Ruft JFrame auf und initialisert alle Componenten und füllt Sie!
     public JFrame_rsbi_addrecipeform() {
         initComponents();
+        FuelleComboIngr();
+        FuelleComboMeas();
     }
 
     /**
