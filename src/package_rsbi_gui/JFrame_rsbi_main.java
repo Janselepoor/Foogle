@@ -32,6 +32,7 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jButton1.setText("search recipe");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -41,7 +42,7 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton2.setText("add recipde");
+        jButton2.setText("add recipe");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
