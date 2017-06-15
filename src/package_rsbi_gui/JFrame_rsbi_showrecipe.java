@@ -60,7 +60,6 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jLabel_preparation_showrecipe = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea_preparation_showrecipe = new javax.swing.JTextArea();
-        jScrollBar_description_showrecipe = new javax.swing.JScrollBar();
         jLabel_rating_showrecipe = new javax.swing.JLabel();
         jButton_rating1_showrecipe = new javax.swing.JButton();
         jButton_rating2_showrecipe = new javax.swing.JButton();
@@ -279,13 +278,22 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(jLabel_categories_showrecipe))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_preparation_showrecipe)
-                            .addComponent(jLabel_categories_showrecipe)))
+                            .addComponent(jLabel_ingredients_showrecipe)
+                            .addComponent(jLabel_recipename_showrecipe)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel_preparation_showrecipe))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel_rating_showrecipe))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jButton_rating1_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton_rating2_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -295,21 +303,11 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
                                 .addComponent(jButton_rating4_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton_rating5_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(149, 149, 149)
+                                .addGap(147, 147, 147)
                                 .addComponent(jButton_confirm_showrecipe)
-                                .addGap(116, 116, 116)
+                                .addGap(118, 118, 118)
                                 .addComponent(jButton_close_showrecipe))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel_rating_showrecipe)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jScrollBar_description_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_ingredients_showrecipe)
-                            .addComponent(jLabel_recipename_showrecipe))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -375,13 +373,11 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
                     .addComponent(jLabel_ingredient5_showrecipe)
                     .addComponent(jLabel_ingredient5amount_showrecipe)
                     .addComponent(jLabel_ingredient5measure_showrecipe))
-                .addGap(56, 56, 56)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel_preparation_showrecipe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollBar_description_showrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE))
-                .addGap(41, 41, 41)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel_rating_showrecipe)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -499,7 +495,6 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_preptimedisplay_showrecipe;
     private javax.swing.JLabel jLabel_rating_showrecipe;
     private javax.swing.JLabel jLabel_recipename_showrecipe;
-    private javax.swing.JScrollBar jScrollBar_description_showrecipe;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea_preparation_showrecipe;
     // End of variables declaration//GEN-END:variables

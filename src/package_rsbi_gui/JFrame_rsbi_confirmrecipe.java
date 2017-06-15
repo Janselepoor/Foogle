@@ -60,7 +60,6 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         jLabel_preparation_confirmrecipe = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea_preparation_confirmrecipe = new javax.swing.JTextArea();
-        jScrollBar_description_confirmrecipe = new javax.swing.JScrollBar();
         jButton_confirm_confirmrecipe = new javax.swing.JButton();
         jButton_cancel_confirmrecipe = new javax.swing.JButton();
         jLabel_ingredient9measure_confirmrecipe = new javax.swing.JLabel();
@@ -74,6 +73,7 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         jLabel_ingredient5measure_confirmrecipe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel_recipename_confirmrecipe.setText("recipe name");
 
@@ -142,6 +142,11 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea_preparation_confirmrecipe);
 
         jButton_confirm_confirmrecipe.setText("confirm");
+        jButton_confirm_confirmrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_confirm_confirmrecipeActionPerformed(evt);
+            }
+        });
 
         jButton_cancel_confirmrecipe.setText("cancel");
         jButton_cancel_confirmrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -172,9 +177,9 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel_category1_confirmrecipe)
@@ -192,9 +197,8 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel_category2_confirmrecipe)
-                                .addGap(181, 181, 181)
-                                .addComponent(jLabel_category3_confirmrecipe))))
-                    .addGroup(layout.createSequentialGroup()
+                                .addGap(251, 251, 251))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel_ingredient5_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
@@ -204,11 +208,11 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
                             .addComponent(jLabel_ingredient1_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel_ingredient4amount_confirmrecipe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel_ingredient5amount_confirmrecipe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel_ingredient2amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel_ingredient3amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel_ingredient1amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel_ingredient4amount_confirmrecipe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(jLabel_ingredient5amount_confirmrecipe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(jLabel_ingredient2amount_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(jLabel_ingredient3amount_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addComponent(jLabel_ingredient1amount_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel_ingredient3measure_confirmrecipe, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
@@ -217,59 +221,59 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
                             .addComponent(jLabel_ingredient4measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
                             .addComponent(jLabel_ingredient5measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
                         .addGap(104, 104, 104)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel_ingredient6_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel_ingredient6_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel_ingredient6amount_confirmrecipe))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel_ingredient9_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel_ingredient8_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jLabel_ingredient7_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel_ingredient7amount_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel_ingredient8amount_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel_ingredient9amount_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel_ingredient6amount_confirmrecipe))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel_ingredient9_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel_ingredient8_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel_ingredient7_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel_ingredient7amount_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel_ingredient8amount_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel_ingredient9amount_confirmrecipe, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel_ingredient8measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel_ingredient6measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel_ingredient7measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                            .addComponent(jLabel_ingredient9measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
-                .addGap(35, 35, 35))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_preparation_confirmrecipe)
-                            .addComponent(jLabel_categories_confirmrecipe)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel_ingredient8measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel_ingredient6measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel_ingredient7measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                                    .addComponent(jLabel_ingredient9measure_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton_confirm_confirmrecipe)
-                                .addGap(116, 116, 116)
-                                .addComponent(jButton_cancel_confirmrecipe))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollBar_description_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(124, 124, 124)
+                                .addComponent(jLabel_category3_confirmrecipe))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 435, Short.MAX_VALUE)
+                        .addComponent(jButton_confirm_confirmrecipe)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton_cancel_confirmrecipe)
+                        .addGap(13, 13, 13))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_ingredients_confirmrecipe)
-                            .addComponent(jLabel_recipename_confirmrecipe))))
-                .addContainerGap(35, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_categories_confirmrecipe)
+                                    .addComponent(jLabel_ingredients_confirmrecipe)
+                                    .addComponent(jLabel_recipename_confirmrecipe)
+                                    .addComponent(jLabel_preparation_confirmrecipe)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel_recipename_confirmrecipe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -329,25 +333,29 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
                     .addComponent(jLabel_ingredient5_confirmrecipe)
                     .addComponent(jLabel_ingredient5amount_confirmrecipe)
                     .addComponent(jLabel_ingredient5measure_confirmrecipe))
-                .addGap(56, 56, 56)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel_preparation_confirmrecipe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollBar_description_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE))
-                .addGap(76, 76, 76)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_confirm_confirmrecipe)
-                    .addComponent(jButton_cancel_confirmrecipe))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton_cancel_confirmrecipe)
+                    .addComponent(jButton_confirm_confirmrecipe))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_confirmrecipeActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        new JFrame_rsbi_addrecipeform().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_confirmrecipeActionPerformed
+
+    private void jButton_confirm_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_confirmrecipeActionPerformed
+        this.setVisible(false);
+        new JFrame_rsbi_main().setVisible(true);
+    }//GEN-LAST:event_jButton_confirm_confirmrecipeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -430,7 +438,6 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_preptime_confirmrecipe;
     private javax.swing.JLabel jLabel_preptimedisplay_confirmrecipe;
     private javax.swing.JLabel jLabel_recipename_confirmrecipe;
-    private javax.swing.JScrollBar jScrollBar_description_confirmrecipe;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea_preparation_confirmrecipe;
     // End of variables declaration//GEN-END:variables

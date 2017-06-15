@@ -40,7 +40,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Login");
+        setResizable(false);
 
         jButton_registration.setText("Registration");
         jButton_registration.addActionListener(new java.awt.event.ActionListener() {

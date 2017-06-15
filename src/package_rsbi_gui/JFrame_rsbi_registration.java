@@ -41,6 +41,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         jButton_Cancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jTextField_username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,6 +187,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
             System.out.println("Fehler bei der Registration!");
             System.out.println("Fehler: " +e);
         }
+       
     }//GEN-LAST:event_jButton_registrateActionPerformed
 
     /**
