@@ -23,7 +23,7 @@ public class Verbindung {
             IllegalAccessException, SQLException
                 {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
-                                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rsbi_database","root","hOto-213");
+                                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/foogle","root","hOto-213");
         //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test?"+"user=root&password=xxx");
         return conn;        
     }
