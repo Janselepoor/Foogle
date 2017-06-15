@@ -80,6 +80,7 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jLabel_ingredient5measure_showrecipe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLabel_recipename_showrecipe.setText("recipe name");
 
@@ -170,8 +171,18 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jButton_rating5_showrecipe.setText("5");
 
         jButton_confirm_showrecipe.setText("confirm");
+        jButton_confirm_showrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_confirm_showrecipeActionPerformed(evt);
+            }
+        });
 
         jButton_close_showrecipe.setText("close");
+        jButton_close_showrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_close_showrecipeActionPerformed(evt);
+            }
+        });
 
         jLabel_ingredient9measure_showrecipe.setText("measure");
 
@@ -394,6 +405,15 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
     private void jButton_rating3_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rating3_showrecipeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_rating3_showrecipeActionPerformed
+
+    private void jButton_close_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_close_showrecipeActionPerformed
+        this.setVisible(false);
+        new JFrame_rsbi_recipetable().setVisible(true);
+    }//GEN-LAST:event_jButton_close_showrecipeActionPerformed
+
+    private void jButton_confirm_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_showrecipeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_confirm_showrecipeActionPerformed
 
     /**
      * @param args the command line arguments
