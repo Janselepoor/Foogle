@@ -73,6 +73,7 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         jLabel_ingredient5measure_confirmrecipe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("foogle");
         setResizable(false);
 
         jLabel_recipename_confirmrecipe.setText("recipe name");
