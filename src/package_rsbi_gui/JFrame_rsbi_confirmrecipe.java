@@ -348,12 +348,12 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_confirmrecipeActionPerformed
-        this.setVisible(false);
+        this.dispose();
         new JFrame_rsbi_addrecipeform().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_confirmrecipeActionPerformed
 
     private void jButton_confirm_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_confirmrecipeActionPerformed
-        this.setVisible(false);
+        this.dispose();
         new JFrame_rsbi_main().setVisible(true);
     }//GEN-LAST:event_jButton_confirm_confirmrecipeActionPerformed
 
@@ -399,11 +399,11 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     private javax.swing.JButton jButton_cancel_confirmrecipe;
     private javax.swing.JButton jButton_confirm_confirmrecipe;
     private javax.swing.JLabel jLabel_categories_confirmrecipe;
-    private javax.swing.JLabel jLabel_category1_confirmrecipe;
-    private javax.swing.JLabel jLabel_category2_confirmrecipe;
-    private javax.swing.JLabel jLabel_category3_confirmrecipe;
+    public static javax.swing.JLabel jLabel_category1_confirmrecipe;
+    public static javax.swing.JLabel jLabel_category2_confirmrecipe;
+    public static javax.swing.JLabel jLabel_category3_confirmrecipe;
     private javax.swing.JLabel jLabel_difficulty_confirmrecipe;
-    private javax.swing.JLabel jLabel_difficultydisplay_confirmrecipe;
+    public static javax.swing.JLabel jLabel_difficultydisplay_confirmrecipe;
     private javax.swing.JLabel jLabel_ingredient1_confirmrecipe;
     private javax.swing.JLabel jLabel_ingredient1amount_confirmrecipe;
     private javax.swing.JLabel jLabel_ingredient1measure_confirmrecipe;
@@ -433,12 +433,12 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_ingredient9measure_confirmrecipe;
     private javax.swing.JLabel jLabel_ingredients_confirmrecipe;
     private javax.swing.JLabel jLabel_persons_confirmrecipe;
-    private javax.swing.JLabel jLabel_personsdisplay_confirmrecipe;
+    public static javax.swing.JLabel jLabel_personsdisplay_confirmrecipe;
     private javax.swing.JLabel jLabel_preparation_confirmrecipe;
     private javax.swing.JLabel jLabel_preptime_confirmrecipe;
-    private javax.swing.JLabel jLabel_preptimedisplay_confirmrecipe;
-    private javax.swing.JLabel jLabel_recipename_confirmrecipe;
+    public static javax.swing.JLabel jLabel_preptimedisplay_confirmrecipe;
+    public static javax.swing.JLabel jLabel_recipename_confirmrecipe;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea_preparation_confirmrecipe;
+    public static javax.swing.JTextArea jTextArea_preparation_confirmrecipe;
     // End of variables declaration//GEN-END:variables
 }
