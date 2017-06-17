@@ -126,7 +126,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("add recipe");
+        setTitle("foogle");
         setResizable(false);
 
         jLabel_recipename_addrecipe.setText("recipe name:");
