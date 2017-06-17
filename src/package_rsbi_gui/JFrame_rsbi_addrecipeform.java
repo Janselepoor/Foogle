@@ -166,6 +166,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jComboBox_category3_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category3_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_category3_addrecipeActionPerformed(evt);
+            }
+        });
 
         jTable_ingredients_addrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -316,6 +321,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField_recipename_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_recipename_addrecipeActionPerformed
@@ -373,6 +379,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         this.dispose();
         new JFrame_rsbi_main().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_addrecipeActionPerformed
+
+    private void jComboBox_category3_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category3_addrecipeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox_category3_addrecipeActionPerformed
     
     //public void setText_Persons(String text){
     //JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(text);
