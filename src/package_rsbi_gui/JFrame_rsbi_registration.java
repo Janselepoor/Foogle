@@ -41,6 +41,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         jButton_Cancel_registration = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("foogle");
         setResizable(false);
 
         jTextField_username_registration.addActionListener(new java.awt.event.ActionListener() {
