@@ -79,6 +79,7 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jLabel_ingredient5measure_showrecipe = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("foogle");
         setResizable(false);
 
         jLabel_recipename_showrecipe.setText("recipe name");
@@ -392,6 +393,7 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_rating2_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rating2_showrecipeActionPerformed
@@ -403,7 +405,7 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_rating3_showrecipeActionPerformed
 
     private void jButton_close_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_close_showrecipeActionPerformed
-        this.setVisible(false);
+        this.dispose();
         new JFrame_rsbi_recipetable().setVisible(true);
     }//GEN-LAST:event_jButton_close_showrecipeActionPerformed
 
