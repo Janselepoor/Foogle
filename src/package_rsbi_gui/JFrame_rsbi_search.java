@@ -55,6 +55,7 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
         jButton_cancel_search = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("foogle");
         setResizable(false);
 
         JButton_clearcategory_search.setText("clear");
