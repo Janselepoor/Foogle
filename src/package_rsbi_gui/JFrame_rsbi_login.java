@@ -31,53 +31,53 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton_registration = new javax.swing.JButton();
-        jButton_login = new javax.swing.JButton();
-        jButton_connect = new javax.swing.JButton();
-        jTextField_username = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField_password = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jButton_registration_login = new javax.swing.JButton();
+        jButton_login_login = new javax.swing.JButton();
+        jButton_connect_login = new javax.swing.JButton();
+        jTextField_username_login = new javax.swing.JTextField();
+        jLabel_username_login = new javax.swing.JLabel();
+        jTextField_password_login = new javax.swing.JTextField();
+        jLabel_password_login = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jButton_registration.setText("Registration");
-        jButton_registration.addActionListener(new java.awt.event.ActionListener() {
+        jButton_registration_login.setText("Registration");
+        jButton_registration_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_registrationActionPerformed(evt);
+                jButton_registration_loginActionPerformed(evt);
             }
         });
 
-        jButton_login.setText("Login");
-        jButton_login.addActionListener(new java.awt.event.ActionListener() {
+        jButton_login_login.setText("Login");
+        jButton_login_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_loginActionPerformed(evt);
+                jButton_login_loginActionPerformed(evt);
             }
         });
 
-        jButton_connect.setText("Connect");
-        jButton_connect.addActionListener(new java.awt.event.ActionListener() {
+        jButton_connect_login.setText("Connect");
+        jButton_connect_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_connectActionPerformed(evt);
+                jButton_connect_loginActionPerformed(evt);
             }
         });
 
-        jTextField_username.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_username_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_usernameActionPerformed(evt);
+                jTextField_username_loginActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Username");
+        jLabel_username_login.setText("Username");
 
-        jTextField_password.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_password_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_passwordActionPerformed(evt);
+                jTextField_password_loginActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Password");
+        jLabel_password_login.setText("Password");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -87,22 +87,22 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton_connect))
+                        .addComponent(jButton_connect_login))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField_password, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_username, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_username_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)))
+                                    .addComponent(jLabel_username_login)
+                                    .addComponent(jLabel_password_login)))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton_login, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton_login_login, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton_registration)))
+                                .addComponent(jButton_registration_login)))
                         .addGap(10, 10, 10)))
                 .addContainerGap(116, Short.MAX_VALUE))
         );
@@ -111,25 +111,26 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jTextField_username_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_username_login))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_password_login))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_registration)
-                    .addComponent(jButton_login))
+                    .addComponent(jButton_registration_login)
+                    .addComponent(jButton_login_login))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-                .addComponent(jButton_connect)
+                .addComponent(jButton_connect_login)
                 .addContainerGap())
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_connectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_connectActionPerformed
+    private void jButton_connect_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_connect_loginActionPerformed
         // TODO add your handling code here:
         try
         {
@@ -143,25 +144,25 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
             System.out.println("Verbindung wurde nicht aufgebaut!");
             System.out.println("Fehler: "+e);
         }  
-    }//GEN-LAST:event_jButton_connectActionPerformed
+    }//GEN-LAST:event_jButton_connect_loginActionPerformed
 
-    private void jTextField_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_usernameActionPerformed
+    private void jTextField_username_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_username_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_usernameActionPerformed
+    }//GEN-LAST:event_jTextField_username_loginActionPerformed
 
-    private void jButton_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_loginActionPerformed
+    private void jButton_login_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_login_loginActionPerformed
         // TODO add your handling code here:
         try
         {
             // checks if Username and password are not empty
-            if(!(jTextField_username.getText().equals("")) && !(jTextField_password.getText().equals("")))
+            if(!(jTextField_username_login.getText().equals("")) && !(jTextField_password_login.getText().equals("")))
             {
             Boolean logincheck = false;
             Verbindung connect2DB = new Verbindung();
-            logincheck = connect2DB.CheckPw(jTextField_username.getText(),jTextField_password.getText());
+            logincheck = connect2DB.CheckPw(jTextField_username_login.getText(),jTextField_password_login.getText());
             if(logincheck)
             {
-                this.setVisible(false);
+                this.dispose();
                 new JFrame_rsbi_main().setVisible(true);
             }
             }
@@ -173,17 +174,17 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         catch(Exception e)
         {
         }
-    }//GEN-LAST:event_jButton_loginActionPerformed
+    }//GEN-LAST:event_jButton_login_loginActionPerformed
 
-    private void jButton_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrationActionPerformed
+    private void jButton_registration_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registration_loginActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        this.dispose();
         new JFrame_rsbi_registration().setVisible(true);
-    }//GEN-LAST:event_jButton_registrationActionPerformed
+    }//GEN-LAST:event_jButton_registration_loginActionPerformed
 
-    private void jTextField_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_passwordActionPerformed
+    private void jTextField_password_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_password_loginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_passwordActionPerformed
+    }//GEN-LAST:event_jTextField_password_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,12 +222,12 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_connect;
-    private javax.swing.JButton jButton_login;
-    private javax.swing.JButton jButton_registration;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField_password;
-    private javax.swing.JTextField jTextField_username;
+    private javax.swing.JButton jButton_connect_login;
+    private javax.swing.JButton jButton_login_login;
+    private javax.swing.JButton jButton_registration_login;
+    private javax.swing.JLabel jLabel_password_login;
+    private javax.swing.JLabel jLabel_username_login;
+    private javax.swing.JTextField jTextField_password_login;
+    private javax.swing.JTextField jTextField_username_login;
     // End of variables declaration//GEN-END:variables
 }
