@@ -107,15 +107,16 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_recipetableActionPerformed
-        this.setVisible(false);
+        this.dispose();
         new JFrame_rsbi_search().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_recipetableActionPerformed
 
     private void jButton_show_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_show_recipetableActionPerformed
-        this.setVisible(false);
+        this.dispose();
         new JFrame_rsbi_showrecipe().setVisible(true);
     }//GEN-LAST:event_jButton_show_recipetableActionPerformed
 
@@ -158,7 +159,6 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_cancel_recipetable;
     private javax.swing.JButton jButton_show_recipetable;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane_table_recipetable;
     private javax.swing.JTable jTable_table_recipetable;
     // End of variables declaration//GEN-END:variables
