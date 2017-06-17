@@ -32,6 +32,7 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         jButton_logout_main = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("foogle");
         setResizable(false);
 
         jButton_search_main.setText("search recipe");
