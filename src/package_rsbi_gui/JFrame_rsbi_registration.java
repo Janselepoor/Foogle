@@ -29,63 +29,63 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField_username = new javax.swing.JTextField();
-        jTextField_email = new javax.swing.JTextField();
-        jTextField_password = new javax.swing.JTextField();
-        jTextField_password_conf = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jButton_registrate = new javax.swing.JButton();
-        jButton_Cancel = new javax.swing.JButton();
+        jTextField_username_registration = new javax.swing.JTextField();
+        jTextField_email_registration = new javax.swing.JTextField();
+        jTextField_password_registration = new javax.swing.JTextField();
+        jTextField_passwordconf_registration = new javax.swing.JTextField();
+        jLabel_username_registration = new javax.swing.JLabel();
+        jLabel_email_registration = new javax.swing.JLabel();
+        jLabel_password_registration = new javax.swing.JLabel();
+        jLabel_passwordconf_registration = new javax.swing.JLabel();
+        jButton_registrate_registration = new javax.swing.JButton();
+        jButton_Cancel_registration = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jTextField_username.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_username_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_usernameActionPerformed(evt);
+                jTextField_username_registrationActionPerformed(evt);
             }
         });
 
-        jTextField_email.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_email_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_emailActionPerformed(evt);
+                jTextField_email_registrationActionPerformed(evt);
             }
         });
 
-        jTextField_password.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_password_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_passwordActionPerformed(evt);
+                jTextField_password_registrationActionPerformed(evt);
             }
         });
 
-        jTextField_password_conf.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_passwordconf_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_password_confActionPerformed(evt);
+                jTextField_passwordconf_registrationActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Username");
+        jLabel_username_registration.setText("Username");
 
-        jLabel2.setText("Email");
+        jLabel_email_registration.setText("Email");
 
-        jLabel3.setText("Password");
+        jLabel_password_registration.setText("Password");
 
-        jLabel4.setText("Password Confirmation");
+        jLabel_passwordconf_registration.setText("Password Confirmation");
 
-        jButton_registrate.setText("Registrate");
-        jButton_registrate.addActionListener(new java.awt.event.ActionListener() {
+        jButton_registrate_registration.setText("Registrate");
+        jButton_registrate_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_registrateActionPerformed(evt);
+                jButton_registrate_registrationActionPerformed(evt);
             }
         });
 
-        jButton_Cancel.setText("Cancel");
-        jButton_Cancel.addActionListener(new java.awt.event.ActionListener() {
+        jButton_Cancel_registration.setText("Cancel");
+        jButton_Cancel_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_CancelActionPerformed(evt);
+                jButton_Cancel_registrationActionPerformed(evt);
             }
         });
 
@@ -97,26 +97,26 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
                 .addGap(89, 89, 89)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField_password, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_password_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3))
+                        .addComponent(jLabel_password_registration))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField_email, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_email_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2))
+                        .addComponent(jLabel_email_registration))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField_username, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField_username_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabel_username_registration))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton_registrate)
+                            .addComponent(jButton_registrate_registration)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton_Cancel))
+                            .addComponent(jButton_Cancel_registration))
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(jTextField_password_conf, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_passwordconf_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabel4))))
+                            .addComponent(jLabel_passwordconf_registration))))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -124,56 +124,57 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(77, 77, 77)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jTextField_username_registration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_username_registration))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(jTextField_email_registration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_email_registration))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jTextField_password_registration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_password_registration))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_password_conf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(jTextField_passwordconf_registration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_passwordconf_registration))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_registrate)
-                    .addComponent(jButton_Cancel))
+                    .addComponent(jButton_registrate_registration)
+                    .addComponent(jButton_Cancel_registration))
                 .addContainerGap(91, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_usernameActionPerformed
+    private void jTextField_username_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_username_registrationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_usernameActionPerformed
+    }//GEN-LAST:event_jTextField_username_registrationActionPerformed
 
-    private void jTextField_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_emailActionPerformed
+    private void jTextField_email_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_email_registrationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_emailActionPerformed
+    }//GEN-LAST:event_jTextField_email_registrationActionPerformed
 
-    private void jTextField_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_passwordActionPerformed
+    private void jTextField_password_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_password_registrationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_passwordActionPerformed
+    }//GEN-LAST:event_jTextField_password_registrationActionPerformed
 
-    private void jTextField_password_confActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_password_confActionPerformed
+    private void jTextField_passwordconf_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_passwordconf_registrationActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_password_confActionPerformed
+    }//GEN-LAST:event_jTextField_passwordconf_registrationActionPerformed
 
-    private void jButton_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CancelActionPerformed
-        this.setVisible(false);
+    private void jButton_Cancel_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Cancel_registrationActionPerformed
+        this.dispose();
         new JFrame_rsbi_login().setVisible(true);
-    }//GEN-LAST:event_jButton_CancelActionPerformed
+    }//GEN-LAST:event_jButton_Cancel_registrationActionPerformed
 
-    private void jButton_registrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrateActionPerformed
-        String username = jTextField_username.getText();
-        String email = jTextField_email.getText();
-        String password = jTextField_password.getText();
-        String password_conf = jTextField_password_conf.getText();
+    private void jButton_registrate_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrate_registrationActionPerformed
+        String username = jTextField_username_registration.getText();
+        String email = jTextField_email_registration.getText();
+        String password = jTextField_password_registration.getText();
+        String password_conf = jTextField_passwordconf_registration.getText();
         boolean regcheck = false;
         
         try
@@ -188,7 +189,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
             System.out.println("Fehler: " +e);
         }
        
-    }//GEN-LAST:event_jButton_registrateActionPerformed
+    }//GEN-LAST:event_jButton_registrate_registrationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,15 +227,15 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_Cancel;
-    private javax.swing.JButton jButton_registrate;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField_email;
-    private javax.swing.JTextField jTextField_password;
-    private javax.swing.JTextField jTextField_password_conf;
-    private javax.swing.JTextField jTextField_username;
+    private javax.swing.JButton jButton_Cancel_registration;
+    private javax.swing.JButton jButton_registrate_registration;
+    private javax.swing.JLabel jLabel_email_registration;
+    private javax.swing.JLabel jLabel_password_registration;
+    private javax.swing.JLabel jLabel_passwordconf_registration;
+    private javax.swing.JLabel jLabel_username_registration;
+    private javax.swing.JTextField jTextField_email_registration;
+    private javax.swing.JTextField jTextField_password_registration;
+    private javax.swing.JTextField jTextField_passwordconf_registration;
+    private javax.swing.JTextField jTextField_username_registration;
     // End of variables declaration//GEN-END:variables
 }
