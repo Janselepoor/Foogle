@@ -33,6 +33,7 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
         jTable_table_recipetable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("foogle");
         setResizable(false);
 
         jButton_show_recipetable.setText("show");
