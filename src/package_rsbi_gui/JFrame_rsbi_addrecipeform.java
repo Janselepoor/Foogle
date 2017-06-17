@@ -92,9 +92,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jLabel_persons_addrecipe = new javax.swing.JLabel();
         jLabel_preptime_addrecipe = new javax.swing.JLabel();
         jLabel_difficulty_addrecipe = new javax.swing.JLabel();
-        jTextField1_recipename_addrecipe = new javax.swing.JTextField();
+        jTextField_recipename_addrecipe = new javax.swing.JTextField();
         jTextField_persons_addrecipe = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextField_preptime_addrecipe = new javax.swing.JTextField();
         jComboBox_difficulty_addrecipe = new javax.swing.JComboBox<>();
         jComboBox_category1_addrecipe = new javax.swing.JComboBox<>();
         jComboBox_category2_addrecipe = new javax.swing.JComboBox<>();
@@ -106,11 +106,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jComboBox_measurement_addrecipe = new javax.swing.JComboBox<>();
         jButton_addingredient_addrecipe = new javax.swing.JButton();
         jLabel_preperation_addrecipe = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jButton_confirm_addrecipe = new javax.swing.JButton();
+        jButton_cancel_addrecipe = new javax.swing.JButton();
+        jLabel_amount_addrecipe = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jTextArea_preparation_addrecipe = new javax.swing.JTextArea();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -137,9 +137,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         jLabel_difficulty_addrecipe.setText("difficulty:");
 
-        jTextField1_recipename_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_recipename_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1_recipename_addrecipeActionPerformed(evt);
+                jTextField_recipename_addrecipeActionPerformed(evt);
             }
         });
 
@@ -204,25 +204,25 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         jLabel_preperation_addrecipe.setText("Preparation:");
 
-        jButton2.setText("confirm");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_confirm_addrecipe.setText("confirm");
+        jButton_confirm_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_confirm_addrecipeActionPerformed(evt);
             }
         });
 
-        jButton3.setText("cancel");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton_cancel_addrecipe.setText("cancel");
+        jButton_cancel_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton_cancel_addrecipeActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("amount");
+        jLabel_amount_addrecipe.setText("amount");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane6.setViewportView(jTextArea1);
+        jTextArea_preparation_addrecipe.setColumns(20);
+        jTextArea_preparation_addrecipe.setRows(5);
+        jScrollPane6.setViewportView(jTextArea_preparation_addrecipe);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,7 +235,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jComboBox_Ingredient_addrecipe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
+                        .addComponent(jLabel_amount_addrecipe)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -244,9 +244,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                         .addComponent(jButton_addingredient_addrecipe))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(jButton_confirm_addrecipe)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3))
+                        .addComponent(jButton_cancel_addrecipe))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -258,9 +258,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jTextField_persons_addrecipe, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField_preptime_addrecipe, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.Alignment.LEADING, 0, 150, Short.MAX_VALUE)
-                                    .addComponent(jTextField1_recipename_addrecipe)))
+                                    .addComponent(jTextField_recipename_addrecipe)))
                             .addComponent(jLabel_preperation_addrecipe)
                             .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -278,7 +278,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_recipename_addrecipe)
-                    .addComponent(jTextField1_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_persons_addrecipe)
@@ -286,7 +286,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_preptime_addrecipe)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_preptime_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_difficulty_addrecipe)
@@ -304,23 +304,23 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                     .addComponent(jTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_addingredient_addrecipe)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel_amount_addrecipe))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel_preperation_addrecipe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)))
+                    .addComponent(jButton_cancel_addrecipe)
+                    .addComponent(jButton_confirm_addrecipe)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1_recipename_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_recipename_addrecipeActionPerformed
+    private void jTextField_recipename_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_recipename_addrecipeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1_recipename_addrecipeActionPerformed
+    }//GEN-LAST:event_jTextField_recipename_addrecipeActionPerformed
 
     private void jTextField_persons_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_persons_addrecipeActionPerformed
         // TODO add your handling code here:
@@ -334,10 +334,28 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox_category1_addrecipeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton_confirm_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_addrecipeActionPerformed
         this.setVisible(false);
         new JFrame_rsbi_confirmrecipe().setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+        String recipename = jTextField_recipename_addrecipe.getText();
+        String persons = jTextField_persons_addrecipe.getText();
+        String preptime = jTextField_preptime_addrecipe.getText();
+        String difficulty = (String)jComboBox_difficulty_addrecipe.getSelectedItem();
+        String category1 = (String)jComboBox_category1_addrecipe.getSelectedItem();
+        String category2 = (String)jComboBox_category2_addrecipe.getSelectedItem();
+        String category3 = (String)jComboBox_category3_addrecipe.getSelectedItem();
+        String preparation = jTextArea_preparation_addrecipe.getText();
+        
+        JFrame_rsbi_confirmrecipe.jLabel_recipename_confirmrecipe.setText(recipename);
+        JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(persons);
+        JFrame_rsbi_confirmrecipe.jLabel_preptimedisplay_confirmrecipe.setText(preptime);
+        JFrame_rsbi_confirmrecipe.jLabel_difficultydisplay_confirmrecipe.setText(difficulty);
+        JFrame_rsbi_confirmrecipe.jLabel_category1_confirmrecipe.setText(category1);
+        JFrame_rsbi_confirmrecipe.jLabel_category2_confirmrecipe.setText(category2);
+        JFrame_rsbi_confirmrecipe.jLabel_category3_confirmrecipe.setText(category3);
+        JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setText(preparation);
+        JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setEditable(false);
+    }//GEN-LAST:event_jButton_confirm_addrecipeActionPerformed
 
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
         // TODO add your handling code here:
@@ -351,12 +369,15 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_amount_addrecipeActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        this.setVisible(false);
+    private void jButton_cancel_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_addrecipeActionPerformed
+        this.dispose();
         new JFrame_rsbi_main().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    /**
+    }//GEN-LAST:event_jButton_cancel_addrecipeActionPerformed
+    
+    //public void setText_Persons(String text){
+    //JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(text);
+    //}
+    /** 
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -392,16 +413,16 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton_addingredient_addrecipe;
+    private javax.swing.JButton jButton_cancel_addrecipe;
+    private javax.swing.JButton jButton_confirm_addrecipe;
     private javax.swing.JComboBox<String> jComboBox_Ingredient_addrecipe;
     private javax.swing.JComboBox<String> jComboBox_category1_addrecipe;
     private javax.swing.JComboBox<String> jComboBox_category2_addrecipe;
     private javax.swing.JComboBox<String> jComboBox_category3_addrecipe;
     private javax.swing.JComboBox<String> jComboBox_difficulty_addrecipe;
     private javax.swing.JComboBox<String> jComboBox_measurement_addrecipe;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel_amount_addrecipe;
     private javax.swing.JLabel jLabel_difficulty_addrecipe;
     private javax.swing.JLabel jLabel_persons_addrecipe;
     private javax.swing.JLabel jLabel_preperation_addrecipe;
@@ -409,14 +430,13 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_recipename_addrecipe;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane_ingredients_addrecipe;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable_ingredients_addrecipe;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1_recipename_addrecipe;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextArea jTextArea_preparation_addrecipe;
     private javax.swing.JTextField jTextField_amount_addrecipe;
     private javax.swing.JTextField jTextField_persons_addrecipe;
+    private javax.swing.JTextField jTextField_preptime_addrecipe;
+    private javax.swing.JTextField jTextField_recipename_addrecipe;
     // End of variables declaration//GEN-END:variables
 }

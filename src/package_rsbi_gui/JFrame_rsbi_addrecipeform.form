@@ -55,7 +55,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jComboBox_Ingredient_addrecipe" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_amount_addrecipe" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jTextField_amount_addrecipe" min="-2" pref="39" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -65,9 +65,9 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton_confirm_addrecipe" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton_cancel_addrecipe" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -81,9 +81,9 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jTextField_persons_addrecipe" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextField_preptime_addrecipe" alignment="0" max="32767" attributes="0"/>
                                   <Component id="jComboBox_difficulty_addrecipe" alignment="0" pref="150" max="32767" attributes="0"/>
-                                  <Component id="jTextField1_recipename_addrecipe" max="32767" attributes="0"/>
+                                  <Component id="jTextField_recipename_addrecipe" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jLabel_preperation_addrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -109,7 +109,7 @@
               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel_recipename_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField1_recipename_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField_recipename_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -119,7 +119,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel_preptime_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField_preptime_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -140,7 +140,7 @@
                   <Component id="jTextField_amount_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jComboBox_measurement_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton_addingredient_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel_amount_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel_preperation_addrecipe" min="-2" max="-2" attributes="0"/>
@@ -148,8 +148,8 @@
               <Component id="jScrollPane6" pref="198" max="32767" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_cancel_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_confirm_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
       </Group>
@@ -176,9 +176,9 @@
         <Property name="text" type="java.lang.String" value="difficulty:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField1_recipename_addrecipe">
+    <Component class="javax.swing.JTextField" name="jTextField_recipename_addrecipe">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1_recipename_addrecipeActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_recipename_addrecipeActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField_persons_addrecipe">
@@ -186,7 +186,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_persons_addrecipeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="jTextField_preptime_addrecipe">
     </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox_difficulty_addrecipe">
       <Properties>
@@ -344,23 +344,23 @@
         <Property name="text" type="java.lang.String" value="Preparation:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="jButton_confirm_addrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="confirm"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_confirm_addrecipeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="jButton_cancel_addrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="cancel"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_cancel_addrecipeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="jLabel_amount_addrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
@@ -372,7 +372,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="jTextArea_preparation_addrecipe">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
