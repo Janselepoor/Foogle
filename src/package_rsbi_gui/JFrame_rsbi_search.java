@@ -335,7 +335,9 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_cancel_searchActionPerformed
 
     private void jButton_addcategory_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addcategory_searchActionPerformed
-    //    jLabel_category1_search.setVisible(true);
+        String Name = (String)jComboBox_category_search.getSelectedItem(); 
+        jLabel_category1_search.setText(Name);
+        jLabel_category1_search.setVisible(true);
     }//GEN-LAST:event_jButton_addcategory_searchActionPerformed
 
     /**
