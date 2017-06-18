@@ -352,6 +352,7 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     private void jButton_cancel_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_confirmrecipeActionPerformed
         this.dispose();
         new JFrame_rsbi_addrecipeform().setVisible(true);
+        
     }//GEN-LAST:event_jButton_cancel_confirmrecipeActionPerformed
 
     private void jButton_confirm_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_confirmrecipeActionPerformed
