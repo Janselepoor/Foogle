@@ -5,17 +5,91 @@
  */
 package package_rsbi_gui;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import methoden_rsbi.Verbindung;
+
 /**
  *
  * @author JF
  */
 public class JFrame_rsbi_search extends javax.swing.JFrame {
+    
+    private Verbindung connect2db = new Verbindung();
 
+    private void FuelleComboCategory()
+        {
+           
+            jComboBox_category_search.removeAllItems();
+            
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_category_search.addItem(tmpString);
+                }
+                conn.close();
+                
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
+        }
+    private void FuelleComboIngr()
+        {
+           
+            jComboBox_ingredients_search.removeAllItems();
+            
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT ingr_name FROM ingredient ORDER BY ingr_name ASC");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_ingredients_search.addItem(tmpString);
+                }
+                conn.close();
+                
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
+        }
+    
     /**
      * Creates new form JFrame_rsbi_search
      */
     public JFrame_rsbi_search() {
         initComponents();
+        FuelleComboCategory();
+        FuelleComboIngr();
+        jLabel_ingredient1_search.setVisible(false);
+        jLabel_ingredient2_search.setVisible(false);
+        jLabel_ingredient3_search.setVisible(false);
+        jLabel_ingredient4_search.setVisible(false);
+        jLabel_ingredient5_search.setVisible(false);
+        jLabel_ingredient6_search.setVisible(false);
+        jLabel_ingredient7_search.setVisible(false);
+        jLabel_ingredient8_search.setVisible(false);
+        jLabel_ingredient9_search.setVisible(false);
+        jLabel_category1_search.setVisible(false);
+        jLabel_category2_search.setVisible(false);
+        jLabel_category3_search.setVisible(false);
     }
 
     /**
@@ -87,6 +161,11 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
         jLabel_category3_search.setText("category3");
 
         jButton_addcategory_search.setText("add");
+        jButton_addcategory_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_addcategory_searchActionPerformed(evt);
+            }
+        });
 
         jButton_addingredient_search.setText("add");
 
@@ -132,16 +211,16 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jComboBox_category_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(18, 18, 18)
                                         .addComponent(jButton_addcategory_search, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jComboBox_ingredients_search, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton_addingredient_search, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton_addingredient_search, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
                                 .addComponent(JButton_clearcategory_search, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
@@ -254,6 +333,10 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
         this.dispose();
         new JFrame_rsbi_main().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_searchActionPerformed
+
+    private void jButton_addcategory_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addcategory_searchActionPerformed
+    //    jLabel_category1_search.setVisible(true);
+    }//GEN-LAST:event_jButton_addcategory_searchActionPerformed
 
     /**
      * @param args the command line arguments
