@@ -21,6 +21,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
      */
     private Verbindung connect2db = new Verbindung();
     
+    //Fülle ComboBox
     private void FuelleComboIngr(){
         jComboBox_Ingredient_addrecipe.removeAllItems();
         try
@@ -44,37 +45,122 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             System.out.println(e.getMessage());
         }
     }
+       //Fülle ComboBox
+        private void FuelleComboCategory1()
+        {
+           
+            jComboBox_category1_addrecipe.removeAllItems();
+            
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_category1_addrecipe.addItem(tmpString);
+                }
+                conn.close();
+                
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
+        }
+        //Fülle ComboBox
+        private void FuelleComboCategory2()
+        {
+           
+            jComboBox_category2_addrecipe.removeAllItems();
+            
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_category2_addrecipe.addItem(tmpString);
+                }
+                conn.close();
+                
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
+        }
+        //Fülle ComboBox
+        private void FuelleComboCategory3()
+        {
+           
+            jComboBox_category3_addrecipe.removeAllItems();
+            
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_category3_addrecipe.addItem(tmpString);
+                }
+                conn.close();
+                
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
+        }
+       //Fülle ComboBox
         private void FuelleComboMeas(){
             
-        jComboBox_measurement_addrecipe.removeAllItems();
+            jComboBox_measurement_addrecipe.removeAllItems();
                 
-        try
-        {
-        Connection conn = connect2db.starteVerbindung();
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT DISTINCT meas_name FROM measurement ORDER BY meas_name ASC;");
-        String tmpString;
-        while (rs.next()) 
-            {                
-                tmpString = "";
-                tmpString = rs.getString(1);
-                jComboBox_measurement_addrecipe.addItem(tmpString);
-            }
-            conn.close();
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT meas_name FROM measurement ORDER BY meas_name ASC;");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_measurement_addrecipe.addItem(tmpString);
+                }
+                conn.close();
         
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
         }
-        catch (Exception e)
-        {
-            System.out.println("Fehler beim Befüllen der ComboBox");
-            System.out.println(e.getMessage());
-        }
-    }
     
     // Ruft JFrame auf und initialisert alle Componenten und füllt Sie!
     public JFrame_rsbi_addrecipeform() {
         initComponents();
         FuelleComboIngr();
         FuelleComboMeas();
+        FuelleComboCategory1();
+        FuelleComboCategory2();
+        FuelleComboCategory3();
     }
 
     /**
