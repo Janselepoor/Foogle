@@ -152,6 +152,32 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 System.out.println(e.getMessage());
             }
         }
+        
+        private void FuelleComboDiff(){
+            
+            jComboBox_difficulty_addrecipe.removeAllItems();
+                
+            try
+            {
+                Connection conn = connect2db.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT DISTINCT diff_name FROM difficulty;");
+                String tmpString;
+                while (rs.next()) 
+                {                
+                    tmpString = "";
+                    tmpString = rs.getString(1);
+                    jComboBox_difficulty_addrecipe.addItem(tmpString);
+                }
+                conn.close();
+        
+            }
+            catch (Exception e)
+            {
+                System.out.println("Fehler beim Befüllen der ComboBox");
+                System.out.println(e.getMessage());
+            }
+        }
     
     // Ruft JFrame auf und initialisert alle Componenten und füllt Sie!
     public JFrame_rsbi_addrecipeform() {
@@ -161,6 +187,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         FuelleComboCategory1();
         FuelleComboCategory2();
         FuelleComboCategory3();
+        FuelleComboDiff();
     }
 
     /**
@@ -285,6 +312,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jComboBox_measurement_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_measurement_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_measurement_addrecipeActionPerformed(evt);
+            }
+        });
 
         jButton_addingredient_addrecipe.setText("add");
         jButton_addingredient_addrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -469,6 +501,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private void jComboBox_category3_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category3_addrecipeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox_category3_addrecipeActionPerformed
+
+    private void jComboBox_measurement_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_measurement_addrecipeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox_measurement_addrecipeActionPerformed
     
     //public void setText_Persons(String text){
     //JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(text);
