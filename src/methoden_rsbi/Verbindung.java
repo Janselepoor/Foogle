@@ -32,6 +32,39 @@ public class Verbindung {
     checks if the pw stored by user 'username' is the same as 'password'
     return true or false
     */
+    
+    public Boolean CheckName (String username)
+    {
+        Boolean namecheck = false;
+        String namefromdb = null;
+        try
+        {
+        Connection conn = this.starteVerbindung();
+        Statement stmt = conn.createStatement();
+        //System.out.println("Step1");
+        ResultSet rs = stmt.executeQuery("SELECT username FROM user WHERE username = \""+username+"\";");
+        //System.out.println("Step2");
+        while(rs.next()){
+        namefromdb = rs.getString(1);
+        }
+        //System.out.println("Step3");
+        if(namefromdb.equals(username))
+            {
+                namecheck = true;
+                System.out.println("Username correct");
+            }
+        else
+            {
+                JOptionPane.showMessageDialog(null,"Username incorrect!");
+            }
+        return namecheck;
+        }
+        catch (Exception e){
+            System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+            System.out.println("Fehler: "+e);
+        }
+        return namecheck;
+    }
     public Boolean CheckPw (String username,String password)
     {
         Boolean pwcheck = false;
