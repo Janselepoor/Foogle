@@ -154,17 +154,22 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     private void jButton_login_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_login_loginActionPerformed
         // TODO add your handling code here:
         try
-        {
+        {   
             // checks if Username and password are not empty
             if(!(jTextField_username_login.getText().equals("")) && !(jTextField_password_login.getText().equals("")))
             {
             Boolean logincheck = false;
+            Boolean namecheck = false;
             Verbindung connect2DB = new Verbindung();
+            namecheck = connect2DB.CheckName(jTextField_username_login.getText());
+            if(namecheck)
+            {
             logincheck = connect2DB.CheckPw(jTextField_username_login.getText(),jTextField_password_login.getText());
             if(logincheck)
             {
                 this.dispose();
                 new JFrame_rsbi_main().setVisible(true);
+            }
             }
             }
             else
