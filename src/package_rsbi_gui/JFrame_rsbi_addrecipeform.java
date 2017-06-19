@@ -61,6 +61,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 {                
                     tmpString = "";
                     tmpString = rs.getString(1);
+                    jComboBox_category1_addrecipe.setSelectedIndex(-1);
                     jComboBox_category1_addrecipe.addItem(tmpString);
                 }
                 conn.close();
@@ -88,6 +89,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 {                
                     tmpString = "";
                     tmpString = rs.getString(1);
+                    jComboBox_category2_addrecipe.setSelectedIndex(-1);
                     jComboBox_category2_addrecipe.addItem(tmpString);
                 }
                 conn.close();
@@ -115,6 +117,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 {                
                     tmpString = "";
                     tmpString = rs.getString(1);
+                    jComboBox_category3_addrecipe.setSelectedIndex(-1);
                     jComboBox_category3_addrecipe.addItem(tmpString);
                 }
                 conn.close();
@@ -177,7 +180,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 System.out.println("Fehler beim Befüllen der ComboBox");
                 System.out.println(e.getMessage());
             }
+            jComboBox_category1_addrecipe.insertItemAt("", 0);
+            jComboBox_category2_addrecipe.insertItemAt("", 0);
+            jComboBox_category3_addrecipe.insertItemAt("", 0);
         }
+        
     
     // Ruft JFrame auf und initialisert alle Componenten und füllt Sie!
     public JFrame_rsbi_addrecipeform() {
@@ -486,7 +493,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_Ingredient_addrecipeActionPerformed
 
     private void jButton_addingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addingredient_addrecipeActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_jButton_addingredient_addrecipeActionPerformed
 
     private void jTextField_amount_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_amount_addrecipeActionPerformed
