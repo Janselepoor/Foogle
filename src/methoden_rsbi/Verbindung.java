@@ -36,7 +36,7 @@ public class Verbindung {
     public Boolean CheckName (String username)
     {
         Boolean namecheck = false;
-        String namefromdb = null;
+        String namefromdb = "";
         try
         {
         Connection conn = this.starteVerbindung();
