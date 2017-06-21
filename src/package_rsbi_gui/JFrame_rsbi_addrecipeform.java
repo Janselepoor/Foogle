@@ -119,7 +119,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
                 while (rs.next()) 
-                {                
+                {   
                     tmpString = "";
                     tmpString = rs.getString(1);
                     jComboBox_category3_addrecipe.setSelectedIndex(-1);
@@ -185,9 +185,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 System.out.println("Fehler beim Befüllen der ComboBox");
                 System.out.println(e.getMessage());
             }
-            jComboBox_category1_addrecipe.insertItemAt("", 0);
-            jComboBox_category2_addrecipe.insertItemAt("", 0);
-            jComboBox_category3_addrecipe.insertItemAt("", 0);
+          //  jComboBox_category1_addrecipe.insertItemAt("LEER", 0);
+          //  jComboBox_category2_addrecipe.insertItemAt("LEER", 0);
+          //  jComboBox_category3_addrecipe.insertItemAt("LEER", 0);
         }
         
     
@@ -483,6 +483,20 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_category1_addrecipeActionPerformed
 
     private void jButton_confirm_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_addrecipeActionPerformed
+        
+    // bugfixing
+    //  JOptionPane.showMessageDialog(null, ""+ jComboBox_category1_addrecipe.getSelectedItem());
+    // überprüfung 2-3 mal gleiche category
+        if(
+            (!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category2_addrecipe.getSelectedItem()) && 
+             !jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) &&
+             !jComboBox_category2_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()))// ||
+           // (jComboBox_category1_addrecipe.getSelectedItem().toString()==(null) && 
+           //  jComboBox_category1_addrecipe.getSelectedItem().toString()==(null) &&
+           //  jComboBox_category1_addrecipe.getSelectedItem().toString()==(null)
+           // )
+        )    
+        {
         this.setVisible(false);
         JFrame confirm = FrameManager.getconfirmrecipeFrame();
         confirm.setVisible(true);
@@ -638,7 +652,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setVisible(false);
         }
     }//GEN-LAST:event_jButton_confirm_addrecipeActionPerformed
-
+    else{
+        JOptionPane.showMessageDialog(null, "Categories have to be unique!");
+    }
+    }
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox_Ingredient_addrecipeActionPerformed
