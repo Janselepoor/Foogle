@@ -38,8 +38,8 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jButton_connect_login = new javax.swing.JButton();
         jTextField_username_login = new javax.swing.JTextField();
         jLabel_username_login = new javax.swing.JLabel();
-        jTextField_password_login = new javax.swing.JTextField();
         jLabel_password_login = new javax.swing.JLabel();
+        jTextField_password_login = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("foogle");
@@ -74,13 +74,13 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
 
         jLabel_username_login.setText("Username");
 
+        jLabel_password_login.setText("Password");
+
         jTextField_password_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_password_loginActionPerformed(evt);
             }
         });
-
-        jLabel_password_login.setText("Password");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,9 +95,9 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField_username_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField_username_login, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                                    .addComponent(jTextField_password_login))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel_username_login)
