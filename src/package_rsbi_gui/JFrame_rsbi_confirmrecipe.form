@@ -321,91 +321,145 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient1"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient1amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient1measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient2_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient2"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient3_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient3"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient4_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient4"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient5_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient5"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient6_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient6"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient6amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient6measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient7_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient7"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient8_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient8"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient9_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="ingredient9"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient7amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient7measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient8amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient9amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient8measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_preparation_confirmrecipe">
       <Properties>
@@ -450,46 +504,73 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient2amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient2measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient3amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient3measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient4amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient4measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient5amount_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="amount"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_ingredient5measure_confirmrecipe">
       <Properties>
         <Property name="text" type="java.lang.String" value="measure"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

@@ -6,7 +6,9 @@
 package package_rsbi_gui;
 
 import java.sql.Connection;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import methoden_rsbi.FrameManager;
 import methoden_rsbi.Verbindung;
 
 /**
@@ -89,13 +91,13 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton_connect_login))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_username_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField_username_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel_username_login)
@@ -103,9 +105,8 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton_login_login, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton_registration_login)))
-                        .addGap(10, 10, 10)))
-                .addContainerGap(116, Short.MAX_VALUE))
+                                .addComponent(jButton_registration_login)))))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,8 +117,8 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                     .addComponent(jLabel_username_login))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_password_login))
+                    .addComponent(jLabel_password_login)
+                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_registration_login)
@@ -167,8 +168,10 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
             logincheck = connect2DB.CheckPw(jTextField_username_login.getText(),jTextField_password_login.getText());
             if(logincheck)
             {
+                //Wenn Login korrekt öffne main
                 this.dispose();
-                new JFrame_rsbi_main().setVisible(true);
+                JFrame main = FrameManager.getmainFrame();
+                main.setVisible(true);
             }
             }
             }
@@ -185,7 +188,8 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     private void jButton_registration_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registration_loginActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new JFrame_rsbi_registration().setVisible(true);
+        JFrame registration = FrameManager.getregistrationFrame();
+        registration.setVisible(true);
     }//GEN-LAST:event_jButton_registration_loginActionPerformed
 
     private void jTextField_password_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_password_loginActionPerformed
@@ -233,7 +237,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     private javax.swing.JButton jButton_registration_login;
     private javax.swing.JLabel jLabel_password_login;
     private javax.swing.JLabel jLabel_username_login;
-    private javax.swing.JTextField jTextField_password_login;
-    private javax.swing.JTextField jTextField_username_login;
+    public static javax.swing.JTextField jTextField_password_login;
+    public static javax.swing.JTextField jTextField_username_login;
     // End of variables declaration//GEN-END:variables
 }

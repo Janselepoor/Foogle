@@ -5,6 +5,9 @@
  */
 package package_rsbi_gui;
 
+import javax.swing.JFrame;
+import methoden_rsbi.FrameManager;
+
 /**
  *
  * @author patrick
@@ -351,7 +354,8 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
 
     private void jButton_cancel_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_confirmrecipeActionPerformed
         this.dispose();
-        new JFrame_rsbi_addrecipeform().setVisible(true);
+        JFrame add =  FrameManager.getaddrecipeFrame();
+        add.setVisible(true);  
         
     }//GEN-LAST:event_jButton_cancel_confirmrecipeActionPerformed
 
@@ -407,33 +411,33 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel_category3_confirmrecipe;
     private javax.swing.JLabel jLabel_difficulty_confirmrecipe;
     public static javax.swing.JLabel jLabel_difficultydisplay_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient1_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient1amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient1measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient2_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient2amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient2measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient3_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient3amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient3measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient4_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient4amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient4measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient5_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient5amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient5measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient6_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient6amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient6measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient7_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient7amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient7measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient8_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient8amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient8measure_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient9_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient9amount_confirmrecipe;
-    private javax.swing.JLabel jLabel_ingredient9measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient1_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient1amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient1measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient2_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient2amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient2measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient3_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient3amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient3measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient4_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient4amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient4measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient5_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient5amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient5measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient6_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient6amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient6measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient7_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient7amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient7measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient8_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient8amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient8measure_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient9_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient9amount_confirmrecipe;
+    public static javax.swing.JLabel jLabel_ingredient9measure_confirmrecipe;
     private javax.swing.JLabel jLabel_ingredients_confirmrecipe;
     private javax.swing.JLabel jLabel_persons_confirmrecipe;
     public static javax.swing.JLabel jLabel_personsdisplay_confirmrecipe;

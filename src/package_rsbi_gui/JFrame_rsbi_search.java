@@ -8,6 +8,8 @@ package package_rsbi_gui;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.JFrame;
+import methoden_rsbi.FrameManager;
 import methoden_rsbi.Verbindung;
 
 /**
@@ -374,7 +376,8 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
 
     private void jButton_cancel_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_searchActionPerformed
         this.dispose();
-        new JFrame_rsbi_main().setVisible(true);
+        JFrame main = FrameManager.getmainFrame();
+        main.setVisible(true);
     }//GEN-LAST:event_jButton_cancel_searchActionPerformed
 
     private void jComboBox_category2_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category2_searchActionPerformed
