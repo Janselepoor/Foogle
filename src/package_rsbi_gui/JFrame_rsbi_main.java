@@ -5,6 +5,9 @@
  */
 package package_rsbi_gui;
 
+import javax.swing.JFrame;
+import methoden_rsbi.FrameManager;
+
 /**
  *
  * @author JF
@@ -94,15 +97,20 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
 
     private void jButton_add_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_add_mainActionPerformed
         // TODO add your handling code here:
-        new JFrame_rsbi_addrecipeform().setVisible(true);
         this.dispose();
-        
+        JFrame add =  FrameManager.getaddrecipeFrame();
+        add.setVisible(true);  
     }//GEN-LAST:event_jButton_add_mainActionPerformed
 
     private void jButton_logout_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_logout_mainActionPerformed
         // TODO add your handling code here:
         this.dispose();
-        new JFrame_rsbi_login().setVisible(true);
+        JFrame login =  FrameManager.getloginFrame();
+        //Reset des loginFrames
+        JFrame_rsbi_login.jTextField_username_login.setText("");
+        JFrame_rsbi_login.jTextField_password_login.setText("");
+        //Sichtbarmachen
+        login.setVisible(true);
     }//GEN-LAST:event_jButton_logout_mainActionPerformed
 
     /**
