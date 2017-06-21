@@ -50,15 +50,15 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane6" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane6" alignment="1" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jComboBox_Ingredient_addrecipe" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel_amount_addrecipe" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTextField_amount_addrecipe" min="-2" pref="39" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jFormattedTextField_amount_addrecipe" min="-2" pref="46" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jComboBox_measurement_addrecipe" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton_addingredient_addrecipe" min="-2" max="-2" attributes="0"/>
@@ -77,8 +77,13 @@
                       <Component id="jComboBox_category3_addrecipe" min="-2" pref="145" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane_ingredients_addrecipe" min="-2" pref="378" max="-2" attributes="0"/>
+                      <EmptySpace pref="32" max="32767" attributes="0"/>
+                      <Component id="jButton_deletelist_addrecipe" min="-2" pref="53" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel_recipename_addrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel_persons_addrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -96,11 +101,6 @@
                           <Component id="jLabel_preperation_addrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane_ingredients_addrecipe" min="-2" pref="378" max="-2" attributes="0"/>
-                      <EmptySpace pref="32" max="32767" attributes="0"/>
-                      <Component id="jButton_deletelist_addrecipe" min="-2" pref="53" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -146,10 +146,10 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jComboBox_Ingredient_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jTextField_amount_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jComboBox_measurement_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton_addingredient_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_amount_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jFormattedTextField_amount_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLabel_preperation_addrecipe" min="-2" max="-2" attributes="0"/>
@@ -323,11 +323,6 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_amount_addrecipe">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField_amount_addrecipeActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JComboBox" name="jComboBox_measurement_addrecipe">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -401,6 +396,16 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_deletelist_addrecipeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField_amount_addrecipe">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="0" type="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFormattedTextField_amount_addrecipeActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
