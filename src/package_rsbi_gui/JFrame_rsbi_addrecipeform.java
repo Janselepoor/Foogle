@@ -534,7 +534,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_measurement_addrecipeActionPerformed
 
     private void jButton_deletelist_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_deletelist_addrecipeActionPerformed
-        // TODO add your handling code here
+            // TODO add your handling code here
         DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
         model.removeRow(jTable_ingredients_addrecipe.getSelectedRow());
     }//GEN-LAST:event_jButton_deletelist_addrecipeActionPerformed
