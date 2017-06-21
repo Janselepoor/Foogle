@@ -8,8 +8,11 @@ package package_rsbi_gui;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import methoden_rsbi.FrameManager;
 import methoden_rsbi.Verbindung;
 
 /**
@@ -480,7 +483,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
     private void jButton_confirm_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_addrecipeActionPerformed
         this.setVisible(false);
-        new JFrame_rsbi_confirmrecipe().setVisible(true);
+        JFrame confirm = FrameManager.getconfirmrecipeFrame();
+        confirm.setVisible(true);
         String recipename = jTextField_recipename_addrecipe.getText();
         String persons = jTextField_persons_addrecipe.getText();
         String preptime = jTextField_preptime_addrecipe.getText();
@@ -499,6 +503,139 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_category3_confirmrecipe.setText(category3);
         JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setText(preparation);
         JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setEditable(false);
+        
+        //ÜBERTRAGUNG DER LISTE
+        DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
+        //Example ingredient1 + amount1 + measurement1 
+
+        //Versucht Daten zu Übertragen wenn die Daten nicht existieren werden die Labels unsichtbar
+        try
+        {
+        //Versucht Daten zu Übertragen..
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1_confirmrecipe.setText(model.getValueAt(0,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1amount_confirmrecipe.setText(model.getValueAt(0,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1measure_confirmrecipe.setText(model.getValueAt(0,2).toString());
+        }
+        catch(Exception e)
+        {
+        //..wenn die Daten nicht existieren werden die Labels unsichtbar
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1measure_confirmrecipe.setVisible(false);
+        }
+        //Das ganze für alle 9 Ingredients kopiert...
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2_confirmrecipe.setText(model.getValueAt(1,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2amount_confirmrecipe.setText(model.getValueAt(1,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2measure_confirmrecipe.setText(model.getValueAt(1,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3_confirmrecipe.setText(model.getValueAt(2,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3amount_confirmrecipe.setText(model.getValueAt(2,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3measure_confirmrecipe.setText(model.getValueAt(2,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4_confirmrecipe.setText(model.getValueAt(3,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4amount_confirmrecipe.setText(model.getValueAt(3,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4measure_confirmrecipe.setText(model.getValueAt(3,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5_confirmrecipe.setText(model.getValueAt(4,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5amount_confirmrecipe.setText(model.getValueAt(4,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5measure_confirmrecipe.setText(model.getValueAt(4,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6_confirmrecipe.setText(model.getValueAt(5,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6amount_confirmrecipe.setText(model.getValueAt(5,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6measure_confirmrecipe.setText(model.getValueAt(5,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7_confirmrecipe.setText(model.getValueAt(6,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7amount_confirmrecipe.setText(model.getValueAt(6,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7measure_confirmrecipe.setText(model.getValueAt(6,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8_confirmrecipe.setText(model.getValueAt(7,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8amount_confirmrecipe.setText(model.getValueAt(7,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8measure_confirmrecipe.setText(model.getValueAt(7,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8measure_confirmrecipe.setVisible(false);
+        }
+        
+        try
+        {
+        //kopiert für erkläre siehe oben: übertragung der liste
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9_confirmrecipe.setText(model.getValueAt(8,0).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9amount_confirmrecipe.setText(model.getValueAt(8,1).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setText(model.getValueAt(8,2).toString());
+        }
+        catch(Exception e)
+        {
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9amount_confirmrecipe.setVisible(false);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setVisible(false);
+        }
     }//GEN-LAST:event_jButton_confirm_addrecipeActionPerformed
 
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
@@ -522,7 +659,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
     private void jButton_cancel_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_addrecipeActionPerformed
         this.dispose();
-        new JFrame_rsbi_main().setVisible(true);
+        JFrame main = FrameManager.getmainFrame();
+        main.setVisible(true);
     }//GEN-LAST:event_jButton_cancel_addrecipeActionPerformed
 
     private void jComboBox_category3_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category3_addrecipeActionPerformed

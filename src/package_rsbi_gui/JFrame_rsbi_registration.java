@@ -5,6 +5,9 @@
  */
 package package_rsbi_gui;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import methoden_rsbi.FrameManager;
 import methoden_rsbi.Verbindung;
 
 /**
@@ -168,7 +171,8 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
 
     private void jButton_Cancel_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_Cancel_registrationActionPerformed
         this.dispose();
-        new JFrame_rsbi_login().setVisible(true);
+        JFrame login = FrameManager.getloginFrame();
+        login.setVisible(true);
     }//GEN-LAST:event_jButton_Cancel_registrationActionPerformed
 
     private void jButton_registrate_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrate_registrationActionPerformed
@@ -183,6 +187,14 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         
         Verbindung connect2DB = new Verbindung();
         regcheck = connect2DB.RegisterUser(username, email, password, password_conf);
+        if (regcheck)
+        {
+            this.dispose();
+            JFrame main = FrameManager.getmainFrame();
+            main.setVisible(true);
+            //Optional Wilkommensnachricht
+            //JOptionPane.showMessageDialog(null, "Welcome!");
+        }
         }
         catch(Exception e)
         {
