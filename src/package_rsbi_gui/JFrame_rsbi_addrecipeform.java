@@ -529,6 +529,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient1_confirmrecipe.setText(model.getValueAt(0,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient1amount_confirmrecipe.setText(model.getValueAt(0,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient1measure_confirmrecipe.setText(model.getValueAt(0,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient1measure_confirmrecipe.setVisible(true);        
         }
         catch(Exception e)
         {
@@ -545,6 +548,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient2_confirmrecipe.setText(model.getValueAt(1,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient2amount_confirmrecipe.setText(model.getValueAt(1,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient2measure_confirmrecipe.setText(model.getValueAt(1,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient2measure_confirmrecipe.setVisible(true);        
         }
         catch(Exception e)
         {
@@ -559,6 +565,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient3_confirmrecipe.setText(model.getValueAt(2,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient3amount_confirmrecipe.setText(model.getValueAt(2,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient3measure_confirmrecipe.setText(model.getValueAt(2,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient3measure_confirmrecipe.setVisible(true);        
         }
         catch(Exception e)
         {
@@ -573,6 +582,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient4_confirmrecipe.setText(model.getValueAt(3,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient4amount_confirmrecipe.setText(model.getValueAt(3,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient4measure_confirmrecipe.setText(model.getValueAt(3,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient4measure_confirmrecipe.setVisible(true);        
         }
         catch(Exception e)
         {
@@ -587,6 +599,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient5_confirmrecipe.setText(model.getValueAt(4,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient5amount_confirmrecipe.setText(model.getValueAt(4,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient5measure_confirmrecipe.setText(model.getValueAt(4,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient5measure_confirmrecipe.setVisible(true);        
         }
         catch(Exception e)
         {
@@ -601,6 +616,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient6_confirmrecipe.setText(model.getValueAt(5,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient6amount_confirmrecipe.setText(model.getValueAt(5,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient6measure_confirmrecipe.setText(model.getValueAt(5,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient6measure_confirmrecipe.setVisible(true);
         }
         catch(Exception e)
         {
@@ -615,6 +633,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient7_confirmrecipe.setText(model.getValueAt(6,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient7amount_confirmrecipe.setText(model.getValueAt(6,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient7measure_confirmrecipe.setText(model.getValueAt(6,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient7measure_confirmrecipe.setVisible(true);        
         }
         catch(Exception e)
         {
@@ -629,6 +650,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient8_confirmrecipe.setText(model.getValueAt(7,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient8amount_confirmrecipe.setText(model.getValueAt(7,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient8measure_confirmrecipe.setText(model.getValueAt(7,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient8measure_confirmrecipe.setVisible(true);
         }
         catch(Exception e)
         {
@@ -643,6 +667,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9_confirmrecipe.setText(model.getValueAt(8,0).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9amount_confirmrecipe.setText(model.getValueAt(8,1).toString());
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setText(model.getValueAt(8,2).toString());
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9amount_confirmrecipe.setVisible(true);
+        JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setVisible(true);
         }
         catch(Exception e)
         {
