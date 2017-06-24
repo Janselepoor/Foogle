@@ -780,8 +780,17 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
     private void jButton_deletelist_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_deletelist_addrecipeActionPerformed
             // TODO add your handling code here
-        DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
-        model.removeRow(jTable_ingredients_addrecipe.getSelectedRow());
+        if((jTable_ingredients_addrecipe.getRowCount()) > 0){
+            try
+            {
+                DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
+                model.removeRow(jTable_ingredients_addrecipe.getSelectedRow());
+            }
+            catch(Exception e)
+            {
+                JOptionPane.showMessageDialog(null, "Click the ingredient you want to delete!");
+            }
+        }
     }//GEN-LAST:event_jButton_deletelist_addrecipeActionPerformed
 
     private void jFormattedTextField_amount_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField_amount_addrecipeActionPerformed

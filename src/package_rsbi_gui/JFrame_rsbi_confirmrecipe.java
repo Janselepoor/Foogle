@@ -7,6 +7,8 @@ package package_rsbi_gui;
 
 import javax.swing.JFrame;
 import methoden_rsbi.FrameManager;
+import methoden_rsbi.User;
+import methoden_rsbi.Verbindung;
 
 /**
  *
@@ -360,6 +362,54 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_cancel_confirmrecipeActionPerformed
 
     private void jButton_confirm_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_confirmrecipeActionPerformed
+        // fügt rezept in datenbank ein
+        boolean addcheck=false;
+        int user_id;
+        int diff_id;
+        int preptime = Integer.parseInt(jLabel_preptimedisplay_confirmrecipe.getText());
+        int persons = Integer.parseInt(jLabel_personsdisplay_confirmrecipe.getText());
+        String rec_name = jLabel_recipename_confirmrecipe.getText();
+        String rec_text = jTextArea_preparation_confirmrecipe.getText();
+        Verbindung connect2DB = new Verbindung();
+        // hole user id
+        User current_user = new User();
+        user_id = current_user.getUserID();
+        // hole difficulity id
+        diff_id = connect2DB.getDiffID(jLabel_difficultydisplay_confirmrecipe.getText());
+        addcheck = connect2DB.addRecipe(user_id,diff_id,rec_name,preptime,persons,rec_text);
+        // füge kategorien
+        if(addcheck)
+        {
+            int rec_id = connect2DB.getRecID(rec_name);
+            //cat1
+            if(!jLabel_category1_confirmrecipe.getText().equals(""))
+            {
+                boolean check;
+                int cat_id = connect2DB.getCatID(jLabel_category1_confirmrecipe.getText());
+                check = connect2DB.addRecCat(rec_id, cat_id);
+            }
+            //cat2
+            if(!jLabel_category2_confirmrecipe.getText().equals(""))
+            {
+                boolean check;
+                int cat_id = connect2DB.getCatID(jLabel_category2_confirmrecipe.getText());
+                check = connect2DB.addRecCat(rec_id, cat_id);
+            }
+            //cat3
+            if(!jLabel_category3_confirmrecipe.getText().equals(""))
+            {
+                boolean check;
+                int cat_id = connect2DB.getCatID(jLabel_category3_confirmrecipe.getText());
+                check = connect2DB.addRecCat(rec_id, cat_id);
+            }
+        
+        }
+        
+        
+        
+        
+        
+        
         this.dispose();
         new JFrame_rsbi_main().setVisible(true);
     }//GEN-LAST:event_jButton_confirm_confirmrecipeActionPerformed

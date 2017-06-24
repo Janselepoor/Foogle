@@ -23,4 +23,8 @@ public class User {
     public String getUserName(){
         return username;
     }
+    
+    public int getUserID(){
+        return user_id;
+    }
 }

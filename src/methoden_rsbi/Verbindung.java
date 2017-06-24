@@ -121,7 +121,7 @@ public class Verbindung {
     }
     
     
-    public ArrayList<String> ReadOutOfDB ()
+    /*public ArrayList<String> ReadOutOfDB ()
     {
         ArrayList<String> tmpListe = new ArrayList<String>();
         
@@ -146,7 +146,7 @@ public class Verbindung {
             System.out.println("Fehler: "+e);
         }
         return tmpListe;  
-    }
+    }*/
     
     public boolean RegisterUser (String username, String email, String password, String password_conf)
     {
@@ -174,7 +174,158 @@ public class Verbindung {
         return allesgut;
     }
     
+    //getter für diff id nimmt: name gibt id
+    public int getDiffID(String name)
+    {
+        int id = -1;
+        try
+        {
+           Connection conn = this.starteVerbindung();
+           Statement stmt = conn.createStatement(); 
+           ResultSet rs = stmt.executeQuery("SELECT id FROM difficulty WHERE diff_name = \""+name+"\";");
+           while(rs.next())
+           {
+               id = rs.getInt(1);
+           }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+            System.out.println("Fehler: "+e);
+        }
+        return id;
+    }
     
+        //getter für rezepte id nimmt: name gibt id
+    public int getRecID(String name)
+    {
+        int id = -1;
+        try
+        {
+           Connection conn = this.starteVerbindung();
+           Statement stmt = conn.createStatement(); 
+           ResultSet rs = stmt.executeQuery("SELECT id FROM recipe WHERE rec_name = \""+name+"\";");
+           while(rs.next())
+           {
+               id = rs.getInt(1);
+           }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+            System.out.println("Fehler: "+e);
+        }
+        return id;
+    }
+    
+            //getter für kategorien id nimmt: name gibt id
+    public int getCatID(String name)
+    {
+        int id = -1;
+        try
+        {
+           Connection conn = this.starteVerbindung();
+           Statement stmt = conn.createStatement(); 
+           ResultSet rs = stmt.executeQuery("SELECT id FROM category WHERE cat_name = \""+name+"\";");
+           while(rs.next())
+           {
+               id = rs.getInt(1);
+           }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+            System.out.println("Fehler: "+e);
+        }
+        return id;
+    }
+    
+            //getter für Zutaten id nimmt: name gibt id
+    public int getIngrID(String name)
+    {
+        int id = -1;
+        try
+        {
+           Connection conn = this.starteVerbindung();
+           Statement stmt = conn.createStatement(); 
+           ResultSet rs = stmt.executeQuery("SELECT id FROM ingredient WHERE ingr_name = \""+name+"\";");
+           while(rs.next())
+           {
+               id = rs.getInt(1);
+           }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+            System.out.println("Fehler: "+e);
+        }
+        return id;
+    }
+    
+            //getter für measurements id nimmt: name gibt id
+    public int getMeasID(String name)
+    {
+        int id = -1;
+        try
+        {
+           Connection conn = this.starteVerbindung();
+           Statement stmt = conn.createStatement(); 
+           ResultSet rs = stmt.executeQuery("SELECT id FROM measurement WHERE meas_name = \""+name+"\";");
+           while(rs.next())
+           {
+               id = rs.getInt(1);
+           }
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+            System.out.println("Fehler: "+e);
+        }
+        return id;
+    }
+    
+    // Fügt ein Rezept in die Datenbank ein und gibt die ID zurück!!!!
+    public boolean addRecipe (int user_id,int diff_id,String rec_name,int prep_time,int servings, String preparation)
+    {
+        boolean check = false;
+            try
+            {
+                Connection conn = this.starteVerbindung();
+                Statement stmt = conn.createStatement();
+                
+                stmt.executeUpdate("Insert INTO recipe(user_id,diff_id,prep_time,rec_name,servings,preparation) "
+                                 + "VALUES (\""+user_id+"\",\""+diff_id+"\",\""+prep_time+"\",\""+rec_name+"\",\""+servings+"\",\""+preparation+"\")");
+                check = true;
+            }
+            catch(Exception e)
+            {
+                System.out.println("Fehler beim Schreiben oder Lesen!");
+                System.out.println("Fehler "+e);
+            }
+        return check;
+    }
+    
+    public boolean addRecCat(int rec_id,int cat_id)
+    {
+        boolean check = false;
+        try
+        {
+            Connection conn = this.starteVerbindung();
+            Statement stmt = conn.createStatement();
+            
+            stmt.executeUpdate("Insert INTO recipe_category(recipe_id,category_id)"
+                             + "VALUES (\""+rec_id+"\",\""+cat_id+"\")");
+            check = true;
+            
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Schreiben in DB!");
+            System.out.println("Fehler "+e);
+            check =false;
+        }
+        return check;
+    }
     /*public boolean WriteInDB (String tmpText)
     {
         try
