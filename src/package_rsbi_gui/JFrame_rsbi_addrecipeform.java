@@ -522,8 +522,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
              jComboBox_category3_addrecipe.getSelectedIndex() == 0) &&
            (!jComboBox_category2_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) ||
              jComboBox_category2_addrecipe.getSelectedIndex() == 0))
-        
-        {
+        //Übertragung der Liste
+        {DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
+                if(model.getRowCount()>=3){
         this.setVisible(false);
         JFrame confirm = FrameManager.getconfirmrecipeFrame();
         confirm.setVisible(true);
@@ -547,7 +548,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setEditable(false);
         
         //ÜBERTRAGUNG DER LISTE
-        DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
+        //DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
         //Example ingredient1 + amount1 + measurement1 
 
         //Versucht Daten zu Übertragen wenn die Daten nicht existieren werden die Labels unsichtbar
@@ -706,8 +707,12 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setVisible(false);
         }
     }//GEN-LAST:event_jButton_confirm_addrecipeActionPerformed
-    else{
-        JOptionPane.showMessageDialog(null, "Categories have to be unique!");
+                else{
+                        JOptionPane.showMessageDialog(null, "Please insert at least 3 ingredients!");
+                }
+        }
+            else{
+                JOptionPane.showMessageDialog(null, "Categories have to be unique!");
     }
     }
     else{
