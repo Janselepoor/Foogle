@@ -481,11 +481,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_category1_addrecipeActionPerformed
 
     private void jButton_confirm_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_addrecipeActionPerformed
-        
+    if(!jFormattedTextField_persons_addrecipe.getText().equals("") ){    
     // bugfixing
     //  JOptionPane.showMessageDialog(null, ""+ jComboBox_category1_addrecipe.getSelectedItem());
     // überprüfung 2-3 mal gleiche category
-        if((!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category2_addrecipe.getSelectedItem()) ||
+            if((!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category2_addrecipe.getSelectedItem()) ||
              jComboBox_category1_addrecipe.getSelectedIndex() == 0) &&
            (!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) ||
              jComboBox_category3_addrecipe.getSelectedIndex() == 0) &&
@@ -678,6 +678,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     else{
         JOptionPane.showMessageDialog(null, "Categories have to be unique!");
     }
+    }
+    else{    
+        JOptionPane.showMessageDialog(null, "You have to type in a number for the preparation time and amount of persons!");
+            }
     }
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
         // TODO add your handling code here:
