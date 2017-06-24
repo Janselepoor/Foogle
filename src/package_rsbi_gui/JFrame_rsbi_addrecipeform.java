@@ -41,6 +41,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 tmpString = rs.getString(1);
                 jComboBox_Ingredient_addrecipe.addItem(tmpString);
             }
+        jComboBox_Ingredient_addrecipe.setSelectedIndex(-1);
             conn.close();
         
         }
@@ -62,11 +63,12 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
+                jComboBox_category1_addrecipe.insertItemAt("", 0);
+                jComboBox_category1_addrecipe.setSelectedIndex(0);
                 while (rs.next()) 
                 {                
                     tmpString = "";
                     tmpString = rs.getString(1);
-                    jComboBox_category1_addrecipe.setSelectedIndex(-1);
                     jComboBox_category1_addrecipe.addItem(tmpString);
                 }
                 conn.close();
@@ -90,11 +92,12 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
+                jComboBox_category2_addrecipe.insertItemAt("", 0);
+                jComboBox_category2_addrecipe.setSelectedIndex(0);
                 while (rs.next()) 
                 {                
                     tmpString = "";
                     tmpString = rs.getString(1);
-                    jComboBox_category2_addrecipe.setSelectedIndex(-1);
                     jComboBox_category2_addrecipe.addItem(tmpString);
                 }
                 conn.close();
@@ -118,11 +121,12 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
+                jComboBox_category3_addrecipe.insertItemAt("", 0);
+                jComboBox_category3_addrecipe.setSelectedIndex(0);
                 while (rs.next()) 
-                {   
+                {                
                     tmpString = "";
                     tmpString = rs.getString(1);
-                    jComboBox_category3_addrecipe.setSelectedIndex(-1);
                     jComboBox_category3_addrecipe.addItem(tmpString);
                 }
                 conn.close();
@@ -151,6 +155,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                     tmpString = rs.getString(1);
                     jComboBox_measurement_addrecipe.addItem(tmpString);
                 }
+                jComboBox_measurement_addrecipe.setSelectedIndex(-1);
                 conn.close();
         
             }
@@ -185,11 +190,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 System.out.println("Fehler beim Befüllen der ComboBox");
                 System.out.println(e.getMessage());
             }
-          //  jComboBox_category1_addrecipe.insertItemAt("LEER", 0);
-          //  jComboBox_category2_addrecipe.insertItemAt("LEER", 0);
-          //  jComboBox_category3_addrecipe.insertItemAt("LEER", 0);
-        }
-        
+        }        
     
     // Ruft JFrame auf und initialisert alle Componenten und füllt Sie!
     public JFrame_rsbi_addrecipeform() {
@@ -487,15 +488,13 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     // bugfixing
     //  JOptionPane.showMessageDialog(null, ""+ jComboBox_category1_addrecipe.getSelectedItem());
     // überprüfung 2-3 mal gleiche category
-        if(
-            (!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category2_addrecipe.getSelectedItem()) && 
-             !jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) &&
-             !jComboBox_category2_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()))// ||
-           // (jComboBox_category1_addrecipe.getSelectedItem().toString()==(null) && 
-           //  jComboBox_category1_addrecipe.getSelectedItem().toString()==(null) &&
-           //  jComboBox_category1_addrecipe.getSelectedItem().toString()==(null)
-           // )
-        )    
+        if((!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category2_addrecipe.getSelectedItem()) ||
+             jComboBox_category1_addrecipe.getSelectedIndex() == 0) &&
+           (!jComboBox_category1_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) ||
+             jComboBox_category3_addrecipe.getSelectedIndex() == 0) &&
+           (!jComboBox_category2_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) ||
+             jComboBox_category2_addrecipe.getSelectedIndex() == 0))
+        
         {
         this.setVisible(false);
         JFrame confirm = FrameManager.getconfirmrecipeFrame();

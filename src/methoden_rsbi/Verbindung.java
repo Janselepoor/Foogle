@@ -65,38 +65,61 @@ public class Verbindung {
         }
         return namecheck;
     }
-    public Boolean CheckPw (String username,String password)
+    public Boolean CheckPw (String username,char[] password)
     {
         Boolean pwcheck = false;
         String pwfromdb = null;
         try
         {
+        // Erstellen von Verbindung und speichert Passwort im Resultset rs
         Connection conn = this.starteVerbindung();
         Statement stmt = conn.createStatement();
-        //System.out.println("Step1");
         ResultSet rs = stmt.executeQuery("SELECT password FROM user WHERE username = \""+username+"\";");
-        //System.out.println("Step2");
         while(rs.next()){
         pwfromdb = rs.getString(1);
         }
-        //System.out.println("Step3");
-        if(pwfromdb.equals(password))
+        // Passwortabgleich
+            if(pwfromdb.equals(new String (password)))
             {
-                pwcheck = true;
-                System.out.println("PW is correct");
+                    pwcheck = true;
             }
-        else
+            else
             {
+                pwcheck = false;
                 JOptionPane.showMessageDialog(null,"Password incorrect!");
             }
-        return pwcheck;
         }
         catch (Exception e){
             System.out.println("Fehler beim Auslesen der Werte aus der DB!");
-            System.out.println("Fehler: "+e);
-        }
+            System.out.println("Fehler: "+e);}
+        
         return pwcheck;
     }
+    
+        public int ReadUserId(String username)
+    {
+        int user_id=-1;
+        try
+        {
+            Connection conn = this.starteVerbindung();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id FROM user WHERE username = \""+username+"\";");
+            while(rs.next())
+            {
+                user_id = rs.getInt(1);
+                System.out.println("User courrently logged in");
+                System.out.println("Username:"+username);
+                System.out.println("ID      :"+user_id);
+            }
+            }
+            catch(Exception e)
+            {
+                System.out.println("Fehler beim Auslesen der Werte aus der DB!");
+                System.out.println("Fehler: "+e); 
+            }
+        return user_id;
+    }
+    
     
     public ArrayList<String> ReadOutOfDB ()
     {
@@ -127,28 +150,30 @@ public class Verbindung {
     
     public boolean RegisterUser (String username, String email, String password, String password_conf)
     {
+        boolean allesgut = false;
         try
         {
             Connection conn = this.starteVerbindung();
             Statement stmt = conn.createStatement();
             
-            //if (password.equals(password_conf))
-            //{
-                stmt.executeUpdate("Insert INTO user(email,username,password) VALUES (\""+email+"\",\""+username+"\",\""+password+"\")");
-                return true;
-            //}
-            /*else
+            if (password.equals(password_conf))
             {
-                JOptionPane.showConfirmDialog(null,"Password confirmation incorrect!");
-            }*/
+                stmt.executeUpdate("Insert INTO user(email,username,password) VALUES (\""+email+"\",\""+username+"\",\""+password+"\")");
+                allesgut = true;
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Password confirmation incorrect!");
+            }
         }
         catch (Exception e)
         {
             System.out.println("Fehler beim Schreiben in DB!");
             System.out.println("Fehler "+e);
-            return false;
         }
+        return allesgut;
     }
+    
     
     /*public boolean WriteInDB (String tmpText)
     {

@@ -108,7 +108,7 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         JFrame login =  FrameManager.getloginFrame();
         //Reset des loginFrames
         JFrame_rsbi_login.jTextField_username_login.setText("");
-        JFrame_rsbi_login.jTextField_password_login.setText("");
+        JFrame_rsbi_login.jPasswordField_login.setText("");
         //Sichtbarmachen
         login.setVisible(true);
     }//GEN-LAST:event_jButton_logout_mainActionPerformed

@@ -9,6 +9,7 @@ import java.sql.Connection;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import methoden_rsbi.FrameManager;
+import methoden_rsbi.User;
 import methoden_rsbi.Verbindung;
 
 /**
@@ -39,7 +40,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jTextField_username_login = new javax.swing.JTextField();
         jLabel_username_login = new javax.swing.JLabel();
         jLabel_password_login = new javax.swing.JLabel();
-        jTextField_password_login = new javax.swing.JTextField();
+        jPasswordField_login = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("foogle");
@@ -76,12 +77,6 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
 
         jLabel_password_login.setText("Password");
 
-        jTextField_password_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_password_loginActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -97,7 +92,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jTextField_username_login, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-                                    .addComponent(jTextField_password_login))
+                                    .addComponent(jPasswordField_login))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel_username_login)
@@ -118,7 +113,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_password_login)
-                    .addComponent(jTextField_password_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPasswordField_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_registration_login)
@@ -157,23 +152,27 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         try
         {   
             // checks if Username and password are not empty
-            if(!(jTextField_username_login.getText().equals("")) && !(jTextField_password_login.getText().equals("")))
+            if(!(jTextField_username_login.getText().equals("")) && !(jPasswordField_login.getPassword().length == 0))
             {
             Boolean logincheck = false;
             Boolean namecheck = false;
             Verbindung connect2DB = new Verbindung();
             namecheck = connect2DB.CheckName(jTextField_username_login.getText());
             if(namecheck)
-            {
-            logincheck = connect2DB.CheckPw(jTextField_username_login.getText(),jTextField_password_login.getText());
-            if(logincheck)
-            {
-                //Wenn Login korrekt öffne main
-                this.dispose();
-                JFrame main = FrameManager.getmainFrame();
-                main.setVisible(true);
-            }
-            }
+                {
+                logincheck = connect2DB.CheckPw(jTextField_username_login.getText(),jPasswordField_login.getPassword());
+                    if(logincheck)
+                    {
+                    //Wenn Login korrekt öffne main
+                    this.dispose();
+                    JFrame main = FrameManager.getmainFrame();
+                    main.setVisible(true);
+                    //Erstelle Überschreibe aktuellen User
+                    User current = new User();
+                    int id = connect2DB.ReadUserId(jTextField_username_login.getText());
+                    current.setUser(jTextField_username_login.getText(),id);
+                    }
+                }
             }
             else
             {
@@ -191,10 +190,6 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         JFrame registration = FrameManager.getregistrationFrame();
         registration.setVisible(true);
     }//GEN-LAST:event_jButton_registration_loginActionPerformed
-
-    private void jTextField_password_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_password_loginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_password_loginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -237,7 +232,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     private javax.swing.JButton jButton_registration_login;
     private javax.swing.JLabel jLabel_password_login;
     private javax.swing.JLabel jLabel_username_login;
-    public static javax.swing.JTextField jTextField_password_login;
+    public static javax.swing.JPasswordField jPasswordField_login;
     public static javax.swing.JTextField jTextField_username_login;
     // End of variables declaration//GEN-END:variables
 }
