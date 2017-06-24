@@ -183,6 +183,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                     jComboBox_difficulty_addrecipe.addItem(tmpString);
                 }
                 conn.close();
+                jComboBox_difficulty_addrecipe.setSelectedIndex(-1);
         
             }
             catch (Exception e)
@@ -238,6 +239,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jFormattedTextField_amount_addrecipe = new javax.swing.JFormattedTextField();
         jFormattedTextField_persons_addrecipe = new javax.swing.JFormattedTextField();
         jFormattedTextField_preptime_addrecipe = new javax.swing.JFormattedTextField();
+        jLabel_star1_addrecipe = new javax.swing.JLabel();
+        jLabel_star2_addrecipe = new javax.swing.JLabel();
+        jLabel_star3_addrecipe = new javax.swing.JLabel();
+        jLabel_star4_addrecipe = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -364,16 +370,26 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         jFormattedTextField_preptime_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
 
+        jLabel_star1_addrecipe.setText("*");
+
+        jLabel_star2_addrecipe.setText("*");
+
+        jLabel_star3_addrecipe.setText("*");
+
+        jLabel_star4_addrecipe.setText("*");
+
+        jLabel1.setText("categories:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox_Ingredient_addrecipe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jComboBox_Ingredient_addrecipe, 0, 204, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel_amount_addrecipe)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -387,18 +403,13 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                         .addComponent(jButton_confirm_addrecipe)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton_cancel_addrecipe))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox_category2_addrecipe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton_deletelist_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton_deletelist_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
                             .addComponent(jLabel_preperation_addrecipe)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -407,15 +418,26 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                                     .addComponent(jLabel_preptime_addrecipe)
                                     .addComponent(jLabel_difficulty_addrecipe))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jFormattedTextField_preptime_addrecipe)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                            .addComponent(jTextField_recipename_addrecipe))
-                                        .addGap(0, 0, Short.MAX_VALUE)))))
-                        .addGap(181, 181, 181)))
+                                        .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel_star4_addrecipe))
+                                    .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                                    .addComponent(jTextField_recipename_addrecipe)
+                                    .addComponent(jFormattedTextField_preptime_addrecipe))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_star1_addrecipe)
+                                    .addComponent(jLabel_star2_addrecipe)
+                                    .addComponent(jLabel_star3_addrecipe)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox_category2_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -424,40 +446,46 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_recipename_addrecipe)
-                    .addComponent(jTextField_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_star1_addrecipe))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_persons_addrecipe)
-                    .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_star2_addrecipe))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_preptime_addrecipe)
-                    .addComponent(jFormattedTextField_preptime_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField_preptime_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_star3_addrecipe))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_difficulty_addrecipe)
-                    .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
+                    .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_star4_addrecipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox_category2_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton_deletelist_addrecipe))
+                    .addComponent(jButton_deletelist_addrecipe, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox_Ingredient_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_addingredient_addrecipe)
                     .addComponent(jLabel_amount_addrecipe)
-                    .addComponent(jFormattedTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_addingredient_addrecipe))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel_preperation_addrecipe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_cancel_addrecipe)
@@ -481,7 +509,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_category1_addrecipeActionPerformed
 
     private void jButton_confirm_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_addrecipeActionPerformed
-    if(!jFormattedTextField_persons_addrecipe.getText().equals("") ){    
+    if(!(jComboBox_difficulty_addrecipe.getSelectedIndex() == -1) || 
+         !jFormattedTextField_persons_addrecipe.getText().equals("") || 
+         !jTextField_recipename_addrecipe.getText().equals("")){   
     // bugfixing
     //  JOptionPane.showMessageDialog(null, ""+ jComboBox_category1_addrecipe.getSelectedItem());
     // überprüfung 2-3 mal gleiche category
@@ -679,9 +709,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Categories have to be unique!");
     }
     }
-    else{    
-        JOptionPane.showMessageDialog(null, "You have to type in a number for the preparation time and amount of persons!");
-            }
+    else{
+        JOptionPane.showMessageDialog(null, "All marked fields have to be filled!\nGive your recipe a name.\n"
+                                          + "You have to type in numbers for the amount of persons\nand the preparation time.\nPlease select a difficulty.");
+    }
     }
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
         // TODO add your handling code here:
@@ -780,12 +811,17 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jFormattedTextField_amount_addrecipe;
     private javax.swing.JFormattedTextField jFormattedTextField_persons_addrecipe;
     private javax.swing.JFormattedTextField jFormattedTextField_preptime_addrecipe;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel_amount_addrecipe;
     private javax.swing.JLabel jLabel_difficulty_addrecipe;
     private javax.swing.JLabel jLabel_persons_addrecipe;
     private javax.swing.JLabel jLabel_preperation_addrecipe;
     private javax.swing.JLabel jLabel_preptime_addrecipe;
     private javax.swing.JLabel jLabel_recipename_addrecipe;
+    private javax.swing.JLabel jLabel_star1_addrecipe;
+    private javax.swing.JLabel jLabel_star2_addrecipe;
+    private javax.swing.JLabel jLabel_star3_addrecipe;
+    private javax.swing.JLabel jLabel_star4_addrecipe;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane_ingredients_addrecipe;
