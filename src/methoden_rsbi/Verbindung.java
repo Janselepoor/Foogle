@@ -57,6 +57,7 @@ public class Verbindung {
             {
                 JOptionPane.showMessageDialog(null,"Username incorrect!");
             }
+        conn.close();
         return namecheck;
         }
         catch (Exception e){
@@ -88,11 +89,11 @@ public class Verbindung {
                 pwcheck = false;
                 JOptionPane.showMessageDialog(null,"Password incorrect!");
             }
+            conn.close();
         }
         catch (Exception e){
             System.out.println("Fehler beim Auslesen der Werte aus der DB!");
             System.out.println("Fehler: "+e);}
-        
         return pwcheck;
     }
     
@@ -111,6 +112,7 @@ public class Verbindung {
                 System.out.println("Username:"+username);
                 System.out.println("ID      :"+user_id);
             }
+            conn.close();
             }
             catch(Exception e)
             {
@@ -165,6 +167,7 @@ public class Verbindung {
             {
                 JOptionPane.showMessageDialog(null, "Password confirmation incorrect!");
             }
+            conn.close();
         }
         catch (Exception e)
         {
@@ -187,6 +190,7 @@ public class Verbindung {
            {
                id = rs.getInt(1);
            }
+           conn.close();
         }
         catch(Exception e)
         {
@@ -209,6 +213,7 @@ public class Verbindung {
            {
                id = rs.getInt(1);
            }
+           conn.close();
         }
         catch(Exception e)
         {
@@ -231,6 +236,7 @@ public class Verbindung {
            {
                id = rs.getInt(1);
            }
+           conn.close();
         }
         catch(Exception e)
         {
@@ -253,6 +259,7 @@ public class Verbindung {
            {
                id = rs.getInt(1);
            }
+           conn.close();
         }
         catch(Exception e)
         {
@@ -275,6 +282,7 @@ public class Verbindung {
            {
                id = rs.getInt(1);
            }
+           conn.close();
         }
         catch(Exception e)
         {
@@ -296,6 +304,7 @@ public class Verbindung {
                 stmt.executeUpdate("Insert INTO recipe(user_id,diff_id,prep_time,rec_name,servings,preparation) "
                                  + "VALUES (\""+user_id+"\",\""+diff_id+"\",\""+prep_time+"\",\""+rec_name+"\",\""+servings+"\",\""+preparation+"\")");
                 check = true;
+                conn.close();
             }
             catch(Exception e)
             {
@@ -316,7 +325,7 @@ public class Verbindung {
             stmt.executeUpdate("Insert INTO recipe_category(recipe_id,category_id)"
                              + "VALUES (\""+rec_id+"\",\""+cat_id+"\")");
             check = true;
-            
+            conn.close();
         }
         catch(Exception e)
         {
@@ -337,6 +346,7 @@ public class Verbindung {
             stmt.executeUpdate("Insert INTO recipe_ingredient(recipe_id,ingredient_id,measurement_id,amount)"
                              + "VALUES (\""+rec_id+"\",\""+ingr_id+"\",\""+meas_id+"\",\""+amount+"\")");
             check = true;
+            conn.close();
         }
         catch(Exception e)
         {
