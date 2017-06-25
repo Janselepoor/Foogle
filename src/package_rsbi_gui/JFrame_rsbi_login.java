@@ -112,6 +112,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
             }
         });
 
+        jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 0, 0));
         jTextField1.setText("LOGIN");

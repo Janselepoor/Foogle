@@ -22,6 +22,8 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
      */
     public JFrame_rsbi_confirmrecipe() {
         initComponents();
+        jTextArea_preparation_confirmrecipe.setWrapStyleWord(true);
+        jTextArea_preparation_confirmrecipe.setLineWrap(true);
     }
 
     /**

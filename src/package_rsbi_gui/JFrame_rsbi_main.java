@@ -6,6 +6,8 @@
 package package_rsbi_gui;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import methoden_rsbi.FrameManager;
 
 /**
@@ -100,7 +102,22 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
         JFrame add =  FrameManager.getaddrecipeFrame();
-        add.setVisible(true);  
+        add.setVisible(true); 
+        JFrame_rsbi_addrecipeform.jTextField_recipename_addrecipe.setText("");
+        JFrame_rsbi_addrecipeform.jFormattedTextField_preptime_addrecipe.setText("");
+        JFrame_rsbi_addrecipeform.jFormattedTextField_persons_addrecipe.setText("");
+        JFrame_rsbi_addrecipeform.jTextArea_preparation_addrecipe.setText("");
+        JFrame_rsbi_addrecipeform.jComboBox_difficulty_addrecipe.setSelectedIndex(-1);
+        JFrame_rsbi_addrecipeform.jComboBox_category1_addrecipe.setSelectedIndex(0);
+        JFrame_rsbi_addrecipeform.jComboBox_category2_addrecipe.setSelectedIndex(0);
+        JFrame_rsbi_addrecipeform.jComboBox_category3_addrecipe.setSelectedIndex(0);
+        JFrame_rsbi_addrecipeform.jComboBox_Ingredient_addrecipe.setSelectedIndex(-1);
+        JFrame_rsbi_addrecipeform.jFormattedTextField_amount_addrecipe.setText("");
+        JFrame_rsbi_addrecipeform.jComboBox_measurement_addrecipe.setSelectedIndex(-1);
+        while(JFrame_rsbi_addrecipeform.jTable_ingredients_addrecipe.getRowCount() > 0){
+                DefaultTableModel model = (DefaultTableModel) JFrame_rsbi_addrecipeform.jTable_ingredients_addrecipe.getModel();
+                model.removeRow(0);
+        }
     }//GEN-LAST:event_jButton_add_mainActionPerformed
 
     private void jButton_logout_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_logout_mainActionPerformed
