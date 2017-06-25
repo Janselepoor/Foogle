@@ -326,6 +326,26 @@ public class Verbindung {
         }
         return check;
     }
+    public boolean addRecIng(int rec_id,int ingr_id,int meas_id,int amount)
+    {
+        boolean check = false;
+        try
+        {
+            Connection conn = this.starteVerbindung();
+            Statement stmt = conn.createStatement();
+            
+            stmt.executeUpdate("Insert INTO recipe_ingredient(recipe_id,ingredient_id,measurement_id,amount)"
+                             + "VALUES (\""+rec_id+"\",\""+ingr_id+"\",\""+meas_id+"\",\""+amount+"\")");
+            check = true;
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Schreiben in DB!");
+            System.out.println("Fehler "+e);
+            check =false;
+        }
+        return check;
+    }
     /*public boolean WriteInDB (String tmpText)
     {
         try
