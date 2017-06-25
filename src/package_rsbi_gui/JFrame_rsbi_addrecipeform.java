@@ -26,6 +26,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
      */
     private Verbindung connect2db = new Verbindung();
     
+    
     //Fülle ComboBox
     private void FuelleComboIngr(){
         jComboBox_Ingredient_addrecipe.removeAllItems();
@@ -202,6 +203,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         FuelleComboCategory2();
         FuelleComboCategory3();
         FuelleComboDiff();
+        jTextArea_preparation_addrecipe.setWrapStyleWord(true);
+        jTextArea_preparation_addrecipe.setLineWrap(true);
     }
 
     /**
@@ -299,6 +302,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane_ingredients_addrecipe.setAutoscrolls(true);
+
         jTable_ingredients_addrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -307,6 +312,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 "name", "amount", "measurement"
             }
         ));
+        jTable_ingredients_addrecipe.setEnabled(false);
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_addrecipe);
 
         jComboBox_Ingredient_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -510,9 +516,14 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox_category1_addrecipeActionPerformed
 
     private void jButton_confirm_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_addrecipeActionPerformed
-    if(!(jComboBox_difficulty_addrecipe.getSelectedIndex() == -1) || 
-         !jFormattedTextField_persons_addrecipe.getText().equals("") || 
-         !jTextField_recipename_addrecipe.getText().equals("")){   
+    //
+        if(!(jComboBox_difficulty_addrecipe.getSelectedIndex() == -1) && 
+           !jFormattedTextField_persons_addrecipe.getText().equals("") && 
+           !jTextField_recipename_addrecipe.getText().equals("") &&
+           !jFormattedTextField_preptime_addrecipe.getText().equals("") &&
+         ( !(jComboBox_category1_addrecipe.getSelectedItem().equals("")) ||
+           !(jComboBox_category2_addrecipe.getSelectedItem().equals("")) ||
+           !(jComboBox_category3_addrecipe.getSelectedItem().equals("")) ) ){   
     // bugfixing
     //  JOptionPane.showMessageDialog(null, ""+ jComboBox_category1_addrecipe.getSelectedItem());
     // überprüfung 2-3 mal gleiche category
@@ -524,7 +535,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
              jComboBox_category2_addrecipe.getSelectedIndex() == 0))
         //Übertragung der Liste
         {DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
-                if(model.getRowCount()>=3){
+        // at least 3 ingredients        
+        if(model.getRowCount()>=3){
         this.setVisible(false);
         JFrame confirm = FrameManager.getconfirmrecipeFrame();
         confirm.setVisible(true);
@@ -705,7 +717,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9_confirmrecipe.setVisible(false);
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9amount_confirmrecipe.setVisible(false);
         JFrame_rsbi_confirmrecipe.jLabel_ingredient9measure_confirmrecipe.setVisible(false);
-        }
+        }     
     }//GEN-LAST:event_jButton_confirm_addrecipeActionPerformed
                 else{
                         JOptionPane.showMessageDialog(null, "Please insert at least 3 ingredients!");
@@ -717,7 +729,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }
     else{
         JOptionPane.showMessageDialog(null, "All marked fields have to be filled!\nGive your recipe a name.\n"
-                                          + "You have to type in numbers for the amount of persons\nand the preparation time.\nPlease select a difficulty.");
+                                          + "You have to type in numbers for the amount of persons\nand the preparation time.\n"
+                                          + "Please select a difficulty and at least one category.");
     }
     }
     private void jComboBox_Ingredient_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_Ingredient_addrecipeActionPerformed
@@ -744,7 +757,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
        */ }
         if(claudioholtgradpizza == true){
         if(!jFormattedTextField_amount_addrecipe.getText().equals("") ){
-        if(jTable_ingredients_addrecipe.getRowCount() <= 9){
+        if(jTable_ingredients_addrecipe.getRowCount() < 9){
         model.addRow(new Object[]{jComboBox_Ingredient_addrecipe.getSelectedItem(),jFormattedTextField_amount_addrecipe.getText(),jComboBox_measurement_addrecipe.getSelectedItem()});
         }
         else
