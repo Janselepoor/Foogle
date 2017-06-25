@@ -270,6 +270,8 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 "name"
             }
         ));
+        jTable_ingredients_searchrecipe.setColumnSelectionAllowed(false);
+        jTable_ingredients_searchrecipe.setRowSelectionAllowed(false);
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_searchrecipe);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -299,7 +301,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                                             .addComponent(jButton_deletelist_searchrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                         .addGap(50, 50, 50)
                         .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -396,6 +398,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel)jTable_ingredients_searchrecipe.getModel();
         int tablecount = model.getRowCount();
         boolean check = true;
+        
         if (!(jComboBox_ingredients_search_recipe.getSelectedIndex() == -1))
         {
             for(int i=0;i<tablecount;i++)
