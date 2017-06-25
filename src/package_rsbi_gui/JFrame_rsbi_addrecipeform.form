@@ -307,7 +307,6 @@
     <Container class="javax.swing.JScrollPane" name="jScrollPane_ingredients_addrecipe">
       <Properties>
         <Property name="autoscrolls" type="boolean" value="true"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
@@ -343,7 +342,6 @@
                 </Column>
               </TableColumnModel>
             </Property>
-            <Property name="enabled" type="boolean" value="false"/>
             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>

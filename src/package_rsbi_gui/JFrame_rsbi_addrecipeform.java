@@ -310,7 +310,6 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jScrollPane_ingredients_addrecipe.setAutoscrolls(true);
-        jScrollPane_ingredients_addrecipe.setEnabled(false);
 
         jTable_ingredients_addrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -320,7 +319,6 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 "name", "amount", "measurement"
             }
         ));
-        jTable_ingredients_addrecipe.setEnabled(false);
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_addrecipe);
 
         jComboBox_Ingredient_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
