@@ -104,14 +104,14 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
 
     private void jButton_cancel_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_recipetableActionPerformed
         JFrame searchwindow = FrameManager.getsearchrecipeFrame();
-        searchwindow.setVisible(true);
         this.dispose();
+        searchwindow.setVisible(true);
     }//GEN-LAST:event_jButton_cancel_recipetableActionPerformed
 
     private void jButton_show_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_show_recipetableActionPerformed
         JFrame searchwindow = FrameManager.getshowrecipeFrame();
-        searchwindow.setVisible(true);
         this.dispose();
+        searchwindow.setVisible(true);
     }//GEN-LAST:event_jButton_show_recipetableActionPerformed
 
     /**

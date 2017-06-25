@@ -98,9 +98,9 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton_logout_main, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_search_main, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                    .addComponent(jButton_add_main, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton_search_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_add_main, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20))
         );
 
@@ -110,8 +110,8 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
 
     private void jButton_search_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_mainActionPerformed
         JFrame searchwindow = FrameManager.getsearchrecipeFrame();
-        searchwindow.setVisible(true);
         this.dispose();
+        searchwindow.setVisible(true);
         JFrame_rsbi_searchrecipe.jComboBox_category1_search_recipe.setSelectedIndex(0);
         JFrame_rsbi_searchrecipe.jComboBox_category2_search_recipe.setSelectedIndex(0);
         JFrame_rsbi_searchrecipe.jComboBox_category3_search_recipe.setSelectedIndex(0);
