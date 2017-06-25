@@ -263,8 +263,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane_ingredients_addrecipe.setEnabled(false);
-
         jTable_ingredients_searchrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -273,6 +271,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 "name"
             }
         ));
+        jTable_ingredients_searchrecipe.setEnabled(false);
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_searchrecipe);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
