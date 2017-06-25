@@ -397,13 +397,10 @@ public class new_search extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel)jTable_ingredients_searchrecipe.getModel();
         int tablecount = model.getRowCount();
         boolean check = true;
-        System.out.println("1");
         if (!(jComboBox_ingredients_search_recipe.getSelectedIndex() == -1))
         {
-            System.out.println("2");
             for(int i=0;i<tablecount;i++)
             {
-                System.out.println("2.1");
                 if(model.getValueAt(i,0).toString().equals(jComboBox_ingredients_search_recipe.getSelectedItem().toString()))
                 {
                     System.out.println("step"+i);
@@ -412,12 +409,9 @@ public class new_search extends javax.swing.JFrame {
                     break;
                 }
             }
-            System.out.println("3");
             if(check){
-                System.out.println("4");
                 if(model.getRowCount()<9)
                 {
-                    System.out.println("5");
                     model.addRow(new Object[]{jComboBox_ingredients_search_recipe.getSelectedItem()});
                 }
                 else
