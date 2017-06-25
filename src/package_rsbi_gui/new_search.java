@@ -10,6 +10,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import methoden_rsbi.Verbindung;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import methoden_rsbi.FrameManager;
 
 /**
@@ -22,7 +24,7 @@ public class new_search extends javax.swing.JFrame {
     
     //Fülle ComboBox
     private void FuelleComboIngr(){
-        jComboBox_category1_search_recipe.removeAllItems();
+        jComboBox_ingredients_search_recipe.removeAllItems();
         try
         {
         Connection conn = connect2db.starteVerbindung();
@@ -35,8 +37,8 @@ public class new_search extends javax.swing.JFrame {
                 tmpString = rs.getString(1);
                 jComboBox_ingredients_search_recipe.addItem(tmpString);
             }
-                jComboBox_ingredients_search_recipe.setSelectedIndex(-1);
-                conn.close();
+        jComboBox_ingredients_search_recipe.setSelectedIndex(-1);
+            conn.close();
         
         }
         catch (Exception e)
@@ -46,7 +48,7 @@ public class new_search extends javax.swing.JFrame {
         }
     }
     
-        private void FuelleComboCategory1()
+    private void FuelleComboCategory1()
         {
            
             jComboBox_category1_search_recipe.removeAllItems();
@@ -57,6 +59,8 @@ public class new_search extends javax.swing.JFrame {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
+                jComboBox_category1_search_recipe.insertItemAt("", 0);
+                jComboBox_category1_search_recipe.setSelectedIndex(0);
                 while (rs.next()) 
                 {                
                     tmpString = "";
@@ -72,7 +76,10 @@ public class new_search extends javax.swing.JFrame {
                 System.out.println(e.getMessage());
             }
         }
-    
+
+           
+  
+   
     private void FuelleComboCategory2()
         {
            
@@ -84,6 +91,8 @@ public class new_search extends javax.swing.JFrame {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
+                jComboBox_category2_search_recipe.insertItemAt("", 0);
+                jComboBox_category2_search_recipe.setSelectedIndex(0);
                 while (rs.next()) 
                 {                
                     tmpString = "";
@@ -110,6 +119,8 @@ public class new_search extends javax.swing.JFrame {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT DISTINCT cat_name FROM category ORDER BY cat_name ASC");
                 String tmpString;
+                jComboBox_category3_search_recipe.insertItemAt("", 0);
+                jComboBox_category3_search_recipe.setSelectedIndex(0);
                 while (rs.next()) 
                 {                
                     tmpString = "";
@@ -150,23 +161,27 @@ public class new_search extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         jComboBox_category1_search_recipe = new javax.swing.JComboBox<>();
         jComboBox_category2_search_recipe = new javax.swing.JComboBox<>();
         jComboBox_category3_search_recipe = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_ingredients_searchrecipe = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jComboBox_ingredients_search_recipe = new javax.swing.JComboBox<>();
         jButton_addlist_searchrecipe = new javax.swing.JButton();
         jButton_deletelist_searchrecipe = new javax.swing.JButton();
-        jComboBox_ingredients_search_recipe = new javax.swing.JComboBox<>();
-        jButton_search_search = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable_ingredients_searchrecipe = new javax.swing.JTable();
         jButton_cancel_search = new javax.swing.JButton();
+        jButton_search_search = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setLocation(new java.awt.Point(0, 0));
+        setResizable(false);
 
         jLabel1.setText("categories:");
 
-        jComboBox_category1_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category1_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select category" }));
         jComboBox_category1_search_recipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_category1_search_recipeActionPerformed(evt);
@@ -174,23 +189,51 @@ public class new_search extends javax.swing.JFrame {
         });
 
         jComboBox_category2_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category2_search_recipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_category2_search_recipeActionPerformed(evt);
+            }
+        });
 
         jComboBox_category3_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jTable_ingredients_searchrecipe.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null}
-            },
-            new String [] {
-                "ingredients"
+        jComboBox_category3_search_recipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_category3_search_recipeActionPerformed(evt);
             }
-        ));
-        jScrollPane1.setViewportView(jTable_ingredients_searchrecipe);
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jComboBox_category1_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(jComboBox_category2_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jComboBox_category3_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox_category1_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_category2_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_category3_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
 
         jLabel2.setText("ingredients:");
+
+        jComboBox_ingredients_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_ingredients_search_recipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_ingredients_search_recipeActionPerformed(evt);
+            }
+        });
 
         jButton_addlist_searchrecipe.setText("add");
         jButton_addlist_searchrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -206,7 +249,31 @@ public class new_search extends javax.swing.JFrame {
             }
         });
 
-        jComboBox_ingredients_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jTable_ingredients_searchrecipe.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null},
+                {null}
+            },
+            new String [] {
+                "ingredients"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable_ingredients_searchrecipe);
+
+        jButton_cancel_search.setText("cancel");
+        jButton_cancel_search.setActionCommand("cancel");
+        jButton_cancel_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_cancel_searchActionPerformed(evt);
+            }
+        });
 
         jButton_search_search.setText("search");
         jButton_search_search.addActionListener(new java.awt.event.ActionListener() {
@@ -215,57 +282,71 @@ public class new_search extends javax.swing.JFrame {
             }
         });
 
-        jButton_cancel_search.setText("cancle");
-        jButton_cancel_search.setActionCommand("cancel");
-        jButton_cancel_search.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_cancel_searchActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton_cancel_search)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton_search_search)
+                .addGap(1, 1, 1))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox_ingredients_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButton_deletelist_searchrecipe)
+                                    .addComponent(jButton_addlist_searchrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(36, 36, 36)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jComboBox_ingredients_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton_addlist_searchrecipe)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton_deletelist_searchrecipe)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton_cancel_search)
+                            .addComponent(jButton_search_search))))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(143, 143, 143))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton_deletelist_searchrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton_addlist_searchrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(jLabel2))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jComboBox_ingredients_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jComboBox_category1_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                                .addComponent(jComboBox_category2_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(61, 61, 61)
-                                .addComponent(jComboBox_category3_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel1)
-                        .addGap(53, 374, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton_cancel_search)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton_search_search)))
-                .addContainerGap())
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -273,34 +354,19 @@ public class new_search extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox_category1_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox_category2_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox_category3_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox_ingredients_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton_addlist_searchrecipe)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton_deletelist_searchrecipe)
-                        .addGap(0, 52, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(53, 53, 53)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_search_search)
-                    .addComponent(jButton_cancel_search))
-                .addContainerGap())
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -310,30 +376,42 @@ public class new_search extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     private void jButton_search_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_searchActionPerformed
         this.dispose();
         new JFrame_rsbi_recipetable().setVisible(true); //TODO add your handling code here:
     }//GEN-LAST:event_jButton_search_searchActionPerformed
 
+    private void jButton_cancel_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_searchActionPerformed
+        this.dispose();
+        JFrame main = FrameManager.getmainFrame();
+        main.setVisible(true);
+    }//GEN-LAST:event_jButton_cancel_searchActionPerformed
+
     private void jButton_deletelist_searchrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_deletelist_searchrecipeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_deletelist_searchrecipeActionPerformed
 
-    private void jComboBox_category1_search_recipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category1_search_recipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox_category1_search_recipeActionPerformed
-
-    private void jButton_cancel_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_searchActionPerformed
-            this.dispose();
-            JFrame main = FrameManager.getmainFrame();
-            main.setVisible(true);        
-    }//GEN-LAST:event_jButton_cancel_searchActionPerformed
-
     private void jButton_addlist_searchrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addlist_searchrecipeActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton_addlist_searchrecipeActionPerformed
 
+    private void jComboBox_ingredients_search_recipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_ingredients_search_recipeActionPerformed
+        String Name = (String)jComboBox_ingredients_search_recipe.getSelectedItem();
+    }//GEN-LAST:event_jComboBox_ingredients_search_recipeActionPerformed
+
+    private void jComboBox_category3_search_recipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category3_search_recipeActionPerformed
+        String Name = (String)jComboBox_category3_search_recipe.getSelectedItem();
+    }//GEN-LAST:event_jComboBox_category3_search_recipeActionPerformed
+
+    private void jComboBox_category2_search_recipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category2_search_recipeActionPerformed
+        String Name = (String)jComboBox_category2_search_recipe.getSelectedItem();
+    }//GEN-LAST:event_jComboBox_category2_search_recipeActionPerformed
+
+    private void jComboBox_category1_search_recipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category1_search_recipeActionPerformed
+        String Name = (String)jComboBox_category1_search_recipe.getSelectedItem();
+    }//GEN-LAST:event_jComboBox_category1_search_recipeActionPerformed
+
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -348,6 +426,8 @@ public class new_search extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable_ingredients_searchrecipe;
     // End of variables declaration//GEN-END:variables
