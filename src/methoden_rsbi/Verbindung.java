@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import package_rsbi_gui.JFrame_rsbi_recipetable;
 
 /**
  *
@@ -353,6 +355,55 @@ public class Verbindung {
             System.out.println("Fehler beim Schreiben in DB!");
             System.out.println("Fehler "+e);
             check =false;
+        }
+        return check;
+    }
+        // Suche 
+    public boolean seachRecipe(
+            String r1,
+            String r2,
+            String r3,
+            String r4,
+            String r5,
+            String r6,
+            String r7,
+            String r8,
+            String r9,
+            String c1,
+            String c2,
+            String c3)
+        {
+        boolean check = false;
+        try
+        {
+            Connection conn = this.starteVerbindung();
+            Statement stmt = conn.createStatement(); 
+            DefaultTableModel model = (DefaultTableModel) JFrame_rsbi_recipetable.jTable_table_recipetable.getModel();
+            ResultSet rs = stmt.executeQuery("select t1.rec_name,t1.matchingingredients,t2.matchingcategories,t1.recipe_id,t1.create_date"
+                            + " from"
+                            + " (select recipe_ingredients.recipe_id,count(recipe_id) as matchingingredients,recipe.rec_name,recipe.create_date"
+                            + " from recipe_ingredient, recipe"
+                            + " where recipe_ingredient.recipe_id = recipe.id"
+                            + " and recipe_ingredient.ingredient_id in(\""+r1+"\",\""+r2+"\",\""+r3+"\",\""+r4+"\",\""+r5+"\",\""+r6+"\",\""+r7+"\",\""+r8+"\",\""+r9+"\")"
+                            + " having count(recipe_id)>=3)t1"
+                            + " inner join"
+                            + "(select recipe_category.recipe_id,count(recipe_id) as matchingcategories,recipe.rec_name"
+                            + " from recipe_category, recipe"
+                            + " where recipe_category.recipe_id = recipe.id"
+                            + " and recipe_category.category_id in (\""+c1+"\",\""+c2+"\",\""+c3+"\",)) t2"
+                            + " on t1.recipe_id = t2.recipe_id"
+                            + " group by t1.matchingingredients");
+            
+            while(rs.next())
+            {
+                model.addRow(new Object[]{rs.getString(1),rs.getInt(2),rs.getInt(3),rs.getDate(5)});
+            }
+            check = true;
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen von DB!");
+            System.out.println("Fehler "+e);
         }
         return check;
     }
