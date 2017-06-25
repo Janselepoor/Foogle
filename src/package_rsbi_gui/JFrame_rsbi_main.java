@@ -5,6 +5,7 @@
  */
 package package_rsbi_gui;
 
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -21,6 +22,7 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
      */
     public JFrame_rsbi_main() {
         initComponents();
+        getContentPane().setBackground(Color.WHITE);
     }
 
     /**
@@ -40,22 +42,34 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         setTitle("foogle");
         setResizable(false);
 
-        jButton_search_main.setText("search recipe");
+        jButton_search_main.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_search_main.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_search_main.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_search_main.setText("SEARCH RECIPE");
         jButton_search_main.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_search_mainActionPerformed(evt);
             }
         });
 
-        jButton_add_main.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jButton_add_main.setText("add recipe");
+        jButton_add_main.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_add_main.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_add_main.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_add_main.setText("ADD RECIPE");
         jButton_add_main.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_add_mainActionPerformed(evt);
             }
         });
 
-        jButton_logout_main.setText("logout");
+        jButton_logout_main.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_logout_main.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_logout_main.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_logout_main.setText("LOGOUT");
+        jButton_logout_main.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton_logout_main.setBorderPainted(false);
+        jButton_logout_main.setDefaultCapable(false);
+        jButton_logout_main.setFocusPainted(false);
         jButton_logout_main.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_logout_mainActionPerformed(evt);
@@ -66,25 +80,27 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton_logout_main)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(296, Short.MAX_VALUE)
+                        .addComponent(jButton_logout_main, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
                         .addComponent(jButton_search_main, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton_add_main, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton_add_main, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton_logout_main)
+                .addComponent(jButton_logout_main, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton_add_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton_search_main, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton_search_main, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                    .addComponent(jButton_add_main, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE))
                 .addGap(20, 20, 20))
         );
 

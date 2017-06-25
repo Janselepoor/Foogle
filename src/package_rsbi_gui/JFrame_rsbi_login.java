@@ -93,9 +93,9 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jLabel_password_login.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_password_login.setText("Password");
 
-        jButton_login_login.setBackground(new java.awt.Color(255, 0, 0));
+        jButton_login_login.setBackground(new java.awt.Color(204, 204, 204));
         jButton_login_login.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jButton_login_login.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_login_login.setForeground(new java.awt.Color(102, 102, 102));
         jButton_login_login.setText("Login");
         jButton_login_login.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton_login_login.setBorderPainted(false);
@@ -107,13 +107,12 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
             }
         });
 
-        jButton_registration_login.setBackground(new java.awt.Color(255, 255, 255));
+        jButton_registration_login.setBackground(new java.awt.Color(204, 204, 204));
         jButton_registration_login.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jButton_registration_login.setForeground(new java.awt.Color(102, 102, 102));
         jButton_registration_login.setText("Register");
         jButton_registration_login.setBorder(null);
         jButton_registration_login.setBorderPainted(false);
-        jButton_registration_login.setContentAreaFilled(false);
         jButton_registration_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_registration_loginActionPerformed(evt);
@@ -122,7 +121,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
 
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 0, 0));
+        jTextField1.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1.setText("LOGIN");
         jTextField1.setToolTipText("");
         jTextField1.setBorder(null);
@@ -151,8 +150,8 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jButton_login_login, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton_registration_login, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                        .addComponent(jButton_registration_login, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,9 +167,9 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                     .addComponent(jLabel_password_login))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_login_login)
-                    .addComponent(jButton_registration_login))
-                .addContainerGap(23, Short.MAX_VALUE))
+                    .addComponent(jButton_login_login, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_registration_login, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/package_rsbi_gui/Google-5.png"))); // NOI18N

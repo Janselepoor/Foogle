@@ -93,9 +93,9 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         jLabel_passwordconf_registration.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_passwordconf_registration.setText("Password Confirmation");
 
-        jButton_registrate_registration.setBackground(new java.awt.Color(255, 0, 0));
+        jButton_registrate_registration.setBackground(new java.awt.Color(204, 204, 204));
         jButton_registrate_registration.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jButton_registrate_registration.setForeground(new java.awt.Color(255, 255, 255));
+        jButton_registrate_registration.setForeground(new java.awt.Color(102, 102, 102));
         jButton_registrate_registration.setText("Register");
         jButton_registrate_registration.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton_registrate_registration.setBorderPainted(false);
@@ -106,13 +106,12 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
             }
         });
 
-        jButton_Cancel_registration.setBackground(new java.awt.Color(255, 255, 255));
+        jButton_Cancel_registration.setBackground(new java.awt.Color(204, 204, 204));
         jButton_Cancel_registration.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jButton_Cancel_registration.setForeground(new java.awt.Color(102, 102, 102));
         jButton_Cancel_registration.setText("Cancel");
-        jButton_Cancel_registration.setBorder(null);
+        jButton_Cancel_registration.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton_Cancel_registration.setBorderPainted(false);
-        jButton_Cancel_registration.setContentAreaFilled(false);
         jButton_Cancel_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_Cancel_registrationActionPerformed(evt);
@@ -120,7 +119,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("REGISTER");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -134,7 +133,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
                         .addComponent(jPasswordField_registrationconf, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel_passwordconf_registration)
-                        .addGap(0, 4, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -153,7 +152,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButton_registrate_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton_Cancel_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButton_Cancel_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(86, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -178,8 +177,8 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
                     .addComponent(jLabel_passwordconf_registration))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_registrate_registration)
-                    .addComponent(jButton_Cancel_registration))
+                    .addComponent(jButton_registrate_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton_Cancel_registration, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
