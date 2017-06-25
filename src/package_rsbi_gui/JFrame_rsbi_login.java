@@ -77,6 +77,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jLabel_username_login.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_username_login.setText("Username");
 
+        jPasswordField_login.setSelectionColor(new java.awt.Color(255, 0, 0));
         jPasswordField_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField_loginActionPerformed(evt);
@@ -92,10 +93,14 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jLabel_password_login.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_password_login.setText("Password");
 
-        jButton_login_login.setBackground(new java.awt.Color(255, 255, 255));
+        jButton_login_login.setBackground(new java.awt.Color(255, 0, 0));
         jButton_login_login.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        jButton_login_login.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_login_login.setForeground(new java.awt.Color(255, 255, 255));
         jButton_login_login.setText("Login");
+        jButton_login_login.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton_login_login.setBorderPainted(false);
+        jButton_login_login.setFocusPainted(false);
+        jButton_login_login.setFocusable(false);
         jButton_login_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_login_loginActionPerformed(evt);
@@ -103,9 +108,12 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         });
 
         jButton_registration_login.setBackground(new java.awt.Color(255, 255, 255));
-        jButton_registration_login.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jButton_registration_login.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jButton_registration_login.setForeground(new java.awt.Color(102, 102, 102));
         jButton_registration_login.setText("Register");
+        jButton_registration_login.setBorder(null);
+        jButton_registration_login.setBorderPainted(false);
+        jButton_registration_login.setContentAreaFilled(false);
         jButton_registration_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_registration_loginActionPerformed(evt);
@@ -129,26 +137,22 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jButton_login_login, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton_registration_login, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jPasswordField_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel_password_login))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
                         .addComponent(jTextField_username_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel_username_login)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                        .addComponent(jLabel_username_login))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPasswordField_login, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel_password_login))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton_login_login, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton_registration_login, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,11 +166,11 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jPasswordField_login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_password_login))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_login_login)
                     .addComponent(jButton_registration_login))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/package_rsbi_gui/Google-5.png"))); // NOI18N
@@ -185,7 +189,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
