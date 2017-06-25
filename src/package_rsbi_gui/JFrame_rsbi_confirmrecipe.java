@@ -158,6 +158,7 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         });
 
         jButton_cancel_confirmrecipe.setText("cancel");
+        jButton_cancel_confirmrecipe.setToolTipText("");
         jButton_cancel_confirmrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_cancel_confirmrecipeActionPerformed(evt);

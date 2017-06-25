@@ -96,6 +96,14 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
         JFrame searchwindow = FrameManager.getsearchrecipeFrame();
         searchwindow.setVisible(true);
         this.dispose();
+        JFrame_rsbi_searchrecipe.jComboBox_category1_search_recipe.setSelectedIndex(0);
+        JFrame_rsbi_searchrecipe.jComboBox_category2_search_recipe.setSelectedIndex(0);
+        JFrame_rsbi_searchrecipe.jComboBox_category3_search_recipe.setSelectedIndex(0);
+        JFrame_rsbi_searchrecipe.jComboBox_ingredients_search_recipe.setSelectedIndex(-1);
+        while(JFrame_rsbi_searchrecipe.jTable_ingredients_searchrecipe.getRowCount() > 0){
+        DefaultTableModel model = (DefaultTableModel) JFrame_rsbi_searchrecipe.jTable_ingredients_searchrecipe.getModel();
+        model.removeRow(0);
+        }
     }//GEN-LAST:event_jButton_search_mainActionPerformed
 
     private void jButton_add_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_add_mainActionPerformed

@@ -275,6 +275,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         jLabel_difficulty_addrecipe.setText("difficulty:");
 
+        jTextField_recipename_addrecipe.setToolTipText("Enter a descriptive name for your recipe.");
         jTextField_recipename_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_recipename_addrecipeActionPerformed(evt);
@@ -282,8 +283,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jComboBox_difficulty_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_difficulty_addrecipe.setToolTipText("Choose the difficulty.");
 
         jComboBox_category1_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category1_addrecipe.setToolTipText("Select a category for your recipe.");
         jComboBox_category1_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_category1_addrecipeActionPerformed(evt);
@@ -291,6 +294,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jComboBox_category2_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category2_addrecipe.setToolTipText("Select a category for your recipe.");
         jComboBox_category2_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_category2_addrecipeActionPerformed(evt);
@@ -298,6 +302,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jComboBox_category3_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category3_addrecipe.setToolTipText("Select a category for your recipe.");
         jComboBox_category3_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_category3_addrecipeActionPerformed(evt);
@@ -305,6 +310,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jScrollPane_ingredients_addrecipe.setAutoscrolls(true);
+        jScrollPane_ingredients_addrecipe.setEnabled(false);
 
         jTable_ingredients_addrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -318,6 +324,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_addrecipe);
 
         jComboBox_Ingredient_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_Ingredient_addrecipe.setToolTipText("Select an ingredient.");
         jComboBox_Ingredient_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_Ingredient_addrecipeActionPerformed(evt);
@@ -325,6 +332,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jComboBox_measurement_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_measurement_addrecipe.setToolTipText("Select the measurement according to the selected ingredient.");
         jComboBox_measurement_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_measurement_addrecipeActionPerformed(evt);
@@ -332,6 +340,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jButton_addingredient_addrecipe.setText("add");
+        jButton_addingredient_addrecipe.setToolTipText("Add ingredient to table.");
         jButton_addingredient_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_addingredient_addrecipeActionPerformed(evt);
@@ -341,6 +350,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jLabel_preperation_addrecipe.setText("Preparation:");
 
         jButton_confirm_addrecipe.setText("confirm");
+        jButton_confirm_addrecipe.setToolTipText("");
         jButton_confirm_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_confirm_addrecipeActionPerformed(evt);
@@ -348,6 +358,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jButton_cancel_addrecipe.setText("cancel");
+        jButton_cancel_addrecipe.setToolTipText("Discard recipe and go back to mainwindow. This step can't be undone.");
         jButton_cancel_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_cancel_addrecipeActionPerformed(evt);
@@ -361,6 +372,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jScrollPane6.setViewportView(jTextArea_preparation_addrecipe);
 
         jButton_deletelist_addrecipe.setText("del");
+        jButton_deletelist_addrecipe.setToolTipText("To delete an ingredient, select it in the table and press this button");
         jButton_deletelist_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_deletelist_addrecipeActionPerformed(evt);
@@ -368,6 +380,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jFormattedTextField_amount_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        jFormattedTextField_amount_addrecipe.setToolTipText("Select the amount of the ingredient you need for your recipe.");
         jFormattedTextField_amount_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextField_amount_addrecipeActionPerformed(evt);
@@ -375,8 +388,10 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         });
 
         jFormattedTextField_persons_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
+        jFormattedTextField_persons_addrecipe.setToolTipText("Enter the amount of servings");
 
         jFormattedTextField_preptime_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
+        jFormattedTextField_preptime_addrecipe.setToolTipText("Enter the preparation time.");
 
         jLabel_star1_addrecipe.setText("*");
 
@@ -455,7 +470,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton_addingredient_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                            .addComponent(jButton_addingredient_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton_deletelist_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );

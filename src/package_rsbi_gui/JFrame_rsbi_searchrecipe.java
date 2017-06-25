@@ -271,7 +271,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 "name"
             }
         ));
-        jTable_ingredients_searchrecipe.setEnabled(false);
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_searchrecipe);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -447,16 +446,16 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
     private javax.swing.JButton jButton_cancel_search;
     private javax.swing.JButton jButton_deletelist_searchrecipe;
     private javax.swing.JButton jButton_search_search;
-    private javax.swing.JComboBox<String> jComboBox_category1_search_recipe;
-    private javax.swing.JComboBox<String> jComboBox_category2_search_recipe;
-    private javax.swing.JComboBox<String> jComboBox_category3_search_recipe;
-    private javax.swing.JComboBox<String> jComboBox_ingredients_search_recipe;
+    public static javax.swing.JComboBox<String> jComboBox_category1_search_recipe;
+    public static javax.swing.JComboBox<String> jComboBox_category2_search_recipe;
+    public static javax.swing.JComboBox<String> jComboBox_category3_search_recipe;
+    public static javax.swing.JComboBox<String> jComboBox_ingredients_search_recipe;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane_ingredients_addrecipe;
-    private javax.swing.JTable jTable_ingredients_searchrecipe;
+    public static javax.swing.JTable jTable_ingredients_searchrecipe;
     // End of variables declaration//GEN-END:variables
 }
