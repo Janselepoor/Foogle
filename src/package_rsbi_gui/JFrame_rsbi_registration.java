@@ -5,6 +5,7 @@
  */
 package package_rsbi_gui;
 
+import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import methoden_rsbi.FrameManager;
@@ -79,6 +80,12 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         jButton_Cancel_registration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_Cancel_registrationActionPerformed(evt);
+            }
+        });
+
+        jPasswordField_registrationconf.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField_registrationconfKeyPressed(evt);
             }
         });
 
@@ -201,6 +208,12 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         }
        
     }//GEN-LAST:event_jButton_registrate_registrationActionPerformed
+
+    private void jPasswordField_registrationconfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField_registrationconfKeyPressed
+         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            jButton_registrate_registration.doClick();
+         }
+    }//GEN-LAST:event_jPasswordField_registrationconfKeyPressed
 
     /**
      * @param args the command line arguments

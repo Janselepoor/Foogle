@@ -5,6 +5,7 @@
  */
 package package_rsbi_gui;
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -76,6 +77,17 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jLabel_username_login.setText("Username");
 
         jLabel_password_login.setText("Password");
+
+        jPasswordField_login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField_loginActionPerformed(evt);
+            }
+        });
+        jPasswordField_login.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jPasswordField_loginKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -190,6 +202,19 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         JFrame registration = FrameManager.getregistrationFrame();
         registration.setVisible(true);
     }//GEN-LAST:event_jButton_registration_loginActionPerformed
+
+    private void jPasswordField_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField_loginActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jPasswordField_loginActionPerformed
+
+    private void jPasswordField_loginKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField_loginKeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            jButton_login_login.doClick();
+        
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField_loginKeyPressed
 
     /**
      * @param args the command line arguments

@@ -208,6 +208,11 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
         jComboBox_ingredients_search.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton_addingredient_search.setText("add");
+        jButton_addingredient_search.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_addingredient_searchActionPerformed(evt);
+            }
+        });
 
         jLabel_ingredient1_search.setText("ingredient1");
 
@@ -387,6 +392,10 @@ public class JFrame_rsbi_search extends javax.swing.JFrame {
     private void jComboBox_category3_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category3_searchActionPerformed
     String Name = (String)jComboBox_category3_search.getSelectedItem();
     }//GEN-LAST:event_jComboBox_category3_searchActionPerformed
+
+    private void jButton_addingredient_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_addingredient_searchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_addingredient_searchActionPerformed
 
     /**
      * @param args the command line arguments

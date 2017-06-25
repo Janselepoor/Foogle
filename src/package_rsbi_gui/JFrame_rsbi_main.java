@@ -91,7 +91,7 @@ public class JFrame_rsbi_main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_search_mainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_mainActionPerformed
-        new JFrame_rsbi_search().setVisible(true);
+        new new_search().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton_search_mainActionPerformed
 
