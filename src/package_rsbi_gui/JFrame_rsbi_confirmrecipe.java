@@ -6,6 +6,7 @@
 package package_rsbi_gui;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import methoden_rsbi.FrameManager;
 import methoden_rsbi.User;
 import methoden_rsbi.Verbindung;
@@ -363,6 +364,8 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
 
     private void jButton_confirm_confirmrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_confirmrecipeActionPerformed
         // fügt rezept in datenbank ein
+        try
+        {
         boolean addcheck=false;
         int user_id;
         int diff_id;
@@ -384,26 +387,124 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
             //cat1
             if(!jLabel_category1_confirmrecipe.getText().equals(""))
             {
-                boolean check;
                 int cat_id = connect2DB.getCatID(jLabel_category1_confirmrecipe.getText());
-                check = connect2DB.addRecCat(rec_id, cat_id);
+                connect2DB.addRecCat(rec_id, cat_id);
             }
             //cat2
             if(!jLabel_category2_confirmrecipe.getText().equals(""))
             {
-                boolean check;
                 int cat_id = connect2DB.getCatID(jLabel_category2_confirmrecipe.getText());
-                check = connect2DB.addRecCat(rec_id, cat_id);
+                connect2DB.addRecCat(rec_id, cat_id);
             }
             //cat3
             if(!jLabel_category3_confirmrecipe.getText().equals(""))
             {
-                boolean check;
                 int cat_id = connect2DB.getCatID(jLabel_category3_confirmrecipe.getText());
-                check = connect2DB.addRecCat(rec_id, cat_id);
+                connect2DB.addRecCat(rec_id, cat_id);
             }
-        
+            
+        //füre Zutaten ein
+            if(addcheck)
+            {
+                  // Zutat 1
+                  if(jLabel_ingredient1_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient1measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient1_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient1amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  
+                  // Zutat 2
+                  if(jLabel_ingredient2_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient2measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient2_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient2amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 3
+                  if(jLabel_ingredient3_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient3measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient3_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient3amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 4
+                  if(jLabel_ingredient4_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient4measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient4_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient4amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 5
+                  if(jLabel_ingredient5_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient5measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient5_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient5amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 6
+                  if(jLabel_ingredient6_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient6measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient6_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient6amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 7
+                  if(jLabel_ingredient7_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient7measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient7_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient7amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 8
+                  if(jLabel_ingredient8_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient8measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient8_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient8amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 9
+                  if(jLabel_ingredient9_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient9measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient9_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient9amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                  // Zutat 1
+                  if(jLabel_ingredient1_confirmrecipe.isVisible())
+                  {
+                       int meas_id = connect2DB.getMeasID(jLabel_ingredient1measure_confirmrecipe.getText());
+                       int ingr_id = connect2DB.getIngrID(jLabel_ingredient1_confirmrecipe.getText());
+                       int amount = Integer.parseInt(jLabel_ingredient1amount_confirmrecipe.getText());
+                       
+                       connect2DB.addRecIng(rec_id,ingr_id,meas_id,amount);
+                  }
+                }
+            }
+            JOptionPane.showMessageDialog(null, "Your recipe has been added successfully");
         }
+        catch (Exception e)
+                    {
+                        JOptionPane.showMessageDialog(null, "Oooops somethings bad happened!");
+                    }
         
         
         
