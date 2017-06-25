@@ -55,26 +55,14 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
 
         jTable_table_recipetable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "name ", "matches", "category", "rating", "date"
+                "name ", "matches", "category", "date"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Float.class, java.lang.String.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -166,6 +154,6 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     private javax.swing.JButton jButton_cancel_recipetable;
     private javax.swing.JButton jButton_show_recipetable;
     private javax.swing.JScrollPane jScrollPane_table_recipetable;
-    private javax.swing.JTable jTable_table_recipetable;
+    public static javax.swing.JTable jTable_table_recipetable;
     // End of variables declaration//GEN-END:variables
 }
