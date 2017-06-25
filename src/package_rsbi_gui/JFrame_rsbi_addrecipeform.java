@@ -203,6 +203,8 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         FuelleComboCategory2();
         FuelleComboCategory3();
         FuelleComboDiff();
+        jTextArea_preparation_addrecipe.setWrapStyleWord(true);
+        jTextArea_preparation_addrecipe.setLineWrap(true);
     }
 
     /**
