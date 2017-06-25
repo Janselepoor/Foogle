@@ -5,6 +5,9 @@
  */
 package package_rsbi_gui;
 
+import javax.swing.JFrame;
+import methoden_rsbi.FrameManager;
+
 /**
  *
  * @author patrick
@@ -112,13 +115,15 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_recipetableActionPerformed
+        JFrame searchwindow = FrameManager.getsearchrecipeFrame();
+        searchwindow.setVisible(true);
         this.dispose();
-        new new_search().setVisible(true);
     }//GEN-LAST:event_jButton_cancel_recipetableActionPerformed
 
     private void jButton_show_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_show_recipetableActionPerformed
+        JFrame searchwindow = FrameManager.getshowrecipeFrame();
+        searchwindow.setVisible(true);
         this.dispose();
-        new JFrame_rsbi_showrecipe().setVisible(true);
     }//GEN-LAST:event_jButton_show_recipetableActionPerformed
 
     /**
