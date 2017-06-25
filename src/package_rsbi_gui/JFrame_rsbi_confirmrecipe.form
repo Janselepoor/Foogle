@@ -54,34 +54,6 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jButton_confirm_confirmrecipe" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton_cancel_confirmrecipe" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel_categories_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel_ingredients_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel_recipename_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel_preparation_confirmrecipe" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="550" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jLabel_ingredient5_confirmrecipe" pref="121" max="32767" attributes="0"/>
@@ -99,57 +71,78 @@
                           <Component id="jLabel_ingredient1amount_confirmrecipe" alignment="1" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jLabel_ingredient3measure_confirmrecipe" alignment="0" pref="0" max="32767" attributes="0"/>
                           <Component id="jLabel_ingredient2measure_confirmrecipe" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="jLabel_ingredient1measure_confirmrecipe" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
                           <Component id="jLabel_ingredient4measure_confirmrecipe" pref="0" max="32767" attributes="0"/>
                           <Component id="jLabel_ingredient5measure_confirmrecipe" pref="0" max="32767" attributes="0"/>
-                          <Component id="jLabel_ingredient3measure_confirmrecipe" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel_ingredient1measure_confirmrecipe" alignment="1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel_ingredient6_confirmrecipe" min="-2" pref="121" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel_ingredient6_confirmrecipe" min="-2" pref="118" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel_ingredient6amount_confirmrecipe" min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient6amount_confirmrecipe" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="jLabel_ingredient9_confirmrecipe" max="32767" attributes="0"/>
                                           <Component id="jLabel_ingredient8_confirmrecipe" max="32767" attributes="0"/>
-                                          <Component id="jLabel_ingredient7_confirmrecipe" alignment="1" pref="121" max="32767" attributes="0"/>
+                                          <Component id="jLabel_ingredient7_confirmrecipe" max="32767" attributes="0"/>
                                       </Group>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              <Component id="jLabel_ingredient7amount_confirmrecipe" min="-2" pref="31" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel_ingredient9amount_confirmrecipe" min="-2" pref="24" max="-2" attributes="0"/>
-                                                  <Component id="jLabel_ingredient8amount_confirmrecipe" pref="0" max="32767" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel_ingredient7amount_confirmrecipe" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient8amount_confirmrecipe" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient9amount_confirmrecipe" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel_ingredient6measure_confirmrecipe" alignment="1" pref="70" max="32767" attributes="0"/>
-                                  <Component id="jLabel_ingredient7measure_confirmrecipe" alignment="1" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel_ingredient8measure_confirmrecipe" min="-2" pref="38" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jLabel_ingredient6measure_confirmrecipe" min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient7measure_confirmrecipe" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <Component id="jLabel_ingredient9measure_confirmrecipe" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel_ingredient8measure_confirmrecipe" alignment="1" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                               <Component id="jLabel_category3_confirmrecipe" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="435" max="32767" attributes="0"/>
+                      <Component id="jButton_confirm_confirmrecipe" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jButton_cancel_confirmrecipe" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel_categories_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel_ingredients_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel_recipename_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel_preparation_confirmrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="550" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -191,9 +184,9 @@
                   <Component id="jLabel_ingredient1_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient1amount_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient1measure_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_ingredient6measure_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient6_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_ingredient6amount_confirmrecipe" alignment="3" min="-2" pref="17" max="-2" attributes="0"/>
+                  <Component id="jLabel_ingredient6amount_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel_ingredient6measure_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -216,11 +209,11 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel_ingredient9_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel_ingredient9amount_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient4_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient9measure_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient4amount_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_ingredient4measure_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel_ingredient9amount_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -237,7 +230,7 @@
                   <Component id="jButton_cancel_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton_confirm_confirmrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
