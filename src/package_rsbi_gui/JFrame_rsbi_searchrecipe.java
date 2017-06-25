@@ -223,7 +223,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                     .addComponent(jComboBox_category1_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox_category2_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox_category3_search_recipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel2.setText("ingredients:");
@@ -262,6 +262,8 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 jButton_search_searchActionPerformed(evt);
             }
         });
+
+        jScrollPane_ingredients_addrecipe.setEnabled(false);
 
         jTable_ingredients_searchrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
