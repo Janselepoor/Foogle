@@ -129,12 +129,12 @@
                       <Component id="jPasswordField_login" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel_password_login" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton_login_login" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="jButton_registration_login" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
