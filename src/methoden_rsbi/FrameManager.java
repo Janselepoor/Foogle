@@ -10,7 +10,10 @@ import package_rsbi_gui.JFrame_rsbi_addrecipeform;
 import package_rsbi_gui.JFrame_rsbi_confirmrecipe;
 import package_rsbi_gui.JFrame_rsbi_login;
 import package_rsbi_gui.JFrame_rsbi_main;
+import package_rsbi_gui.JFrame_rsbi_recipetable;
 import package_rsbi_gui.JFrame_rsbi_registration;
+import package_rsbi_gui.JFrame_rsbi_searchrecipe;
+import package_rsbi_gui.JFrame_rsbi_showrecipe;
 
 /**
  *
@@ -24,7 +27,7 @@ public abstract class FrameManager {
                           mainFrame,
                           addrecipeFrame,
                           confirmrecipeFrame,
-                          searchFrame,
+                          searchrecipeFrame,
                           recipetableFrame,
                           showrecipeFrame;
 
@@ -74,5 +77,29 @@ public abstract class FrameManager {
         confirmrecipeFrame = new JFrame_rsbi_confirmrecipe();
     }
     return confirmrecipeFrame;
+}
+    static public synchronized JFrame getsearchrecipeFrame()
+{
+    if(searchrecipeFrame == null)
+    {
+        searchrecipeFrame = new JFrame_rsbi_searchrecipe();
+    }
+    return searchrecipeFrame;
+}
+    static public synchronized JFrame getshowrecipeFrame()
+{
+    if(showrecipeFrame == null)
+    {
+        showrecipeFrame = new JFrame_rsbi_showrecipe();
+    }
+    return showrecipeFrame;
+}
+        static public synchronized JFrame getrecipetableFrame()
+{
+    if(recipetableFrame == null)
+    {
+        recipetableFrame = new JFrame_rsbi_recipetable();
+    }
+    return recipetableFrame;
 }
 }
