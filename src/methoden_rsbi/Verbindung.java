@@ -378,9 +378,7 @@ public class Verbindung {
         try
         {
             Connection conn = this.starteVerbindung();
-            Statement stmt = conn.createStatement(); 
             DefaultTableModel model = (DefaultTableModel) JFrame_rsbi_recipetable.jTable_table_recipetable.getModel();
-            System.out.println(r1 + r2 + r3 + "c" + c1 + c2);
             PreparedStatement pst = conn.prepareStatement("select t1.rec_name, t1.amount, t2.amount, t1.create_date "
                             + "from "
                             + "(select recipe_ingredient.recipe_id,count(*) as amount,recipe.rec_name,recipe.create_date "
@@ -400,7 +398,6 @@ public class Verbindung {
                             + "on t1.recipe_id = t2.recipe_id "
                             + "group by t1.amount");
             ResultSet rs = pst.executeQuery();
-            System.out.println("rs" + rs.next());
             while(rs.next())
             {
                 model.addRow(new Object[]{rs.getString(1),rs.getInt(2),rs.getInt(3),rs.getDate(4)});
