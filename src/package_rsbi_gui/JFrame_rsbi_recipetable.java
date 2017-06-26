@@ -5,8 +5,11 @@
  */
 package package_rsbi_gui;
 
+import java.sql.Connection;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 import methoden_rsbi.FrameManager;
+import methoden_rsbi.Verbindung;
 
 /**
  *
@@ -103,6 +106,10 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_recipetableActionPerformed
+        while(jTable_table_recipetable.getRowCount() > 0){
+                DefaultTableModel model = (DefaultTableModel) jTable_table_recipetable.getModel();
+                model.removeRow(0);
+                }
         JFrame searchwindow = FrameManager.getsearchrecipeFrame();
         this.dispose();
         searchwindow.setVisible(true);
@@ -110,8 +117,13 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
 
     private void jButton_show_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_show_recipetableActionPerformed
         JFrame searchwindow = FrameManager.getshowrecipeFrame();
+        DefaultTableModel model = (DefaultTableModel) jTable_table_recipetable.getModel();
         this.dispose();
         searchwindow.setVisible(true);
+        Verbindung connect2DB = new Verbindung();
+        int rec_id = connect2DB.getRecID((String)model.getValueAt(jTable_table_recipetable.getSelectedRow(),0));
+        connect2DB.showRecipe(rec_id);
+        //connect2DB.showRecipe()
     }//GEN-LAST:event_jButton_show_recipetableActionPerformed
 
     /**
