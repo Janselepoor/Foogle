@@ -398,7 +398,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
             int c2 =connect2DB.getCatID((String)jComboBox_category2_search_recipe.getSelectedItem());
             int c3 =connect2DB.getCatID((String)jComboBox_category3_search_recipe.getSelectedItem());
             int r1,r2,r3,r4,r5,r6,r7,r8,r9;
-            System.out.println("hey" + c1 + c2);
             if(tablecount >=1)
             {r1 = connect2DB.getIngrID(model.getValueAt(0,0).toString());}
             else
@@ -436,8 +435,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
             else
             {r9 =0;}
             boolean check = connect2DB.seachRecipe(r1, r2, r3, r4, r5, r6, r7, r8, r9, c1, c2, c3);
-            JOptionPane.showMessageDialog(null, ""+check);
-            
         }
         catch(Exception e)
         {
