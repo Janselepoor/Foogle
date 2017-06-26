@@ -187,7 +187,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        jComboBox_category2_search_recipe.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox_category2_search_recipe.setForeground(new java.awt.Color(102, 102, 102));
         jComboBox_category2_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox_category2_search_recipe.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +195,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
             }
         });
 
-        jComboBox_category3_search_recipe.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox_category3_search_recipe.setForeground(new java.awt.Color(102, 102, 102));
         jComboBox_category3_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox_category3_search_recipe.addActionListener(new java.awt.event.ActionListener() {
@@ -205,7 +203,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
             }
         });
 
-        jComboBox_category1_search_recipe.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox_category1_search_recipe.setForeground(new java.awt.Color(102, 102, 102));
         jComboBox_category1_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "select category" }));
         jComboBox_category1_search_recipe.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +240,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Enter your ingredients");
 
-        jComboBox_ingredients_search_recipe.setBackground(new java.awt.Color(255, 255, 255));
         jComboBox_ingredients_search_recipe.setForeground(new java.awt.Color(102, 102, 102));
         jComboBox_ingredients_search_recipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox_ingredients_search_recipe.addActionListener(new java.awt.event.ActionListener() {
@@ -278,6 +274,8 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 jButton_deletelist_searchrecipeActionPerformed(evt);
             }
         });
+
+        jScrollPane_ingredients_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
 
         jTable_ingredients_searchrecipe.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
