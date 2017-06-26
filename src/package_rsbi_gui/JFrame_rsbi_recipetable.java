@@ -59,7 +59,6 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane_table_recipetable.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane_table_recipetable.setForeground(new java.awt.Color(102, 102, 102));
 
         jTable_table_recipetable.setForeground(new java.awt.Color(102, 102, 102));
@@ -68,7 +67,7 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
 
             },
             new String [] {
-                "name ", "matches", "category", "date"
+                "name ", "matching ingr", "matching cat", "date"
             }
         ) {
             Class[] types = new Class [] {
