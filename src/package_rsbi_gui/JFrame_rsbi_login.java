@@ -53,6 +53,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("foogle");
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(425, 300));
         setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
