@@ -5,6 +5,7 @@
  */
 package package_rsbi_gui;
 
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -233,6 +234,11 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 jComboBox_ingredients_search_recipeActionPerformed(evt);
             }
         });
+        jComboBox_ingredients_search_recipe.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jComboBox_ingredients_search_recipeKeyPressed(evt);
+            }
+        });
 
         jButton_addlist_searchrecipe.setText("add");
         jButton_addlist_searchrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -300,7 +306,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                                             .addComponent(jButton_deletelist_searchrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                         .addGap(50, 50, 50)
                         .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -521,6 +527,12 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
     private void jComboBox_category1_search_recipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_category1_search_recipeActionPerformed
         String Name = (String)jComboBox_category1_search_recipe.getSelectedItem();
     }//GEN-LAST:event_jComboBox_category1_search_recipeActionPerformed
+
+    private void jComboBox_ingredients_search_recipeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox_ingredients_search_recipeKeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            jButton_addlist_searchrecipe.doClick();
+        }
+    }//GEN-LAST:event_jComboBox_ingredients_search_recipeKeyPressed
 
     
 
