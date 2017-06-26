@@ -248,7 +248,18 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
                !(jPasswordField_registration.getPassword().length == 0)) &&
                !(jPasswordField_registrationconf.getPassword().length == 0))
             {
-            
+                boolean check = false;
+                if(jPasswordField_registration.getPassword().length >= 8){
+                    for(int i=0;i<jPasswordField_registration.getPassword().length;i++)
+                    {
+                        char[] ch = jPasswordField_registration.getPassword();
+                        if((Character.isUpperCase(ch[i])))
+                        {
+                            check = true;
+                            break;
+                        }
+                    }
+        if(check){    
         Verbindung connect2DB = new Verbindung();
         regcheck = connect2DB.RegisterUser(username, email, password, password_conf);
         if (regcheck)
@@ -263,7 +274,17 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Welcome " +jTextField_username_registration.getText()+"!");
             }
         }
-        else
+        else 
+        {
+            JOptionPane.showMessageDialog(null, "Password must have at least 1 capital letter!");
+        }
+        }
+                        else
+            {
+                JOptionPane.showMessageDialog(null, "Password must have at least 8 characters!");
+            }
+            }
+            else
             {
                 JOptionPane.showMessageDialog(null, "All Fields have to be filled!");
             }
@@ -273,7 +294,6 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
             System.out.println("Fehler bei der Registration!");
             System.out.println("Fehler: " +e);
         }
-       
     }//GEN-LAST:event_jButton_registrate_registrationActionPerformed
 
     private void jPasswordField_registrationconfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField_registrationconfKeyPressed
