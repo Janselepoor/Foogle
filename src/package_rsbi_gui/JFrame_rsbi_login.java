@@ -40,7 +40,6 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton_connect_login = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jTextField_username_login = new javax.swing.JTextField();
         jLabel_username_login = new javax.swing.JLabel();
@@ -54,15 +53,7 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("foogle");
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(425, 300));
         setResizable(false);
-
-        jButton_connect_login.setText("Connect");
-        jButton_connect_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_connect_loginActionPerformed(evt);
-            }
-        });
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(261, 198));
@@ -123,7 +114,6 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1.setText("LOGIN");
-        jTextField1.setToolTipText("");
         jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,15 +169,10 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton_connect_login))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -197,34 +182,16 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(144, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 52, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)))
-                .addComponent(jButton_connect_login)
-                .addContainerGap())
+                        .addGap(47, 47, 47))))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton_connect_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_connect_loginActionPerformed
-        // TODO add your handling code here:
-        try
-        {
-            Verbindung connect2DB = new Verbindung();
-            Connection conn2 = connect2DB.starteVerbindung();
-            System.out.println("Verbindung erfolgreich aufgebaut!");
-            conn2.close();
-        }
-        catch (Exception e)
-        {
-            System.out.println("Verbindung wurde nicht aufgebaut!");
-            System.out.println("Fehler: "+e);
-        }  
-    }//GEN-LAST:event_jButton_connect_loginActionPerformed
 
     private void jTextField_username_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_username_loginActionPerformed
         // TODO add your handling code here:
@@ -327,7 +294,6 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_connect_login;
     private javax.swing.JButton jButton_login_login;
     private javax.swing.JButton jButton_registration_login;
     private javax.swing.JLabel jLabel1;
