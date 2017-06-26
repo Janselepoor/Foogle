@@ -270,7 +270,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                 "name"
             }
         ));
-        jTable_ingredients_searchrecipe.setColumnSelectionAllowed(false);
         jTable_ingredients_searchrecipe.setRowSelectionAllowed(false);
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_searchrecipe);
 
@@ -301,7 +300,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
                                             .addComponent(jButton_deletelist_searchrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                         .addGap(50, 50, 50)
                         .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -367,6 +366,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_search_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_searchActionPerformed
