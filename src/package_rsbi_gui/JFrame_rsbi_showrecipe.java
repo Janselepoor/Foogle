@@ -220,58 +220,85 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jLabel_ingredients_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredients_showrecipe.setText("Ingredients:");
 
+        jLabel_ingredient1_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient1_showrecipe.setText("ingredient1");
 
+        jLabel_ingredient1amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient1amount_showrecipe.setText("amount");
 
+        jLabel_ingredient1measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient1measure_showrecipe.setText("measure");
 
+        jLabel_ingredient2_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient2_showrecipe.setText("ingredient2");
 
+        jLabel_ingredient2amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient2amount_showrecipe.setText("amount");
 
+        jLabel_ingredient2measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient2measure_showrecipe.setText("measure");
 
+        jLabel_ingredient3measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient3measure_showrecipe.setText("measure");
 
+        jLabel_ingredient3_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient3_showrecipe.setText("ingredient3");
 
+        jLabel_ingredient4_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient4_showrecipe.setText("ingredient4");
 
+        jLabel_ingredient4amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient4amount_showrecipe.setText("amount");
 
+        jLabel_ingredient4measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient4measure_showrecipe.setText("measure");
 
+        jLabel_ingredient5_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient5_showrecipe.setText("ingredient5");
 
+        jLabel_ingredient5amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient5amount_showrecipe.setText("amount");
 
+        jLabel_ingredient5measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient5measure_showrecipe.setText("measure");
 
+        jLabel_ingredient6_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient6_showrecipe.setText("ingredient6");
 
+        jLabel_ingredient6amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient6amount_showrecipe.setText("amount");
 
+        jLabel_ingredient6measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient6measure_showrecipe.setText("measure");
 
+        jLabel_ingredient7_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient7_showrecipe.setText("ingredient7");
 
+        jLabel_ingredient7amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient7amount_showrecipe.setText("amount");
 
+        jLabel_ingredient7measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient7measure_showrecipe.setText("measure");
 
+        jLabel_ingredient8_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient8_showrecipe.setText("ingredient8");
 
+        jLabel_ingredient8amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient8amount_showrecipe.setText("amount");
 
+        jLabel_ingredient8measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient8measure_showrecipe.setText("measure");
 
+        jLabel_ingredient9_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient9_showrecipe.setText("ingredient9");
 
+        jLabel_ingredient9amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient9amount_showrecipe.setText("amount");
 
+        jLabel_ingredient9measure_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient9measure_showrecipe.setText("measure");
 
+        jLabel_ingredient3amount_showrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_ingredient3amount_showrecipe.setText("amount");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);

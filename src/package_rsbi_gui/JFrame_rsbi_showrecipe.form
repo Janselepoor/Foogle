@@ -544,6 +544,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient1_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient1"/>
           </Properties>
           <AuxValues>
@@ -552,6 +555,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient1amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -560,6 +566,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient1measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -568,6 +577,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient2_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient2"/>
           </Properties>
           <AuxValues>
@@ -576,6 +588,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient2amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -584,6 +599,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient2measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -592,6 +610,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient3measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -600,6 +621,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient3_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient3"/>
           </Properties>
           <AuxValues>
@@ -608,6 +632,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient4_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient4"/>
           </Properties>
           <AuxValues>
@@ -616,6 +643,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient4amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -624,6 +654,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient4measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -632,6 +665,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient5_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient5"/>
           </Properties>
           <AuxValues>
@@ -640,6 +676,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient5amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -648,6 +687,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient5measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -656,6 +698,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient6_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient6"/>
           </Properties>
           <AuxValues>
@@ -664,6 +709,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient6amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -672,6 +720,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient6measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -680,6 +731,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient7_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient7"/>
           </Properties>
           <AuxValues>
@@ -688,6 +742,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient7amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -696,6 +753,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient7measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -704,6 +764,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient8_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient8"/>
           </Properties>
           <AuxValues>
@@ -712,6 +775,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient8amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -720,6 +786,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient8measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -728,6 +797,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient9_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="ingredient9"/>
           </Properties>
           <AuxValues>
@@ -736,6 +808,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient9amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
@@ -744,6 +819,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient9measure_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="measure"/>
           </Properties>
           <AuxValues>
@@ -752,6 +830,9 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_ingredient3amount_showrecipe">
           <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="66" red="66" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="amount"/>
           </Properties>
           <AuxValues>
