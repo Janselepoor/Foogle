@@ -34,7 +34,7 @@
                           <Component id="jLabel_recipename_showrecipe" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel_preparation_showrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jPanel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jPanel3" alignment="0" min="-2" pref="279" max="-2" attributes="0"/>
+                          <Component id="jPanel3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -362,95 +362,94 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="66" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel_ingredient2_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient2amount_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="jLabel_ingredient3_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient3amount_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel_ingredient2measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient3measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" alignment="1" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel_ingredient1_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient1amount_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient1measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel_ingredient8_showrecipe" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel_ingredient9_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel_ingredient8amount_showrecipe" alignment="1" min="-2" pref="61" max="-2" attributes="0"/>
-                                  <Component id="jLabel_ingredient9amount_showrecipe" alignment="1" min="-2" pref="61" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel_ingredient8measure_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient9measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel_ingredient7_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient6_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient7amount_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient7measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel_ingredients_showrecipe" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel_ingredient6amount_showrecipe" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel_ingredient9_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel_ingredient2_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient3_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient8_showrecipe" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient1_showrecipe" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                                       <Component id="jLabel_ingredient4_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
                                       <Component id="jLabel_ingredient5_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabel_ingredient4amount_showrecipe" pref="60" max="32767" attributes="0"/>
-                                      <Component id="jLabel_ingredient5amount_showrecipe" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel_ingredient7_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="jLabel_ingredient6_showrecipe" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="jLabel_ingredient9amount_showrecipe" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabel_ingredient2amount_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient3amount_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient8amount_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient1amount_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel_ingredient4amount_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient5amount_showrecipe" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
+                              </Group>
+                              <Component id="jLabel_ingredient6amount_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  <Component id="jLabel_ingredient7amount_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel_ingredient4measure_showrecipe" min="-2" pref="63" max="-2" attributes="0"/>
-                              <Component id="jLabel_ingredient5measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jLabel_ingredient6measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel_ingredient8measure_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient9measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel_ingredient1measure_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient7measure_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel_ingredient3measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                                          <Component id="jLabel_ingredient2measure_showrecipe" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel_ingredient4measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient5measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                                      <Component id="jLabel_ingredient6measure_showrecipe" min="-2" pref="60" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -460,63 +459,71 @@
                   <Component id="jLabel_ingredients_showrecipe" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_ingredient1amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient1measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient1_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient1measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient2_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient2measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient3measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient3_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel_ingredient4measure_showrecipe" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient4_showrecipe" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient5_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient5measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient6_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient6measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient7_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient7measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient8_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient8measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel_ingredient9_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_ingredient9measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Component id="jLabel_ingredient1_showrecipe" alignment="1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_ingredient2_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient2amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient2measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_ingredient3measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient3amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient3_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_ingredient4amount_showrecipe" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient4measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="jLabel_ingredient1amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient2amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient3amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient4amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient5amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient6amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient7amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel_ingredient8amount_showrecipe" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel_ingredient9amount_showrecipe" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jLabel_ingredient4_showrecipe" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_ingredient5_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient5amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient5measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_ingredient6_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient6amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient6measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel_ingredient7measure_showrecipe" alignment="0" min="-2" pref="16" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel_ingredient7_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel_ingredient7amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_ingredient8_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient8amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient8measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_ingredient9_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient9amount_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_ingredient9measure_showrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
