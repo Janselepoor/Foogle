@@ -638,9 +638,9 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jComboBox_category1_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jComboBox_category2_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jComboBox_category3_addrecipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBox_category3_addrecipe" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
