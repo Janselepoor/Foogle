@@ -79,6 +79,12 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
         jLabel_email_registration.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_email_registration.setText("Email");
 
+        jPasswordField_registration.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField_registrationActionPerformed(evt);
+            }
+        });
+
         jLabel_password_registration.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_password_registration.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_password_registration.setText("Password");
@@ -227,6 +233,7 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_Cancel_registrationActionPerformed
 
     private void jButton_registrate_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrate_registrationActionPerformed
+        
         String username = jTextField_username_registration.getText();
         String email = jTextField_email_registration.getText();
         String password = new String (jPasswordField_registration.getPassword());
@@ -270,10 +277,15 @@ public class JFrame_rsbi_registration extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_registrate_registrationActionPerformed
 
     private void jPasswordField_registrationconfKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField_registrationconfKeyPressed
-         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+
+            if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             jButton_registrate_registration.doClick();
          }
     }//GEN-LAST:event_jPasswordField_registrationconfKeyPressed
+
+    private void jPasswordField_registrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField_registrationActionPerformed
+       
+    }//GEN-LAST:event_jPasswordField_registrationActionPerformed
 
     /**
      * @param args the command line arguments

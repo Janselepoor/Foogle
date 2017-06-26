@@ -977,9 +977,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_addingredient_addrecipeKeyPressed
 
     private void jTextArea_preparation_addrecipeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextArea_preparation_addrecipeKeyPressed
-            if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            jButton_confirm_addrecipe.doClick();
-            }
+         
     }//GEN-LAST:event_jTextArea_preparation_addrecipeKeyPressed
     
     //public void setText_Persons(String text){
