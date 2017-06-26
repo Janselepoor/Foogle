@@ -5,6 +5,7 @@
  */
 package package_rsbi_gui;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -197,6 +198,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     // Ruft JFrame auf und initialisert alle Componenten und füllt Sie!
     public JFrame_rsbi_addrecipeform() {
         initComponents();
+        getContentPane().setBackground(Color.WHITE);
         FuelleComboIngr();
         FuelleComboMeas();
         FuelleComboCategory1();
@@ -218,37 +220,38 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel_recipename_addrecipe = new javax.swing.JLabel();
-        jLabel_persons_addrecipe = new javax.swing.JLabel();
-        jLabel_preptime_addrecipe = new javax.swing.JLabel();
-        jLabel_difficulty_addrecipe = new javax.swing.JLabel();
-        jTextField_recipename_addrecipe = new javax.swing.JTextField();
-        jComboBox_difficulty_addrecipe = new javax.swing.JComboBox<>();
-        jComboBox_category1_addrecipe = new javax.swing.JComboBox<>();
-        jComboBox_category2_addrecipe = new javax.swing.JComboBox<>();
-        jComboBox_category3_addrecipe = new javax.swing.JComboBox<>();
         jScrollPane_ingredients_addrecipe = new javax.swing.JScrollPane();
         jTable_ingredients_addrecipe = new javax.swing.JTable();
         jComboBox_Ingredient_addrecipe = new javax.swing.JComboBox<>();
         jComboBox_measurement_addrecipe = new javax.swing.JComboBox<>();
         jButton_addingredient_addrecipe = new javax.swing.JButton();
         jLabel_preperation_addrecipe = new javax.swing.JLabel();
-        jButton_confirm_addrecipe = new javax.swing.JButton();
-        jButton_cancel_addrecipe = new javax.swing.JButton();
         jLabel_amount_addrecipe = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextArea_preparation_addrecipe = new javax.swing.JTextArea();
         jButton_deletelist_addrecipe = new javax.swing.JButton();
         jFormattedTextField_amount_addrecipe = new javax.swing.JFormattedTextField();
-        jFormattedTextField_persons_addrecipe = new javax.swing.JFormattedTextField();
-        jFormattedTextField_preptime_addrecipe = new javax.swing.JFormattedTextField();
-        jLabel_star1_addrecipe = new javax.swing.JLabel();
-        jLabel_star2_addrecipe = new javax.swing.JLabel();
-        jLabel_star3_addrecipe = new javax.swing.JLabel();
-        jLabel_star4_addrecipe = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel_recipename_addrecipe = new javax.swing.JLabel();
+        jTextField_recipename_addrecipe = new javax.swing.JTextField();
+        jLabel_persons_addrecipe = new javax.swing.JLabel();
+        jFormattedTextField_persons_addrecipe = new javax.swing.JFormattedTextField();
+        jLabel_preptime_addrecipe = new javax.swing.JLabel();
+        jFormattedTextField_preptime_addrecipe = new javax.swing.JFormattedTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel_difficulty_addrecipe = new javax.swing.JLabel();
+        jComboBox_difficulty_addrecipe = new javax.swing.JComboBox<>();
+        jLabel_star2_addrecipe = new javax.swing.JLabel();
+        jLabel_star4_addrecipe = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox_category1_addrecipe = new javax.swing.JComboBox<>();
+        jComboBox_category2_addrecipe = new javax.swing.JComboBox<>();
+        jComboBox_category3_addrecipe = new javax.swing.JComboBox<>();
+        jButton_confirm_addrecipe = new javax.swing.JButton();
+        jButton_cancel_addrecipe = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -267,48 +270,6 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         setTitle("foogle");
         setResizable(false);
 
-        jLabel_recipename_addrecipe.setText("recipe name:");
-
-        jLabel_persons_addrecipe.setText("persons:");
-
-        jLabel_preptime_addrecipe.setText("preparation time:");
-
-        jLabel_difficulty_addrecipe.setText("difficulty:");
-
-        jTextField_recipename_addrecipe.setToolTipText("Enter a descriptive name for your recipe.");
-        jTextField_recipename_addrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_recipename_addrecipeActionPerformed(evt);
-            }
-        });
-
-        jComboBox_difficulty_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox_difficulty_addrecipe.setToolTipText("Choose the difficulty.");
-
-        jComboBox_category1_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox_category1_addrecipe.setToolTipText("Select a category for your recipe.");
-        jComboBox_category1_addrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_category1_addrecipeActionPerformed(evt);
-            }
-        });
-
-        jComboBox_category2_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox_category2_addrecipe.setToolTipText("Select a category for your recipe.");
-        jComboBox_category2_addrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_category2_addrecipeActionPerformed(evt);
-            }
-        });
-
-        jComboBox_category3_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox_category3_addrecipe.setToolTipText("Select a category for your recipe.");
-        jComboBox_category3_addrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox_category3_addrecipeActionPerformed(evt);
-            }
-        });
-
         jScrollPane_ingredients_addrecipe.setAutoscrolls(true);
 
         jTable_ingredients_addrecipe.setModel(new javax.swing.table.DefaultTableModel(
@@ -321,6 +282,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         ));
         jScrollPane_ingredients_addrecipe.setViewportView(jTable_ingredients_addrecipe);
 
+        jComboBox_Ingredient_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_Ingredient_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jComboBox_Ingredient_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jComboBox_Ingredient_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox_Ingredient_addrecipe.setToolTipText("Select an ingredient.");
         jComboBox_Ingredient_addrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -329,6 +293,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             }
         });
 
+        jComboBox_measurement_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_measurement_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jComboBox_measurement_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jComboBox_measurement_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox_measurement_addrecipe.setToolTipText("Select the measurement according to the selected ingredient.");
         jComboBox_measurement_addrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -337,6 +304,9 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             }
         });
 
+        jButton_addingredient_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_addingredient_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_addingredient_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jButton_addingredient_addrecipe.setText("add");
         jButton_addingredient_addrecipe.setToolTipText("Add ingredient to table.");
         jButton_addingredient_addrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -345,31 +315,23 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             }
         });
 
+        jLabel_preperation_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel_preperation_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_preperation_addrecipe.setText("Preparation:");
 
-        jButton_confirm_addrecipe.setText("confirm");
-        jButton_confirm_addrecipe.setToolTipText("");
-        jButton_confirm_addrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_confirm_addrecipeActionPerformed(evt);
-            }
-        });
-
-        jButton_cancel_addrecipe.setText("cancel");
-        jButton_cancel_addrecipe.setToolTipText("Discard recipe and go back to mainwindow. This step can't be undone.");
-        jButton_cancel_addrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_cancel_addrecipeActionPerformed(evt);
-            }
-        });
-
+        jLabel_amount_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_amount_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel_amount_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_amount_addrecipe.setText("amount:");
 
         jTextArea_preparation_addrecipe.setColumns(20);
         jTextArea_preparation_addrecipe.setRows(5);
         jScrollPane6.setViewportView(jTextArea_preparation_addrecipe);
 
-        jButton_deletelist_addrecipe.setText("del");
+        jButton_deletelist_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_deletelist_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_deletelist_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_deletelist_addrecipe.setText("delete");
         jButton_deletelist_addrecipe.setToolTipText("To delete an ingredient, select it in the table and press this button");
         jButton_deletelist_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -377,6 +339,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             }
         });
 
+        jFormattedTextField_amount_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jFormattedTextField_amount_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
         jFormattedTextField_amount_addrecipe.setToolTipText("Select the amount of the ingredient you need for your recipe.");
         jFormattedTextField_amount_addrecipe.addActionListener(new java.awt.event.ActionListener() {
@@ -385,146 +348,288 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("Enter your ingredients");
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel_recipename_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel_recipename_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel_recipename_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel_recipename_addrecipe.setText("Recipe name");
+
+        jTextField_recipename_addrecipe.setToolTipText("Enter a descriptive name for your recipe.");
+        jTextField_recipename_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField_recipename_addrecipeActionPerformed(evt);
+            }
+        });
+
+        jLabel_persons_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel_persons_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel_persons_addrecipe.setText("# persons");
+
         jFormattedTextField_persons_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
         jFormattedTextField_persons_addrecipe.setToolTipText("Enter the amount of servings");
+
+        jLabel_preptime_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel_preptime_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel_preptime_addrecipe.setText("Preparation time");
 
         jFormattedTextField_preptime_addrecipe.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getIntegerInstance())));
         jFormattedTextField_preptime_addrecipe.setToolTipText("Enter the preparation time.");
 
-        jLabel_star1_addrecipe.setText("*");
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel2.setText("min");
+
+        jLabel_difficulty_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel_difficulty_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel_difficulty_addrecipe.setText("difficulty");
+
+        jComboBox_difficulty_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_difficulty_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jComboBox_difficulty_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jComboBox_difficulty_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_difficulty_addrecipe.setToolTipText("Choose the difficulty.");
 
         jLabel_star2_addrecipe.setText("*");
 
-        jLabel_star3_addrecipe.setText("*");
-
         jLabel_star4_addrecipe.setText("*");
 
-        jLabel1.setText("categories:");
+        jLabel4.setText("*");
 
-        jLabel2.setText("min");
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel_difficulty_addrecipe)
+                    .addComponent(jLabel_preptime_addrecipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jFormattedTextField_preptime_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_star4_addrecipe)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)))
+                .addGap(4, 4, 4))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel_recipename_addrecipe))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel_persons_addrecipe)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel_star2_addrecipe))
+                    .addComponent(jTextField_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_recipename_addrecipe)
+                    .addComponent(jTextField_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_persons_addrecipe)
+                    .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_star2_addrecipe))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_preptime_addrecipe)
+                    .addComponent(jFormattedTextField_preptime_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel_difficulty_addrecipe)
+                    .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel_star4_addrecipe))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jLabel3.setText("choose your ingredients:");
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel1.setText("Choose from categories");
+
+        jComboBox_category1_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_category1_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jComboBox_category1_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jComboBox_category1_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category1_addrecipe.setToolTipText("Select a category for your recipe.");
+        jComboBox_category1_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_category1_addrecipeActionPerformed(evt);
+            }
+        });
+
+        jComboBox_category2_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_category2_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jComboBox_category2_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jComboBox_category2_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category2_addrecipe.setToolTipText("Select a category for your recipe.");
+        jComboBox_category2_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_category2_addrecipeActionPerformed(evt);
+            }
+        });
+
+        jComboBox_category3_addrecipe.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox_category3_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jComboBox_category3_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jComboBox_category3_addrecipe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_category3_addrecipe.setToolTipText("Select a category for your recipe.");
+        jComboBox_category3_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox_category3_addrecipeActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox_category2_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_category2_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jButton_confirm_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_confirm_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_confirm_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_confirm_addrecipe.setText("confirm");
+        jButton_confirm_addrecipe.setToolTipText("");
+        jButton_confirm_addrecipe.setBorderPainted(false);
+        jButton_confirm_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_confirm_addrecipeActionPerformed(evt);
+            }
+        });
+
+        jButton_cancel_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_cancel_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jButton_cancel_addrecipe.setForeground(new java.awt.Color(102, 102, 102));
+        jButton_cancel_addrecipe.setText("cancel");
+        jButton_cancel_addrecipe.setToolTipText("Discard recipe and go back to mainwindow. This step can't be undone.");
+        jButton_cancel_addrecipe.setBorderPainted(false);
+        jButton_cancel_addrecipe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_cancel_addrecipeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton_confirm_addrecipe)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton_cancel_addrecipe))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel_preperation_addrecipe)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel_recipename_addrecipe)
-                                    .addComponent(jLabel_persons_addrecipe)
-                                    .addComponent(jLabel_preptime_addrecipe)
-                                    .addComponent(jLabel_difficulty_addrecipe))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel_star4_addrecipe))
-                                    .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                                    .addComponent(jTextField_recipename_addrecipe)
-                                    .addComponent(jFormattedTextField_preptime_addrecipe))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel_star1_addrecipe)
-                                    .addComponent(jLabel_star2_addrecipe)
+                                        .addGap(5, 5, 5)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel_preperation_addrecipe)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jComboBox_Ingredient_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jLabel_amount_addrecipe)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jFormattedTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jButton_addingredient_addrecipe))))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
+                                        .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel_star3_addrecipe))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox_category2_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 5, Short.MAX_VALUE))
+                                        .addComponent(jButton_deletelist_addrecipe))))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 14, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jComboBox_Ingredient_addrecipe, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel_amount_addrecipe)
-                                .addGap(18, 18, 18)
-                                .addComponent(jFormattedTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton_addingredient_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton_deletelist_addrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton_confirm_addrecipe)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton_cancel_addrecipe)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_recipename_addrecipe)
-                    .addComponent(jTextField_recipename_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_star1_addrecipe))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_persons_addrecipe)
-                    .addComponent(jFormattedTextField_persons_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_star2_addrecipe))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_preptime_addrecipe)
-                    .addComponent(jFormattedTextField_preptime_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_star3_addrecipe)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_difficulty_addrecipe)
-                    .addComponent(jComboBox_difficulty_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_star4_addrecipe))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox_category1_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox_category2_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox_category3_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBox_Ingredient_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_amount_addrecipe)
+                            .addComponent(jFormattedTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton_addingredient_addrecipe))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane_ingredients_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton_deletelist_addrecipe))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox_Ingredient_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_amount_addrecipe)
-                    .addComponent(jFormattedTextField_amount_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox_measurement_addrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_addingredient_addrecipe))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel_preperation_addrecipe)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_cancel_addrecipe)
-                    .addComponent(jButton_confirm_addrecipe)))
+                    .addComponent(jButton_confirm_addrecipe)
+                    .addComponent(jButton_cancel_addrecipe))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -893,16 +998,17 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel_amount_addrecipe;
     private javax.swing.JLabel jLabel_difficulty_addrecipe;
     private javax.swing.JLabel jLabel_persons_addrecipe;
     private javax.swing.JLabel jLabel_preperation_addrecipe;
     private javax.swing.JLabel jLabel_preptime_addrecipe;
     private javax.swing.JLabel jLabel_recipename_addrecipe;
-    private javax.swing.JLabel jLabel_star1_addrecipe;
     private javax.swing.JLabel jLabel_star2_addrecipe;
-    private javax.swing.JLabel jLabel_star3_addrecipe;
     private javax.swing.JLabel jLabel_star4_addrecipe;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane6;
     public static javax.swing.JScrollPane jScrollPane_ingredients_addrecipe;
