@@ -302,6 +302,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 jComboBox_measurement_addrecipeActionPerformed(evt);
             }
         });
+        jComboBox_measurement_addrecipe.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jComboBox_measurement_addrecipeKeyPressed(evt);
+            }
+        });
 
         jButton_addingredient_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
         jButton_addingredient_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -311,6 +316,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
         jButton_addingredient_addrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_addingredient_addrecipeActionPerformed(evt);
+            }
+        });
+        jButton_addingredient_addrecipe.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton_addingredient_addrecipeKeyPressed(evt);
             }
         });
 
@@ -325,6 +335,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
 
         jTextArea_preparation_addrecipe.setColumns(20);
         jTextArea_preparation_addrecipe.setRows(5);
+        jTextArea_preparation_addrecipe.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextArea_preparation_addrecipeKeyPressed(evt);
+            }
+        });
         jScrollPane6.setViewportView(jTextArea_preparation_addrecipe);
 
         jButton_deletelist_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
@@ -406,8 +421,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addComponent(jLabel_difficulty_addrecipe)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                        .addComponent(jLabel_difficulty_addrecipe))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel_preptime_addrecipe)
@@ -953,10 +967,20 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     }//GEN-LAST:event_jFormattedTextField_amount_addrecipeActionPerformed
 
     private void jComboBox_measurement_addrecipeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox_measurement_addrecipeKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             jButton_addingredient_addrecipe.doClick();
         }
     }//GEN-LAST:event_jComboBox_measurement_addrecipeKeyPressed
+
+    private void jButton_addingredient_addrecipeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton_addingredient_addrecipeKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_addingredient_addrecipeKeyPressed
+
+    private void jTextArea_preparation_addrecipeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextArea_preparation_addrecipeKeyPressed
+            if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            jButton_confirm_addrecipe.doClick();
+            }
+    }//GEN-LAST:event_jTextArea_preparation_addrecipeKeyPressed
     
     //public void setText_Persons(String text){
     //JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(text);
