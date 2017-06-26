@@ -667,30 +667,32 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
            (!jComboBox_category2_addrecipe.getSelectedItem().equals(jComboBox_category3_addrecipe.getSelectedItem()) ||
              jComboBox_category2_addrecipe.getSelectedIndex() == 0))
         //Übertragung der Liste
-        {DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
+            {
+                DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();
         // at least 3 ingredients        
-        if(model.getRowCount()>=3){
-        this.setVisible(false);
-        JFrame confirm = FrameManager.getconfirmrecipeFrame();
-        confirm.setVisible(true);
-        String recipename = jTextField_recipename_addrecipe.getText();
-        String persons = jFormattedTextField_persons_addrecipe.getText();
-        String preptime = jFormattedTextField_preptime_addrecipe.getText();
-        String difficulty = (String)jComboBox_difficulty_addrecipe.getSelectedItem();
-        String category1 = (String)jComboBox_category1_addrecipe.getSelectedItem();
-        String category2 = (String)jComboBox_category2_addrecipe.getSelectedItem();
-        String category3 = (String)jComboBox_category3_addrecipe.getSelectedItem();
-        String preparation = jTextArea_preparation_addrecipe.getText();
+            if(model.getRowCount()>=3)
+            {
+            this.setVisible(false);
+            JFrame confirm = FrameManager.getconfirmrecipeFrame();
+            confirm.setVisible(true);
+            String recipename = jTextField_recipename_addrecipe.getText();
+            String persons = jFormattedTextField_persons_addrecipe.getText();
+            String preptime = jFormattedTextField_preptime_addrecipe.getText();
+            String difficulty = (String)jComboBox_difficulty_addrecipe.getSelectedItem();
+            String category1 = (String)jComboBox_category1_addrecipe.getSelectedItem();
+            String category2 = (String)jComboBox_category2_addrecipe.getSelectedItem();
+            String category3 = (String)jComboBox_category3_addrecipe.getSelectedItem();
+            String preparation = jTextArea_preparation_addrecipe.getText();
         
-        JFrame_rsbi_confirmrecipe.jLabel_recipename_confirmrecipe.setText(recipename);
-        JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(persons);
-        JFrame_rsbi_confirmrecipe.jLabel_preptimedisplay_confirmrecipe.setText(preptime);
-        JFrame_rsbi_confirmrecipe.jLabel_difficultydisplay_confirmrecipe.setText(difficulty);
-        JFrame_rsbi_confirmrecipe.jLabel_category1_confirmrecipe.setText(category1);
-        JFrame_rsbi_confirmrecipe.jLabel_category2_confirmrecipe.setText(category2);
-        JFrame_rsbi_confirmrecipe.jLabel_category3_confirmrecipe.setText(category3);
-        JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setText(preparation);
-        JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setEditable(false);
+            JFrame_rsbi_confirmrecipe.jLabel_recipename_confirmrecipe.setText(recipename);
+            JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(persons);
+            JFrame_rsbi_confirmrecipe.jLabel_preptimedisplay_confirmrecipe.setText(preptime);
+            JFrame_rsbi_confirmrecipe.jLabel_difficultydisplay_confirmrecipe.setText(difficulty);
+            JFrame_rsbi_confirmrecipe.jLabel_category1_confirmrecipe.setText(category1);
+            JFrame_rsbi_confirmrecipe.jLabel_category2_confirmrecipe.setText(category2);
+            JFrame_rsbi_confirmrecipe.jLabel_category3_confirmrecipe.setText(category3);
+            JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setText(preparation);
+            JFrame_rsbi_confirmrecipe.jTextArea_preparation_confirmrecipe.setEditable(false);
         
         //ÜBERTRAGUNG DER LISTE
         //DefaultTableModel model = (DefaultTableModel) jTable_ingredients_addrecipe.getModel();

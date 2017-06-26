@@ -370,10 +370,92 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_search_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_searchActionPerformed
-        this.dispose();
-        new JFrame_rsbi_recipetable().setVisible(true); //TODO add your handling code here:
+            
+            if(!(jComboBox_category1_search_recipe.getSelectedItem().equals("")) ||
+               !(jComboBox_category2_search_recipe.getSelectedItem().equals("")) ||
+               !(jComboBox_category3_search_recipe.getSelectedItem().equals("")) )
+            {
+        
+        
+            if((!jComboBox_category1_search_recipe.getSelectedItem().equals(jComboBox_category2_search_recipe.getSelectedItem()) ||
+                 jComboBox_category1_search_recipe.getSelectedIndex() == 0) &&
+               (!jComboBox_category1_search_recipe.getSelectedItem().equals(jComboBox_category3_search_recipe.getSelectedItem()) ||
+                 jComboBox_category3_search_recipe.getSelectedIndex() == 0) &&
+               (!jComboBox_category2_search_recipe.getSelectedItem().equals(jComboBox_category3_search_recipe.getSelectedItem()) ||
+                 jComboBox_category2_search_recipe.getSelectedIndex() == 0))
+            {
+            DefaultTableModel model = (DefaultTableModel)jTable_ingredients_searchrecipe.getModel();
+            if(model.getRowCount()>=3)
+            {
+        try
+        {
+            this.dispose();
+            JFrame tablewindow = FrameManager.getrecipetableFrame();
+            tablewindow.setVisible(true);
+            Verbindung connect2DB = new Verbindung();
+            int tablecount = model.getRowCount();
+            int c1 =connect2DB.getCatID((String)jComboBox_category1_search_recipe.getSelectedItem());
+            int c2 =connect2DB.getCatID((String)jComboBox_category2_search_recipe.getSelectedItem());
+            int c3 =connect2DB.getCatID((String)jComboBox_category3_search_recipe.getSelectedItem());
+            int r1,r2,r3,r4,r5,r6,r7,r8,r9;
+            System.out.println("hey" + c1 + c2);
+            if(tablecount >=1)
+            {r1 = connect2DB.getIngrID(model.getValueAt(0,0).toString());}
+            else
+            {r1 =0;}
+            if(tablecount >=2)
+            {r2 = connect2DB.getIngrID(model.getValueAt(1,0).toString());}
+            else
+            {r2 =0;}
+            if(tablecount >=3)
+            {r3 = connect2DB.getIngrID(model.getValueAt(2,0).toString());}
+            else
+            {r3 =0;}
+            if(tablecount >=4)
+            {r4 = connect2DB.getIngrID(model.getValueAt(3,0).toString());}
+            else
+            {r4 =0;}
+            if(tablecount >=5)
+            {r5 = connect2DB.getIngrID(model.getValueAt(4,0).toString());}
+            else
+            {r5 =0;}
+            if(tablecount >=6)
+            {r6 = connect2DB.getIngrID(model.getValueAt(5,0).toString());}
+            else
+            {r6 =0;}
+            if(tablecount >=7)
+            {r7 = connect2DB.getIngrID(model.getValueAt(6,0).toString());}
+            else
+            {r7 =0;}
+            if(tablecount >=8)
+            {r8 = connect2DB.getIngrID(model.getValueAt(7,0).toString());}
+            else
+            {r8 =0;}
+            if(tablecount >=9)
+            {r9 = connect2DB.getIngrID(model.getValueAt(8,0).toString());}
+            else
+            {r9 =0;}
+            boolean check = connect2DB.seachRecipe(r1, r2, r3, r4, r5, r6, r7, r8, r9, c1, c2, c3);
+            JOptionPane.showMessageDialog(null, ""+check);
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, "Versagt...");
+        }
+        }
+            else{
+                        JOptionPane.showMessageDialog(null, "Please insert at least 3 ingredients!");
+            }
+        }
+            else{
+                JOptionPane.showMessageDialog(null, "Categories have to be unique!");
+            }
     }//GEN-LAST:event_jButton_search_searchActionPerformed
-
+            else{
+                JOptionPane.showMessageDialog(null, "Please select at least one category!");
+            }
+    }
     private void jButton_cancel_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_searchActionPerformed
         this.dispose();
         JFrame main = FrameManager.getmainFrame();

@@ -63,13 +63,6 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jLabel_preparation_showrecipe = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea_preparation_showrecipe = new javax.swing.JTextArea();
-        jLabel_rating_showrecipe = new javax.swing.JLabel();
-        jButton_rating1_showrecipe = new javax.swing.JButton();
-        jButton_rating2_showrecipe = new javax.swing.JButton();
-        jButton_rating3_showrecipe = new javax.swing.JButton();
-        jButton_rating4_showrecipe = new javax.swing.JButton();
-        jButton_rating5_showrecipe = new javax.swing.JButton();
-        jButton_confirm_showrecipe = new javax.swing.JButton();
         jButton_close_showrecipe = new javax.swing.JButton();
         jLabel_ingredient9measure_showrecipe = new javax.swing.JLabel();
         jLabel_ingredient2amount_showrecipe = new javax.swing.JLabel();
@@ -151,35 +144,6 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         jTextArea_preparation_showrecipe.setRows(5);
         jScrollPane1.setViewportView(jTextArea_preparation_showrecipe);
 
-        jLabel_rating_showrecipe.setText("How good is this recipe?(1=bad,5=good)");
-
-        jButton_rating1_showrecipe.setText("1");
-
-        jButton_rating2_showrecipe.setText("2");
-        jButton_rating2_showrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_rating2_showrecipeActionPerformed(evt);
-            }
-        });
-
-        jButton_rating3_showrecipe.setText("3");
-        jButton_rating3_showrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_rating3_showrecipeActionPerformed(evt);
-            }
-        });
-
-        jButton_rating4_showrecipe.setText("4");
-
-        jButton_rating5_showrecipe.setText("5");
-
-        jButton_confirm_showrecipe.setText("confirm");
-        jButton_confirm_showrecipe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_confirm_showrecipeActionPerformed(evt);
-            }
-        });
-
         jButton_close_showrecipe.setText("close");
         jButton_close_showrecipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,8 +173,28 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel_categories_showrecipe))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel_ingredients_showrecipe)
+                            .addComponent(jLabel_recipename_showrecipe)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel_preparation_showrecipe))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(54, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton_close_showrecipe))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -278,41 +262,6 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
                                     .addComponent(jLabel_ingredient7measure_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                             .addComponent(jLabel_ingredient9measure_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
                 .addGap(35, 35, 35))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel_categories_showrecipe))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_ingredients_showrecipe)
-                            .addComponent(jLabel_recipename_showrecipe)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel_preparation_showrecipe))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel_rating_showrecipe))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jButton_rating1_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_rating2_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_rating3_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_rating4_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_rating5_showrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(147, 147, 147)
-                                .addComponent(jButton_confirm_showrecipe)
-                                .addGap(118, 118, 118)
-                                .addComponent(jButton_close_showrecipe))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -382,16 +331,7 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel_rating_showrecipe)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_rating1_showrecipe)
-                    .addComponent(jButton_rating2_showrecipe)
-                    .addComponent(jButton_rating3_showrecipe)
-                    .addComponent(jButton_rating4_showrecipe)
-                    .addComponent(jButton_rating5_showrecipe)
-                    .addComponent(jButton_confirm_showrecipe)
-                    .addComponent(jButton_close_showrecipe))
+                .addComponent(jButton_close_showrecipe)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -399,23 +339,11 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_rating2_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rating2_showrecipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_rating2_showrecipeActionPerformed
-
-    private void jButton_rating3_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rating3_showrecipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_rating3_showrecipeActionPerformed
-
     private void jButton_close_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_close_showrecipeActionPerformed
         JFrame searchwindow = FrameManager.getshowrecipeFrame();
         this.dispose();
         searchwindow.setVisible(true);
     }//GEN-LAST:event_jButton_close_showrecipeActionPerformed
-
-    private void jButton_confirm_showrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_confirm_showrecipeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_confirm_showrecipeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -454,54 +382,47 @@ public class JFrame_rsbi_showrecipe extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_close_showrecipe;
-    private javax.swing.JButton jButton_confirm_showrecipe;
-    private javax.swing.JButton jButton_rating1_showrecipe;
-    private javax.swing.JButton jButton_rating2_showrecipe;
-    private javax.swing.JButton jButton_rating3_showrecipe;
-    private javax.swing.JButton jButton_rating4_showrecipe;
-    private javax.swing.JButton jButton_rating5_showrecipe;
     private javax.swing.JLabel jLabel_categories_showrecipe;
-    private javax.swing.JLabel jLabel_category1_showrecipe;
-    private javax.swing.JLabel jLabel_category2_showrecipe;
-    private javax.swing.JLabel jLabel_category3_showrecipe;
+    public static javax.swing.JLabel jLabel_category1_showrecipe;
+    public static javax.swing.JLabel jLabel_category2_showrecipe;
+    public static javax.swing.JLabel jLabel_category3_showrecipe;
     private javax.swing.JLabel jLabel_difficulty_showrecipe;
-    private javax.swing.JLabel jLabel_difficultydisplay_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient1_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient1amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient1measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient2_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient2amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient2measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient3_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient3amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient3measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient4_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient4amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient4measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient5_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient5amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient5measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient6_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient6amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient6measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient7_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient7amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient7measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient8_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient8amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient8measure_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient9_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient9amount_showrecipe;
-    private javax.swing.JLabel jLabel_ingredient9measure_showrecipe;
+    public static javax.swing.JLabel jLabel_difficultydisplay_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient1_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient1amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient1measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient2_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient2amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient2measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient3_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient3amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient3measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient4_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient4amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient4measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient5_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient5amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient5measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient6_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient6amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient6measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient7_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient7amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient7measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient8_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient8amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient8measure_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient9_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient9amount_showrecipe;
+    public static javax.swing.JLabel jLabel_ingredient9measure_showrecipe;
     private javax.swing.JLabel jLabel_ingredients_showrecipe;
     private javax.swing.JLabel jLabel_persons_showrecipe;
-    private javax.swing.JLabel jLabel_personsdisplay_showrecipe;
+    public static javax.swing.JLabel jLabel_personsdisplay_showrecipe;
     private javax.swing.JLabel jLabel_preparation_showrecipe;
     private javax.swing.JLabel jLabel_preptime_showrecipe;
-    private javax.swing.JLabel jLabel_preptimedisplay_showrecipe;
-    private javax.swing.JLabel jLabel_rating_showrecipe;
-    private javax.swing.JLabel jLabel_recipename_showrecipe;
+    public static javax.swing.JLabel jLabel_preptimedisplay_showrecipe;
+    public static javax.swing.JLabel jLabel_recipename_showrecipe;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea_preparation_showrecipe;
+    public static javax.swing.JTextArea jTextArea_preparation_showrecipe;
     // End of variables declaration//GEN-END:variables
 }

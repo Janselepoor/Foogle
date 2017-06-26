@@ -7,6 +7,7 @@ package methoden_rsbi;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,7 +27,7 @@ public class Verbindung {
                 {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
                                             Connection conn = DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11180394","sql11180394","xgJyrQK6SB");
-        //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test?"+"user=root&password=xxx");
+        //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/rsbi_database?"+"user=root&password=hOto-213");
         return conn;        
     }
     
@@ -360,18 +361,18 @@ public class Verbindung {
     }
         // Suche 
     public boolean seachRecipe(
-            String r1,
-            String r2,
-            String r3,
-            String r4,
-            String r5,
-            String r6,
-            String r7,
-            String r8,
-            String r9,
-            String c1,
-            String c2,
-            String c3)
+            int r1,
+            int r2,
+            int r3,
+            int r4,
+            int r5,
+            int r6,
+            int r7,
+            int r8,
+            int r9,
+            int c1,
+            int c2,
+            int c3)
         {
         boolean check = false;
         try
@@ -379,25 +380,32 @@ public class Verbindung {
             Connection conn = this.starteVerbindung();
             Statement stmt = conn.createStatement(); 
             DefaultTableModel model = (DefaultTableModel) JFrame_rsbi_recipetable.jTable_table_recipetable.getModel();
-            ResultSet rs = stmt.executeQuery("select t1.rec_name,t1.matchingingredients,t2.matchingcategories,t1.recipe_id,t1.create_date"
-                            + " from"
-                            + " (select recipe_ingredients.recipe_id,count(recipe_id) as matchingingredients,recipe.rec_name,recipe.create_date"
-                            + " from recipe_ingredient, recipe"
-                            + " where recipe_ingredient.recipe_id = recipe.id"
-                            + " and recipe_ingredient.ingredient_id in(\""+r1+"\",\""+r2+"\",\""+r3+"\",\""+r4+"\",\""+r5+"\",\""+r6+"\",\""+r7+"\",\""+r8+"\",\""+r9+"\")"
-                            + " having count(recipe_id)>=3)t1"
-                            + " inner join"
-                            + "(select recipe_category.recipe_id,count(recipe_id) as matchingcategories,recipe.rec_name"
-                            + " from recipe_category, recipe"
-                            + " where recipe_category.recipe_id = recipe.id"
-                            + " and recipe_category.category_id in (\""+c1+"\",\""+c2+"\",\""+c3+"\",)) t2"
-                            + " on t1.recipe_id = t2.recipe_id"
-                            + " group by t1.matchingingredients");
-            
+            System.out.println(r1 + r2 + r3 + "c" + c1 + c2);
+            PreparedStatement pst = conn.prepareStatement("select t1.rec_name, t1.amount, t2.amount, t1.create_date "
+                            + "from "
+                            + "(select recipe_ingredient.recipe_id,count(*) as amount,recipe.rec_name,recipe.create_date "
+                            + "from recipe_ingredient, recipe "
+                            + "where recipe_ingredient.recipe_id = recipe.id "
+                            + "and recipe_ingredient.ingredient_id in("+r1+","+r2+","+r3+","+r4+","+r5+","+r6+","+r7+","+r8+","+r9+") "
+                            + "group by recipe.rec_name "
+                            + "having count(recipe_id) >=3 "
+                            + "order by amount desc) t1 "
+                            + "inner join "
+                            + "(select recipe_category.recipe_id,count(*) as amount,recipe.rec_name "
+                            + "from recipe_category, recipe "
+                            + "where recipe_category.recipe_id = recipe.id "
+                            + "and recipe_category.category_id in ("+c1+","+c2+","+c3+") "
+                            + "group by recipe.rec_name "
+                            + "order by amount desc) t2 "
+                            + "on t1.recipe_id = t2.recipe_id "
+                            + "group by t1.amount");
+            ResultSet rs = pst.executeQuery();
+            System.out.println("rs" + rs.next());
             while(rs.next())
             {
-                model.addRow(new Object[]{rs.getString(1),rs.getInt(2),rs.getInt(3),rs.getDate(5)});
+                model.addRow(new Object[]{rs.getString(1),rs.getInt(2),rs.getInt(3),rs.getDate(4)});
             }
+            conn.close();
             check = true;
         }
         catch(Exception e)
