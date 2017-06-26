@@ -5,8 +5,10 @@
  */
 package package_rsbi_gui;
 
+import java.awt.Color;
 import java.sql.Connection;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import methoden_rsbi.FrameManager;
 import methoden_rsbi.Verbindung;
@@ -22,6 +24,7 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
      */
     public JFrame_rsbi_recipetable() {
         initComponents();
+        getContentPane().setBackground(Color.WHITE);
     }
 
     /**
@@ -56,6 +59,10 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane_table_recipetable.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane_table_recipetable.setForeground(new java.awt.Color(102, 102, 102));
+
+        jTable_table_recipetable.setForeground(new java.awt.Color(102, 102, 102));
         jTable_table_recipetable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -116,13 +123,25 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_cancel_recipetableActionPerformed
 
     private void jButton_show_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_show_recipetableActionPerformed
-        JFrame searchwindow = FrameManager.getshowrecipeFrame();
-        DefaultTableModel model = (DefaultTableModel) jTable_table_recipetable.getModel();
-        this.dispose();
-        searchwindow.setVisible(true);
-        Verbindung connect2DB = new Verbindung();
-        int rec_id = connect2DB.getRecID((String)model.getValueAt(jTable_table_recipetable.getSelectedRow(),0));
-        connect2DB.showRecipe(rec_id);
+        if(!(jTable_table_recipetable.getSelectedRow() == -1)){
+            try{
+                JFrame searchwindow = FrameManager.getshowrecipeFrame();
+                DefaultTableModel model = (DefaultTableModel) jTable_table_recipetable.getModel();
+                this.dispose();
+                searchwindow.setVisible(true);
+                Verbindung connect2DB = new Verbindung();
+                int rec_id = connect2DB.getRecID((String)model.getValueAt(jTable_table_recipetable.getSelectedRow(),0));
+                connect2DB.showRecipe(rec_id);
+                }
+            catch(Exception e)
+            {
+                
+            }
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Select a recipe!");
+        }
         //connect2DB.showRecipe()
     }//GEN-LAST:event_jButton_show_recipetableActionPerformed
 
