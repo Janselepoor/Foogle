@@ -94,25 +94,31 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
 
         jLabel_recipename_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel_recipename_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel_recipename_confirmrecipe.setText("recipe name");
+        jLabel_recipename_confirmrecipe.setText("Recipe name");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel_persons_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_persons_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_persons_confirmrecipe.setText("persons");
 
+        jLabel_personsdisplay_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_personsdisplay_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_personsdisplay_confirmrecipe.setText("no.");
 
+        jLabel_preptime_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_preptime_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_preptime_confirmrecipe.setText("prep time");
 
+        jLabel_preptimedisplay_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_preptimedisplay_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_preptimedisplay_confirmrecipe.setText("time");
 
+        jLabel_difficulty_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_difficulty_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_difficulty_confirmrecipe.setText("difficulty");
 
+        jLabel_difficultydisplay_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_difficultydisplay_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_difficultydisplay_confirmrecipe.setText("diff");
 
@@ -156,12 +162,15 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
         jLabel_categories_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_categories_confirmrecipe.setText("Categories");
 
+        jLabel_category1_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_category1_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_category1_confirmrecipe.setText("category1");
 
+        jLabel_category2_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_category2_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_category2_confirmrecipe.setText("category2");
 
+        jLabel_category3_confirmrecipe.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jLabel_category3_confirmrecipe.setForeground(new java.awt.Color(102, 102, 102));
         jLabel_category3_confirmrecipe.setText("category3");
 
@@ -297,10 +306,10 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel_ingredient4amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel_ingredient1amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel_ingredient2amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel_ingredient3amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel_ingredient4amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel_ingredient3amount_confirmrecipe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(jLabel_ingredient5amount_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel_ingredient6_confirmrecipe, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -464,14 +473,14 @@ public class JFrame_rsbi_confirmrecipe extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel_recipename_confirmrecipe)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
