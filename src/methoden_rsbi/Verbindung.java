@@ -397,7 +397,8 @@ public class Verbindung {
                             + "group by recipe.rec_name "
                             + "order by amount desc) t2 "
                             + "on t1.recipe_id = t2.recipe_id "
-                            + "group by t1.amount");
+                            + "group by t1.amount "
+                            + "order by t1.amount DESC ");
             ResultSet rs = pst.executeQuery();
             while(rs.next())
             {
