@@ -6,6 +6,7 @@
 package package_rsbi_gui;
 
 import java.awt.Color;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -304,6 +305,11 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 jComboBox_measurement_addrecipeActionPerformed(evt);
             }
         });
+        jComboBox_measurement_addrecipe.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jComboBox_measurement_addrecipeKeyPressed(evt);
+            }
+        });
 
         jButton_addingredient_addrecipe.setBackground(new java.awt.Color(204, 204, 204));
         jButton_addingredient_addrecipe.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -411,8 +417,7 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addComponent(jLabel_difficulty_addrecipe)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                        .addComponent(jLabel_difficulty_addrecipe))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel_preptime_addrecipe)
@@ -958,6 +963,12 @@ public class JFrame_rsbi_addrecipeform extends javax.swing.JFrame {
     private void jFormattedTextField_amount_addrecipeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField_amount_addrecipeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField_amount_addrecipeActionPerformed
+
+    private void jComboBox_measurement_addrecipeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jComboBox_measurement_addrecipeKeyPressed
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            jButton_addingredient_addrecipe.doClick();
+        }
+    }//GEN-LAST:event_jComboBox_measurement_addrecipeKeyPressed
     
     //public void setText_Persons(String text){
     //JFrame_rsbi_confirmrecipe.jLabel_personsdisplay_confirmrecipe.setText(text);
