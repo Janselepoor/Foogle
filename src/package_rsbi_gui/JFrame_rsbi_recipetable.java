@@ -6,6 +6,7 @@
 package package_rsbi_gui;
 
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 import methoden_rsbi.FrameManager;
 
 /**
@@ -103,6 +104,10 @@ public class JFrame_rsbi_recipetable extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_cancel_recipetableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_recipetableActionPerformed
+        while(jTable_table_recipetable.getRowCount() > 0){
+                DefaultTableModel model = (DefaultTableModel) jTable_table_recipetable.getModel();
+                model.removeRow(0);
+                }
         JFrame searchwindow = FrameManager.getsearchrecipeFrame();
         this.dispose();
         searchwindow.setVisible(true);
