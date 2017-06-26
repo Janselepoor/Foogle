@@ -386,7 +386,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
             {
             DefaultTableModel model = (DefaultTableModel)jTable_ingredients_searchrecipe.getModel();
             if(model.getRowCount()>=3)
-            {
+            {    
         try
         {
             this.dispose();
@@ -454,7 +454,7 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_search_searchActionPerformed
             else{
                 JOptionPane.showMessageDialog(null, "Please select at least one category!");
-            }
+            }    
     }
     private void jButton_cancel_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_searchActionPerformed
         this.dispose();
