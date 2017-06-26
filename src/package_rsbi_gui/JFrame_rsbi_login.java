@@ -114,7 +114,6 @@ public class JFrame_rsbi_login extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(102, 102, 102));
         jTextField1.setText("LOGIN");
-        jTextField1.setToolTipText("");
         jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
