@@ -28,7 +28,7 @@ public class Verbindung {
                 {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
                                             Connection conn = DriverManager.getConnection("jdbc:mysql://sql11.freemysqlhosting.net:3306/sql11180394","sql11180394","xgJyrQK6SB");
-        //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/rsbi_database?"+"user=root&password=hOto-213");
+        //Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/Foogle?"+"user=root&password=hOto-213");
         return conn;        
     }
     
@@ -386,7 +386,7 @@ public class Verbindung {
                             + "from recipe_ingredient, recipe "
                             + "where recipe_ingredient.recipe_id = recipe.id "
                             + "and recipe_ingredient.ingredient_id in("+r1+","+r2+","+r3+","+r4+","+r5+","+r6+","+r7+","+r8+","+r9+") "
-                            + "group by recipe.rec_name "
+                            + "group by recipe_ingredient.recipe_id "
                             + "having count(recipe_id) >=3 "
                             + "order by amount desc) t1 "
                             + "inner join "
@@ -394,10 +394,9 @@ public class Verbindung {
                             + "from recipe_category, recipe "
                             + "where recipe_category.recipe_id = recipe.id "
                             + "and recipe_category.category_id in ("+c1+","+c2+","+c3+") "
-                            + "group by recipe.rec_name "
+                            + "group by recipe_category.recipe_id "
                             + "order by amount desc) t2 "
-                            + "on t1.recipe_id = t2.recipe_id "
-                            + "group by t1.amount "
+                            + "on t1.rec_name = t2.rec_name "
                             + "order by t1.amount DESC ");
             ResultSet rs = pst.executeQuery();
             while(rs.next())
