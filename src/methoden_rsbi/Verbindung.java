@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import package_rsbi_gui.JFrame_rsbi_recipetable;
+import package_rsbi_gui.JFrame_rsbi_showrecipe;
 
 /**
  *
@@ -404,6 +405,236 @@ public class Verbindung {
             }
             conn.close();
             check = true;
+        }
+        catch(Exception e)
+        {
+            System.out.println("Fehler beim Auslesen von DB!");
+            System.out.println("Fehler "+e);
+        }
+        return check;
+    }
+    
+    public boolean showRecipe(int rec_id)
+    {
+        boolean check=false;
+        try
+        {
+            Connection conn = this.starteVerbindung();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT a.rec_name, a.prep_time, a.servings, a.preparation, b.diff_name "
+                    + "FROM recipe a,difficulty b "
+                    + "WHERE a.id = "+rec_id+" "
+                    + "AND b.id = a.diff_id;");
+            while(rs.next())
+            {
+                JFrame_rsbi_showrecipe.jLabel_recipename_showrecipe.setText(rs.getString(1));
+                JFrame_rsbi_showrecipe.jLabel_preptimedisplay_showrecipe.setText(rs.getString(2));
+                JFrame_rsbi_showrecipe.jLabel_personsdisplay_showrecipe.setText(rs.getString(3));
+                JFrame_rsbi_showrecipe.jTextArea_preparation_showrecipe.setText(rs.getString(4));
+                JFrame_rsbi_showrecipe.jLabel_difficultydisplay_showrecipe.setText(rs.getString(5));
+            }
+            ArrayList<String> tmpListe = new ArrayList<String>();
+            rs = stmt.executeQuery("SELECT b.cat_name "
+                    + "FROM recipe_category a,category b "
+                    + "WHERE a.recipe_id = "+rec_id+" "
+                    + "AND b.id = a.category_id;");
+            while(rs.next())
+            {
+               tmpListe.add(rs.getString(1)); 
+            }
+            int catcheck = tmpListe.size();
+            
+            if(catcheck >=1)
+            {
+                JFrame_rsbi_showrecipe.jLabel_category1_showrecipe.setText(tmpListe.get(0));
+                JFrame_rsbi_showrecipe.jLabel_category1_showrecipe.setVisible(true);
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_category1_showrecipe.setVisible(false);
+            }
+            if(catcheck >=2)
+            {
+                JFrame_rsbi_showrecipe.jLabel_category2_showrecipe.setText(tmpListe.get(1));
+                JFrame_rsbi_showrecipe.jLabel_category2_showrecipe.setVisible(true);
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_category2_showrecipe.setVisible(false);
+            }
+            if(catcheck >=3)
+            {
+                JFrame_rsbi_showrecipe.jLabel_category3_showrecipe.setText(tmpListe.get(2));
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_category3_showrecipe.setVisible(false);
+            }
+            
+            rs = stmt.executeQuery("SELECT b.ingr_name, a.amount, c.meas_name "
+                    + "FROM recipe_ingredient a,ingredient b, measurement c "
+                    + "WHERE a.recipe_id = "+rec_id+" "
+                    + "AND b.id = a.ingredient_id "
+                    + "AND c.id = a.measurement_id; ");
+            
+            ArrayList<String> tmpListeIngr = new ArrayList<String>();
+            ArrayList<String> tmpListeAmou = new ArrayList<String>();
+            ArrayList<String> tmpListeMeas = new ArrayList<String>();
+            
+            while(rs.next())
+            {
+                tmpListeIngr.add(rs.getString(1));
+                tmpListeAmou.add(rs.getString(2));
+                tmpListeMeas.add(rs.getString(3));
+            }
+            int ingrcheck = tmpListeIngr.size();
+            
+            if(ingrcheck >= 1)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient1_showrecipe.setText(tmpListeIngr.get(0));
+                JFrame_rsbi_showrecipe.jLabel_ingredient1amount_showrecipe.setText(tmpListeAmou.get(0));
+                JFrame_rsbi_showrecipe.jLabel_ingredient1measure_showrecipe.setText(tmpListeMeas.get(0));
+                JFrame_rsbi_showrecipe.jLabel_ingredient1_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient1amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient1measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient1_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient1amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient1measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 2)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient2_showrecipe.setText(tmpListeIngr.get(1));
+                JFrame_rsbi_showrecipe.jLabel_ingredient2amount_showrecipe.setText(tmpListeAmou.get(1));
+                JFrame_rsbi_showrecipe.jLabel_ingredient2measure_showrecipe.setText(tmpListeMeas.get(1));
+                JFrame_rsbi_showrecipe.jLabel_ingredient2_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient2amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient2measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient2_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient2amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient2measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 3)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient3_showrecipe.setText(tmpListeIngr.get(2));
+                JFrame_rsbi_showrecipe.jLabel_ingredient3amount_showrecipe.setText(tmpListeAmou.get(2));
+                JFrame_rsbi_showrecipe.jLabel_ingredient3measure_showrecipe.setText(tmpListeMeas.get(2));
+                JFrame_rsbi_showrecipe.jLabel_ingredient3_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient3amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient3measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient3_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient3amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient3measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 4)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient4_showrecipe.setText(tmpListeIngr.get(3));
+                JFrame_rsbi_showrecipe.jLabel_ingredient4amount_showrecipe.setText(tmpListeAmou.get(3));
+                JFrame_rsbi_showrecipe.jLabel_ingredient4measure_showrecipe.setText(tmpListeMeas.get(3));
+                JFrame_rsbi_showrecipe.jLabel_ingredient4_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient4amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient4measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient4_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient4amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient4measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 5)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient5_showrecipe.setText(tmpListeIngr.get(4));
+                JFrame_rsbi_showrecipe.jLabel_ingredient5amount_showrecipe.setText(tmpListeAmou.get(4));
+                JFrame_rsbi_showrecipe.jLabel_ingredient5measure_showrecipe.setText(tmpListeMeas.get(4));
+                JFrame_rsbi_showrecipe.jLabel_ingredient5_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient5amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient5measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient5_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient5amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient5measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 6)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient6_showrecipe.setText(tmpListeIngr.get(5));
+                JFrame_rsbi_showrecipe.jLabel_ingredient6amount_showrecipe.setText(tmpListeAmou.get(5));
+                JFrame_rsbi_showrecipe.jLabel_ingredient6measure_showrecipe.setText(tmpListeMeas.get(5));
+                JFrame_rsbi_showrecipe.jLabel_ingredient6_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient6amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient6measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient6_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient6amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient6measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 7)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient7_showrecipe.setText(tmpListeIngr.get(6));
+                JFrame_rsbi_showrecipe.jLabel_ingredient7amount_showrecipe.setText(tmpListeAmou.get(6));
+                JFrame_rsbi_showrecipe.jLabel_ingredient7measure_showrecipe.setText(tmpListeMeas.get(6));
+                JFrame_rsbi_showrecipe.jLabel_ingredient7_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient7amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient7measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient7_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient7amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient7measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 8)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient8_showrecipe.setText(tmpListeIngr.get(7));
+                JFrame_rsbi_showrecipe.jLabel_ingredient8amount_showrecipe.setText(tmpListeAmou.get(7));
+                JFrame_rsbi_showrecipe.jLabel_ingredient8measure_showrecipe.setText(tmpListeMeas.get(7));
+                JFrame_rsbi_showrecipe.jLabel_ingredient8_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient8amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient8measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient8_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient8amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient8measure_showrecipe.setVisible(false);
+            }
+            if(ingrcheck >= 9)
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient9_showrecipe.setText(tmpListeIngr.get(8));
+                JFrame_rsbi_showrecipe.jLabel_ingredient9amount_showrecipe.setText(tmpListeAmou.get(8));
+                JFrame_rsbi_showrecipe.jLabel_ingredient9measure_showrecipe.setText(tmpListeMeas.get(8));
+                JFrame_rsbi_showrecipe.jLabel_ingredient9_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient9amount_showrecipe.setVisible(true);
+                JFrame_rsbi_showrecipe.jLabel_ingredient9measure_showrecipe.setVisible(true);
+                
+            }
+            else
+            {
+                JFrame_rsbi_showrecipe.jLabel_ingredient9_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient9amount_showrecipe.setVisible(false);
+                JFrame_rsbi_showrecipe.jLabel_ingredient9measure_showrecipe.setVisible(false);
+            }
+            conn.close();
+            check=true;
         }
         catch(Exception e)
         {
