@@ -371,10 +371,6 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
 
     private void jButton_search_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_searchActionPerformed
 
-        /*      while(JFrame_rsbi_recipetable.jTable_table_recipetable.getRowCount() > 0){
-                DefaultTableModel model = (DefaultTableModel) JFrame_rsbi_recipetable.jTable_table_recipetable.getModel();
-                model.removeRow(0);
-                }   */
             if(!(jComboBox_category1_search_recipe.getSelectedItem().equals("")) ||
                !(jComboBox_category2_search_recipe.getSelectedItem().equals("")) ||
                !(jComboBox_category3_search_recipe.getSelectedItem().equals("")) )
