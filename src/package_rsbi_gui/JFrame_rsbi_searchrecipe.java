@@ -370,14 +370,29 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_search_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_search_searchActionPerformed
-
+            
+            if(!(jComboBox_category1_search_recipe.getSelectedItem().equals("")) ||
+               !(jComboBox_category2_search_recipe.getSelectedItem().equals("")) ||
+               !(jComboBox_category3_search_recipe.getSelectedItem().equals("")) )
+            {
+        
+        
+            if((!jComboBox_category1_search_recipe.getSelectedItem().equals(jComboBox_category2_search_recipe.getSelectedItem()) ||
+                 jComboBox_category1_search_recipe.getSelectedIndex() == 0) &&
+               (!jComboBox_category1_search_recipe.getSelectedItem().equals(jComboBox_category3_search_recipe.getSelectedItem()) ||
+                 jComboBox_category3_search_recipe.getSelectedIndex() == 0) &&
+               (!jComboBox_category2_search_recipe.getSelectedItem().equals(jComboBox_category3_search_recipe.getSelectedItem()) ||
+                 jComboBox_category2_search_recipe.getSelectedIndex() == 0))
+            {
+            DefaultTableModel model = (DefaultTableModel)jTable_ingredients_searchrecipe.getModel();
+            if(model.getRowCount()>=3)
+            {
         try
         {
             this.dispose();
             JFrame tablewindow = FrameManager.getrecipetableFrame();
             tablewindow.setVisible(true);
             Verbindung connect2DB = new Verbindung();
-            DefaultTableModel model = (DefaultTableModel)jTable_ingredients_searchrecipe.getModel();
             int tablecount = model.getRowCount();
             int c1 =connect2DB.getCatID((String)jComboBox_category1_search_recipe.getSelectedItem());
             int c2 =connect2DB.getCatID((String)jComboBox_category2_search_recipe.getSelectedItem());
@@ -428,9 +443,19 @@ public class JFrame_rsbi_searchrecipe extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(null, "Versagt...");
         }
-
+        }
+            else{
+                        JOptionPane.showMessageDialog(null, "Please insert at least 3 ingredients!");
+            }
+        }
+            else{
+                JOptionPane.showMessageDialog(null, "Categories have to be unique!");
+            }
     }//GEN-LAST:event_jButton_search_searchActionPerformed
-
+            else{
+                JOptionPane.showMessageDialog(null, "Please select at least one category!");
+            }
+    }
     private void jButton_cancel_searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cancel_searchActionPerformed
         this.dispose();
         JFrame main = FrameManager.getmainFrame();
